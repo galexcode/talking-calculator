@@ -14,6 +14,8 @@
 
 @implementation ViewController
 
+@synthesize display = _display;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,4 +28,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)digitPressed:(UIButton *)sender {
+    NSString *digit = [sender currentTitle];
+    self.display.text = digit;
+}
 @end
