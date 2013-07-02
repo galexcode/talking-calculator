@@ -12,5 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *display;
 
 - (IBAction)digitPressed:(UIButton *)sender;
+- (IBAction)operatorPressed:(UIButton *)sender;
+- (IBAction)eqaulsPressed:(UIButton *)sender;
 
 @end
