@@ -14,7 +14,6 @@
 @property double currentValue;
 @property BOOL newEntry;
 @property (strong, nonatomic) MathOperator *operator;
-@property (strong, nonatomic) NSMutableArray *operatorButtons;
 
 @end
 
@@ -25,18 +24,6 @@
 @synthesize operator = _operator;
 @synthesize display = _display;
 @synthesize operatorButton = _operatorButton;
-@synthesize minusButton = _minusButton;
-@synthesize operatorButtons = _operatorButtons;
-
-- (NSMutableArray *)operatorButtons
-{
-    if (_operatorButtons == NULL) {
-        _operatorButtons = [[NSMutableArray alloc] initWithCapacity:2];
-        [_operatorButtons addObject:self.operatorButton];
-        [_operatorButtons addObject:self.minusButton];
-    }
-    return _operatorButtons;
-}
 
 - (void)viewDidLoad
 {
@@ -82,15 +69,9 @@
     return [self.display.text doubleValue];
 }
 
-
 - (void)disableOperator:(NSNotification *)notification
-{
-    //[operator setHighlighted:NO];
-    for (int i = 0; i < [self.operatorButtons count]; i++) {
-        UIButton *button = [self.operatorButtons objectAtIndex:i];
-        
-        [self performSelector:@selector(turnOffHighlightButton:) withObject:button afterDelay:0.0];
-    }
+{ 
+    [self performSelector:@selector(turnOffHighlightButton:) withObject:nil afterDelay:0.0];
 }
 
 - (IBAction)digitPressed:(UIButton *)sender
@@ -101,26 +82,41 @@
     [self addDigit:digit];
 }
 
+
+- (void)turnOffHighlightButton:(id)dummy
+{
+    [self.operatorButton setHighlighted:NO];
+}
+
 - (void)highlightButton:(UIButton *)button
 {
     [button setHighlighted:YES];
 }
 
-- (void)turnOffHighlightButton:(UIButton *)button
+- (void)highlightOperatorButton:(UIButton *)sender
 {
-    [button setHighlighted:NO];
+    [self.operatorButton setHighlighted:NO];
+    self.operatorButton = sender;
+    
+    [self performSelector:@selector(highlightButton:) withObject:self.operatorButton afterDelay:0.0];
+}
+
+- (BOOL)shouldPerformCalculation:(MathOperator *)oldOperator
+{
+    return [oldOperator class] == [self.operator class];
 }
 
 - (IBAction)operatorPressed:(UIButton *)sender
 {
-    [self disableOperator:nil];
-    [self performSelector:@selector(highlightButton:) withObject:sender afterDelay:0.0];
-    
+    [self highlightOperatorButton:sender];
     MathOperator *oldOperator = self.operator;
-    self.operator = [MathOperator createWithString:[sender currentTitle]];
     
-    if ([oldOperator class] == [self.operator class]) {
-        double result = [self performOperation:self.currentValue :[self getDisplayValue]];
+    self.operator = [MathOperator createWithString:[self.operatorButton  currentTitle]];
+    
+    if ([self shouldPerformCalculation:oldOperator]) {
+        double result = [self performOperation:self.currentValue
+                                       withRhs:[self getDisplayValue]];
+        
         [self displayResult:result];
     }
     
@@ -128,7 +124,8 @@
     self.newEntry = YES;
 }
 
-- (double)performOperation:(double)lhs :(double)rhs
+- (double)performOperation:(double)lhs
+                   withRhs:(double)rhs
 {
     return [self.operator calculate:lhs with:rhs];
 }
@@ -147,7 +144,9 @@
 {
     double rhs = [self.display.text doubleValue];
     if ([self hasOperator]) {
-        double result = [self performOperation:self.currentValue :rhs];
+        double result = [self performOperation:self.currentValue
+                                       withRhs:rhs];
+        
         [self displayResult:result];
     }
     self.operator = NULL;

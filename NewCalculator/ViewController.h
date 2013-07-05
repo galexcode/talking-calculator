@@ -11,7 +11,6 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *display;
 @property (weak, nonatomic) IBOutlet UIButton *operatorButton;
-@property (weak, nonatomic) IBOutlet UIButton *minusButton;
 
 - (IBAction)digitPressed:(UIButton *)sender;
 - (IBAction)operatorPressed:(UIButton *)sender;
