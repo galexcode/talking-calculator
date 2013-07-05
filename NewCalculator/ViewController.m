@@ -105,21 +105,15 @@
     [self performSelector:@selector(highlightButton:) withObject:nil afterDelay:0.0];
 }
 
-- (BOOL)shouldPerformCalculation:(MathOperator *)oldOperator
-{
-    return [oldOperator class] == [self.operator class];
-}
-
 - (IBAction)operatorPressed:(UIButton *)sender
 {
     [self highlightOperatorButton:sender];
-    MathOperator *oldOperator = self.operator;
-    self.operator = [MathOperator createWithString:[self.operatorButton  currentTitle]];
-    
-    if ([self shouldPerformCalculation:oldOperator]) {
+
+    if ([self hasOperator]) {
         [self performOperation:self.previousValue withRhs:[self getDisplayValue]];
     }
     
+    self.operator = [MathOperator createWithString:[self.operatorButton  currentTitle]];
     self.previousValue = [self getDisplayValue];
     self.newEntry = YES;
 }
