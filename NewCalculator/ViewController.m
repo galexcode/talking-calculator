@@ -82,15 +82,14 @@
     [self addDigit:digit];
 }
 
-
 - (void)turnOffHighlightButton:(id)dummy
 {
     [self.operatorButton setHighlighted:NO];
 }
 
-- (void)highlightButton:(UIButton *)button
+- (void)highlightButton:(id)dummy
 {
-    [button setHighlighted:YES];
+    [self.operatorButton setHighlighted:YES];
 }
 
 - (void)highlightOperatorButton:(UIButton *)sender
@@ -98,7 +97,7 @@
     [self.operatorButton setHighlighted:NO];
     self.operatorButton = sender;
     
-    [self performSelector:@selector(highlightButton:) withObject:self.operatorButton afterDelay:0.0];
+    [self performSelector:@selector(highlightButton:) withObject:nil afterDelay:0.0];
 }
 
 - (BOOL)shouldPerformCalculation:(MathOperator *)oldOperator
@@ -110,24 +109,22 @@
 {
     [self highlightOperatorButton:sender];
     MathOperator *oldOperator = self.operator;
-    
     self.operator = [MathOperator createWithString:[self.operatorButton  currentTitle]];
     
     if ([self shouldPerformCalculation:oldOperator]) {
-        double result = [self performOperation:self.currentValue
-                                       withRhs:[self getDisplayValue]];
-        
-        [self displayResult:result];
+        [self performOperation:self.currentValue withRhs:[self getDisplayValue]];
     }
     
     self.currentValue = [self getDisplayValue];
     self.newEntry = YES;
 }
 
-- (double)performOperation:(double)lhs
-                   withRhs:(double)rhs
+- (void)performOperation:(double)lhs
+                 withRhs:(double)rhs
 {
-    return [self.operator calculate:lhs with:rhs];
+    NSNumber *result = [self.operator performOperation:[NSNumber numberWithDouble:lhs]
+                                                  with:[NSNumber numberWithDouble:rhs]];
+    [self displayResult:result];
 }
 
 - (BOOL)hasOperator
@@ -135,19 +132,17 @@
     return !(_operator == NULL);
 }
 
-- (void)displayResult:(double)result
+- (void)displayResult:(NSNumber *)result
 {
-    self.display.text = [NSString stringWithFormat:@"%d", (int)result];
+    self.display.text = [result stringValue];
 }
 
 - (IBAction)eqaulsPressed:(UIButton *)sender
 {
+    [self turnOffHighlightButton:nil];
     double rhs = [self.display.text doubleValue];
     if ([self hasOperator]) {
-        double result = [self performOperation:self.currentValue
-                                       withRhs:rhs];
-        
-        [self displayResult:result];
+        [self performOperation:self.currentValue withRhs:rhs];
     }
     self.operator = NULL;
     self.newEntry = YES;

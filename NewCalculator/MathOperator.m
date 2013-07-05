@@ -20,7 +20,6 @@
 - (NSNumber *)performOperation:(NSNumber *)lhs
                           with:(NSNumber *)rhs
 {
-    return [NSNumber numberWithInt:5];
     double dLhs = [lhs doubleValue];
     double dRhs = [rhs doubleValue];
     
