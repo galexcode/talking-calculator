@@ -13,6 +13,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvJ-0T-fEW">
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="271" id="Oog-ko-2X0"/>
                                     <constraint firstAttribute="height" constant="58" id="d6Z-Qd-dDY"/>
@@ -299,7 +300,6 @@
                     </view>
                     <connections>
                         <outlet property="display" destination="UvJ-0T-fEW" id="c2h-hF-EzM"/>
-                        <outlet property="operatorButton" destination="gMe-S4-qtd" id="yMz-QY-ep5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>

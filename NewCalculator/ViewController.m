@@ -11,7 +11,7 @@
 
 @interface ViewController ()
 
-@property double currentValue;
+@property NSNumber *previousValue;
 @property BOOL newEntry;
 @property (strong, nonatomic) MathOperator *operator;
 
@@ -19,7 +19,7 @@
 
 @implementation ViewController
 
-@synthesize currentValue = _currentValue;
+@synthesize previousValue = _previousValue;
 @synthesize newEntry = _newEntry;
 @synthesize operator = _operator;
 @synthesize display = _display;
@@ -31,7 +31,12 @@
     self.newEntry = YES;
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(disableOperator:) name:@"DigitPressed" object:nil];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    UISwipeGestureRecognizer *oneFingerSwipeRight = [[UISwipeGestureRecognizer alloc]
+                                                     initWithTarget:self
+                                                     action:@selector(undoEntry)];
+    [oneFingerSwipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    [[self view] addGestureRecognizer:oneFingerSwipeRight];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,9 +69,9 @@
     }
 }
 
-- (double)getDisplayValue
+- (NSNumber *)getDisplayValue
 {
-    return [self.display.text doubleValue];
+    return [NSNumber numberWithDouble:[self.display.text doubleValue]];
 }
 
 - (void)disableOperator:(NSNotification *)notification
@@ -112,18 +117,18 @@
     self.operator = [MathOperator createWithString:[self.operatorButton  currentTitle]];
     
     if ([self shouldPerformCalculation:oldOperator]) {
-        [self performOperation:self.currentValue withRhs:[self getDisplayValue]];
+        [self performOperation:self.previousValue withRhs:[self getDisplayValue]];
     }
     
-    self.currentValue = [self getDisplayValue];
+    self.previousValue = [self getDisplayValue];
     self.newEntry = YES;
 }
 
-- (void)performOperation:(double)lhs
-                 withRhs:(double)rhs
+- (void)performOperation:(NSNumber *)lhs
+                 withRhs:(NSNumber *)rhs
 {
-    NSNumber *result = [self.operator performOperation:[NSNumber numberWithDouble:lhs]
-                                                  with:[NSNumber numberWithDouble:rhs]];
+    NSNumber *result = [self.operator performOperation:lhs
+                                                  with:rhs];
     [self displayResult:result];
 }
 
@@ -140,12 +145,17 @@
 - (IBAction)eqaulsPressed:(UIButton *)sender
 {
     [self turnOffHighlightButton:nil];
-    double rhs = [self.display.text doubleValue];
     if ([self hasOperator]) {
-        [self performOperation:self.currentValue withRhs:rhs];
+        [self performOperation:self.previousValue withRhs:[self getDisplayValue]];
     }
     self.operator = NULL;
     self.newEntry = YES;
+}
+
+- (void)undoEntry
+{
+    self.operator = NULL;
+    self.display.text = [self.previousValue stringValue];
 }
 
 @end
