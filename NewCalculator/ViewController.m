@@ -8,11 +8,12 @@
 
 #import "ViewController.h"
 #import "MathOperator.h"
+#import "Display.h"
 
 @interface ViewController ()
 
-@property NSNumber *previousValue;
-@property BOOL newEntry;
+@property (strong, nonatomic) NSNumber *previousValue;
+@property (strong, nonatomic) Display *displayModel;
 @property (strong, nonatomic) MathOperator *operator;
 
 @end
@@ -20,15 +21,14 @@
 @implementation ViewController
 
 @synthesize previousValue = _previousValue;
-@synthesize newEntry = _newEntry;
-@synthesize operator = _operator;
 @synthesize display = _display;
+@synthesize displayModel = _displayModel;
+@synthesize operator = _operator;
 @synthesize operatorButton = _operatorButton;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.newEntry = YES;
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(disableOperator:) name:@"DigitPressed" object:nil];
     
@@ -45,33 +45,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)addDigitToCurrentValue:(NSString *)digit
+- (Display *)displayModel
 {
-    NSString *currentValue = self.display.text;
-    NSString *result = NULL;
-    
-    if ([currentValue isEqualToString:@"0"]) {
-        result = digit;
-    } else {
-        result = [self.display.text stringByAppendingString:digit];
+    if (_displayModel == nil) {
+        _displayModel = [[Display alloc] init];
     }
-    
-    self.display.text = result;
+    return _displayModel;
+}
+
+- (void)updateDisplay
+{
+    self.display.text = [self.displayModel valueAsString];
 }
 
 - (void)addDigit:(NSString *)digit
 {
-    if (self.newEntry) {
-        self.display.text = digit;
-        self.newEntry = NO;
-    } else {
-        [self addDigitToCurrentValue:digit];
-    }
+    [self.displayModel addDigitWithString:digit];
+    [self updateDisplay];
 }
 
 - (NSNumber *)getDisplayValue
 {
-    return [NSNumber numberWithDouble:[self.display.text doubleValue]];
+    return [self.displayModel valueAsNumber];
 }
 
 - (void)disableOperator:(NSNotification *)notification
@@ -115,7 +110,7 @@
     
     self.operator = [MathOperator createWithString:[self.operatorButton  currentTitle]];
     self.previousValue = [self getDisplayValue];
-    self.newEntry = YES;
+    [self.displayModel beginNewEntry];
 }
 
 - (void)performOperation:(NSNumber *)lhs
@@ -133,7 +128,8 @@
 
 - (void)displayResult:(NSNumber *)result
 {
-    self.display.text = [result stringValue];
+    [self.displayModel setValueWithNumber:result];
+    [self updateDisplay];
 }
 
 - (IBAction)eqaulsPressed:(UIButton *)sender
@@ -143,13 +139,14 @@
         [self performOperation:self.previousValue withRhs:[self getDisplayValue]];
     }
     self.operator = NULL;
-    self.newEntry = YES;
+    [self.displayModel beginNewEntry];
 }
 
 - (void)undoEntry
 {
     self.operator = NULL;
-    self.display.text = [self.previousValue stringValue];
+    [self.displayModel setValueWithNumber:self.previousValue];
+    [self updateDisplay];
 }
 
 @end

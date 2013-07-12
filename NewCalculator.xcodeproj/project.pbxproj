@@ -26,6 +26,9 @@
 		D5C915E517820D5D003939D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C915C017820D5D003939D1 /* Foundation.framework */; };
 		D5C915ED17820D5D003939D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5C915EB17820D5D003939D1 /* InfoPlist.strings */; };
 		D5C915F017820D5D003939D1 /* NewCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C915EF17820D5D003939D1 /* NewCalculatorTests.m */; };
+		D5EEF955178F3B3F0030E723 /* Display.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EEF954178F3B3F0030E723 /* Display.m */; };
+		D5EEF956178F3B3F0030E723 /* Display.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EEF954178F3B3F0030E723 /* Display.m */; };
+		D5EEF959178F3B560030E723 /* DisplayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EEF958178F3B550030E723 /* DisplayTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,10 @@
 		D5C915EC17820D5D003939D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5C915EE17820D5D003939D1 /* NewCalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewCalculatorTests.h; sourceTree = "<group>"; };
 		D5C915EF17820D5D003939D1 /* NewCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewCalculatorTests.m; sourceTree = "<group>"; };
+		D5EEF953178F3B3F0030E723 /* Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Display.h; sourceTree = "<group>"; };
+		D5EEF954178F3B3F0030E723 /* Display.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Display.m; sourceTree = "<group>"; };
+		D5EEF957178F3B550030E723 /* DisplayTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayTest.h; sourceTree = "<group>"; };
+		D5EEF958178F3B550030E723 /* DisplayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +139,8 @@
 				D5C915D917820D5D003939D1 /* ViewController.h */,
 				D5C915DA17820D5D003939D1 /* ViewController.m */,
 				D5C915C517820D5D003939D1 /* Supporting Files */,
+				D5EEF953178F3B3F0030E723 /* Display.h */,
+				D5EEF954178F3B3F0030E723 /* Display.m */,
 			);
 			path = NewCalculator;
 			sourceTree = "<group>";
@@ -158,6 +167,8 @@
 				D5C915E917820D5D003939D1 /* Supporting Files */,
 				D5A66DEC17835D2C00D9062F /* MathOperatorTest.h */,
 				D5A66DED17835D2C00D9062F /* MathOperatorTest.m */,
+				D5EEF957178F3B550030E723 /* DisplayTest.h */,
+				D5EEF958178F3B550030E723 /* DisplayTest.m */,
 			);
 			path = NewCalculatorTests;
 			sourceTree = "<group>";
@@ -285,6 +296,7 @@
 				D5C915CF17820D5D003939D1 /* AppDelegate.m in Sources */,
 				D5C915DB17820D5D003939D1 /* ViewController.m in Sources */,
 				D5A66DEA1782EA8E00D9062F /* MathOperator.m in Sources */,
+				D5EEF955178F3B3F0030E723 /* Display.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +307,8 @@
 				D5C915F017820D5D003939D1 /* NewCalculatorTests.m in Sources */,
 				D5A66DEB1782EA8E00D9062F /* MathOperator.m in Sources */,
 				D5A66DEE17835D2C00D9062F /* MathOperatorTest.m in Sources */,
+				D5EEF956178F3B3F0030E723 /* Display.m in Sources */,
+				D5EEF959178F3B560030E723 /* DisplayTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
