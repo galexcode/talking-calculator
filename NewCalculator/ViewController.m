@@ -132,7 +132,7 @@
     [self updateDisplay];
 }
 
-- (IBAction)eqaulsPressed:(UIButton *)sender
+- (IBAction)equalsPressed:(UIButton *)sender
 {
     [self turnOffHighlightButton:nil];
     if ([self hasOperator]) {

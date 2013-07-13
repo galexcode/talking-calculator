@@ -65,6 +65,7 @@
     [display setValueWithNumber:[NSNumber numberWithInt:1000000000]];
     
     STAssertEqualObjects([display valueAsString], @"1 000 000 000", @"");
+    STAssertEqualObjects([display valueAsNumber], [NSNumber numberWithInt:1000000000], @"");
 }
 
 - (void)testAddingADigitShouldPutItAtTheEndOfTheCurrentValue
