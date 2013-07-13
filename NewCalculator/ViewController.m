@@ -66,7 +66,7 @@
 
 - (NSNumber *)getDisplayValue
 {
-    return [self.displayModel valueAsNumber];
+    return [NSNumber numberWithDouble:[self.display.text doubleValue]];
 }
 
 - (void)disableOperator:(NSNotification *)notification

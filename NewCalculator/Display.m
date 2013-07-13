@@ -11,14 +11,12 @@
 @interface Display()
 
 @property (strong, nonatomic) NSString *value;
-@property BOOL newEntry;
 
 @end
 
 @implementation Display
 
 @synthesize value = _value;
-@synthesize newEntry = _newEntry;
 
 - (NSString *)value
 {
@@ -61,11 +59,6 @@
 
 - (void)addDigitWithString:(NSString *)digit
 {
-    if (self.newEntry == YES) {
-        self.value = @"0";
-        self.newEntry = NO;
-    }
-    
     if ([self.value isEqualToString:@"0"]) {
         self.value = digit;
     } else {
@@ -80,7 +73,7 @@
 
 - (void)beginNewEntry
 {
-    self.newEntry = YES;
+    self.value = @"0";
 }
 
 @end
