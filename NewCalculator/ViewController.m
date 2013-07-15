@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSNumber *previousValue;
 @property (strong, nonatomic) Display *displayModel;
 @property (strong, nonatomic) MathOperator *operator;
+@property (nonatomic) BOOL isAlpha;
 
 @end
 
@@ -25,6 +26,7 @@
 @synthesize displayModel = _displayModel;
 @synthesize operator = _operator;
 @synthesize operatorButton = _operatorButton;
+@synthesize isAlpha = _isAlpha;
 
 - (void)viewDidLoad
 {
@@ -35,8 +37,15 @@
     UISwipeGestureRecognizer *oneFingerSwipeRight = [[UISwipeGestureRecognizer alloc]
                                                      initWithTarget:self
                                                      action:@selector(undoEntry)];
+    UISwipeGestureRecognizer *oneFingerSwipeLeft = [[UISwipeGestureRecognizer alloc]
+                                                     initWithTarget:self
+                                                     action:@selector(clear)];
+    
     [oneFingerSwipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    [oneFingerSwipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    
     [[self view] addGestureRecognizer:oneFingerSwipeRight];
+    [[self view] addGestureRecognizer:oneFingerSwipeLeft];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,11 +83,74 @@
     [self performSelector:@selector(turnOffHighlightButton:) withObject:nil afterDelay:0.0];
 }
 
-- (IBAction)digitPressed:(UIButton *)sender
+- (IBAction)onePressed:(UIButton *)sender
+{
+    [self digitPressed:@"1"];
+}
+
+- (IBAction)twoPressed:(UIButton *)sender
+{
+    [self digitPressed:@"2"];
+}
+
+- (IBAction)threePressed:(UIButton *)sender
+{
+    [self digitPressed:@"3"];
+}
+
+- (IBAction)fourPressed:(UIButton *)sender
+{
+    [self digitPressed:@"4"];
+}
+- (IBAction)fivePressed:(UIButton *)sender
+{
+    [self digitPressed:@"5"];
+}
+- (IBAction)sixPressed:(UIButton *)sender
+{
+    [self digitPressed:@"6"];
+}
+- (IBAction)sevenPressed:(UIButton *)sender
+{
+    [self digitPressed:@"7"];
+}
+- (IBAction)eightPressed:(UIButton *)sender
+{
+    [self digitPressed:@"8"];
+}
+- (IBAction)ninePressed:(UIButton *)sender
+{
+    [self digitPressed:@"9"];
+}
+- (IBAction)zeroPressed:(UIButton *)sender
+{
+    [self digitPressed:@"0"];
+}
+
+- (IBAction)plusPressed:(UIButton *)sender
+{
+    [self operatorPressed:sender withOperator:[[AddOperator alloc] init]];
+}
+
+- (IBAction)minusPressed:(UIButton *)sender
+{
+    [self operatorPressed:sender withOperator:[[SubOperator alloc] init]];
+}
+
+- (IBAction)multiplyPressed:(UIButton *)sender;
+{
+    [self operatorPressed:sender withOperator:[[MulOperator alloc] init]];
+}
+
+- (IBAction)dividePressed:(UIButton *)sender
+{
+    [self operatorPressed:sender withOperator:[[DivOperator alloc] init]];
+}
+
+- (void)digitPressed:(NSString *)digit
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"DigitPressed" object:nil];
     
-    NSString *digit = [sender currentTitle];
     [self addDigit:digit];
 }
 
@@ -100,7 +172,7 @@
     [self performSelector:@selector(highlightButton:) withObject:nil afterDelay:0.0];
 }
 
-- (IBAction)operatorPressed:(UIButton *)sender
+- (void)operatorPressed:(UIButton *)sender withOperator:(MathOperator *)operator
 {
     [self highlightOperatorButton:sender];
 
@@ -108,7 +180,7 @@
         [self performOperation:self.previousValue withRhs:[self getDisplayValue]];
     }
     
-    self.operator = [MathOperator createWithString:[self.operatorButton  currentTitle]];
+    self.operator = operator;
     self.previousValue = [self getDisplayValue];
     [self.displayModel beginNewEntry];
 }
@@ -147,6 +219,45 @@
     self.operator = NULL;
     [self.displayModel setValueWithNumber:self.previousValue];
     [self updateDisplay];
+}
+
+- (void)clear
+{
+    self.operator = NULL;
+    self.displayModel = [[Display alloc] init];
+    [self turnOffHighlightButton:self.operatorButton];
+    self.operatorButton = nil;
+    [self updateDisplay];
+}
+
+// For shake recognizer
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake) {
+        NSString *selector = nil;
+        if (self.isAlpha) {
+            selector = @"Numeric";
+        } else {
+            selector = @"Alpha";
+        }
+        [self performSegueWithIdentifier:selector sender:self];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"Alpha"]) {
+        ViewController *vc = [segue destinationViewController];
+        vc.isAlpha = YES;
+    } else if ([[segue identifier] isEqualToString:@"Numeric"]) {
+        ViewController *vc = [segue destinationViewController];
+        vc.isAlpha = NO;
+    }
 }
 
 @end

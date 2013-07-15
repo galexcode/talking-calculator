@@ -12,8 +12,21 @@
 @property (weak, nonatomic) IBOutlet UILabel *display;
 @property (weak, nonatomic) IBOutlet UIButton *operatorButton;
 
-- (IBAction)digitPressed:(UIButton *)sender;
-- (IBAction)operatorPressed:(UIButton *)sender;
 - (IBAction)equalsPressed:(UIButton *)sender;
 
+- (IBAction)onePressed:(UIButton *)sender;
+- (IBAction)twoPressed:(UIButton *)sender;
+- (IBAction)threePressed:(UIButton *)sender;
+- (IBAction)fourPressed:(UIButton *)sender;
+- (IBAction)fivePressed:(UIButton *)sender;
+- (IBAction)sixPressed:(UIButton *)sender;
+- (IBAction)sevenPressed:(UIButton *)sender;
+- (IBAction)eightPressed:(UIButton *)sender;
+- (IBAction)ninePressed:(UIButton *)sender;
+- (IBAction)zeroPressed:(UIButton *)sender;
+
+- (IBAction)plusPressed:(UIButton *)sender;
+- (IBAction)minusPressed:(UIButton *)sender;
+- (IBAction)multiplyPressed:(UIButton *)sender;
+- (IBAction)dividePressed:(UIButton *)sender;
 @end
