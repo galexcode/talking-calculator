@@ -11,10 +11,19 @@
 
 @implementation AudioPlayerMock
 
-- (NSString *)playAudio:(id)player
+@synthesize playedFiles = _playedFiles;
+
+- (NSArray *)playedFiles
+{
+    if (_playedFiles == nil) {
+        _playedFiles = [[NSMutableArray alloc] init];
+    }
+    return _playedFiles;
+}
+- (void)playAudio:(id)player numberOfTimes:(int)n
 {
     AVAudioPlayer *audioPlayer = player;
-    return [audioPlayer.url relativeString];
+    [self.playedFiles addObject:[audioPlayer.url relativeString]];
 }
 
 @end

@@ -15,10 +15,10 @@
 @interface AudioPlayer : NSObject
 
 - (void)addAudioFile:(NSString *)audioFile withKey:(NSString *)key;
-- (NSString *)playAudioWithKeyAsync:(StringRepeated *)key;
-- (NSString *)playAudioWithKey:(StringRepeated *)key;
-- (NSArray *)playAudioQueueWithKeys:(RepeatedStrings *)keys inBackground:(BOOL)async;
-- (NSString *)playAudio:(id)player;
+- (void)playAudioWithKeyAsync:(StringRepeated *)key;
+- (void)playAudioWithKey:(StringRepeated *)key;
+- (void)playAudioQueueWithKeys:(RepeatedStrings *)keys inBackground:(BOOL)async;
+- (void)playAudio:(id)player;
 - (void)abortQueue;
 
 @end

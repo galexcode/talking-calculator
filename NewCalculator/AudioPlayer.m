@@ -86,17 +86,16 @@
     [player play];
 }
 
-- (NSString *)playAudio:(id)player
+- (void)playAudio:(id)player
 {
-    return [self playAudio:player numberOfTimes:1];
+    [self playAudio:player numberOfTimes:1];
 }
 
-- (NSString *)playAudio:(id)player numberOfTimes:(int)nbrTimes
+- (void)playAudio:(id)player numberOfTimes:(int)nbrTimes
 {
     AVAudioPlayer *audioPlayer = player;
     [self resetPlayer:player withNumberOfLoops:nbrTimes];
     [audioPlayer play];
-    return nil;
 }
 
 - (AVAudioPlayer *)getPlayerForKey:(NSString *)key
@@ -109,35 +108,31 @@
     return player;
 }
 
-- (NSString *)playAudioWithKeyAsync:(StringRepeated *)key
+- (void)playAudioWithKeyAsync:(StringRepeated *)key
 {
     [self abortQueue];
     
     AsyncPlay *play = [[AsyncPlay alloc] initWithAudioPlayer:self andRepeatedKey:key];
     [self.queue addOperation:play];
-    return nil;
 }
 
-- (NSString *)playAudioWithKey:(StringRepeated *)key
+- (void)playAudioWithKey:(StringRepeated *)key
 {
     AVAudioPlayer *player = [self getPlayerForKey:key.value];
     [self playAudio:player numberOfTimes:key.repeated];
     while ([player isPlaying]) {
         sleep(0.1);
     }
-    return nil;
 }
 
-- (NSArray *)playAudioQueueWithKeys:(RepeatedStrings *)keys inBackground:(BOOL)async
+- (void)playAudioQueueWithKeys:(RepeatedStrings *)keys inBackground:(BOOL)async
 {
     AsyncAudioPlayer *ap = [[AsyncAudioPlayer alloc] initWithAudioPlayer:self andKeys:keys];
     if (async) {
         [self.queue addOperation:ap];
-        return nil;
     } else {
         NSArray *array = [[NSArray alloc] initWithObjects:ap, nil];
         [self.queue addOperations:array waitUntilFinished:YES];
-        return nil;
     }
 }
 

@@ -264,7 +264,6 @@
     
     [self.displayModel beginNewEntry];
     
-    //NSArray *resultArray = [self.displayModel valueAsArrayOfStrings];
     RepeatedStrings *resultArray = [self.displayModel valueAsArrayOfRepeatedStrings];
     [self sayResult:resultArray];
 }

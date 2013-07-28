@@ -10,4 +10,6 @@
 
 @interface AudioPlayerMock : AudioPlayer
 
+@property (strong, nonatomic) NSMutableArray *playedFiles;
+
 @end
