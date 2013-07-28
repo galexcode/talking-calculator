@@ -54,11 +54,7 @@ AudioPlayerMock *player;
 - (void)testPlayingAKeyThatDoesNotExistShouldReturnNil
 {
     StringRepeated *sr = [[StringRepeated alloc] initWithString:@"incorrect_key"];
-    [self.player playAudioWithKeyAsync:sr];
-    
-    // TODO
-    NSString *filePlayed = self.player.playedFiles[0];
-    STAssertTrue(filePlayed == nil, @"");
+    STAssertThrowsSpecific([self.player playAudioWithKey:sr], MissingAudioKeyException, @"");
 }
 
 - (void)testWhenPlayingAKeyTheCorrespondingFileShouldBePlayed
@@ -67,9 +63,8 @@ AudioPlayerMock *player;
     [self.player addAudioFile:filename withKey:@"two"];
     
     StringRepeated *key = [[StringRepeated alloc] initWithString:@"two"];
-    [self.player playAudioWithKeyAsync:key];
+    [self.player playAudioWithKey:key];
     
-    // TODO
     NSString *filePlayed = self.player.playedFiles[0];
     STAssertTrue(filePlayed != nil, @"");
     BOOL found = [filePlayed rangeOfString:filename].location != NSNotFound;
