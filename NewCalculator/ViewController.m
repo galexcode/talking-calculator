@@ -195,8 +195,7 @@
     
     if (self.speechIsActivated) {
         [self.audioPlayer abortQueue];
-        //[self.audioPlayer playAudioWithKey:digit];
-        [self.audioPlayer playAudioWithKey:[[StringRepeated alloc] initWithString:digit]];
+        [self.audioPlayer playAudioWithKeyAsync:[[StringRepeated alloc] initWithString:digit]];
     }
 }
 
@@ -252,7 +251,7 @@
 
 - (void)sayResult:(RepeatedStrings *)result
 {
-    [self.audioPlayer playAudioQueueWithKeys2:result inBackground:YES];
+    [self.audioPlayer playAudioQueueWithKeys:result inBackground:YES];
 }
 
 - (IBAction)equalsPressed:(UIButton *)sender

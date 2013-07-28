@@ -15,10 +15,9 @@
 @interface AudioPlayer : NSObject
 
 - (void)addAudioFile:(NSString *)audioFile withKey:(NSString *)key;
+- (NSString *)playAudioWithKeyAsync:(StringRepeated *)key;
 - (NSString *)playAudioWithKey:(StringRepeated *)key;
-- (NSString *)playAudioWithRepeatedKey:(StringRepeated *)key;
-- (NSArray *)playAudioQueueWithKeys:(NSArray *)keys inBackground:(BOOL)async;
-- (NSArray *)playAudioQueueWithKeys2:(RepeatedStrings *)keys inBackground:(BOOL)async;
+- (NSArray *)playAudioQueueWithKeys:(RepeatedStrings *)keys inBackground:(BOOL)async;
 - (NSString *)playAudio:(id)player;
 - (void)abortQueue;
 
@@ -31,10 +30,8 @@
 @interface AsyncAudioPlayer : NSOperation
 
 @property (strong) AudioPlayer *audioPlayer;
-@property (strong) NSArray *keys;
-@property (strong) RepeatedStrings *keys2;
--(id)initWithAudioPlayer:(AudioPlayer *)player andKeys:(NSArray *)keys;
--(id)initWithAudioPlayer:(AudioPlayer *)player andKeys2:(RepeatedStrings *)keys;
+@property (strong) RepeatedStrings *keys;
+-(id)initWithAudioPlayer:(AudioPlayer *)player andKeys:(RepeatedStrings *)keys;
 
 @end
 
