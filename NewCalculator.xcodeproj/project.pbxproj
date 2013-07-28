@@ -7,9 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D541314817A1B98400611F30 /* testa.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541314517A1B98400611F30 /* testa.m4a */; };
+		D541314917A1B98400611F30 /* testa.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541314517A1B98400611F30 /* testa.m4a */; };
+		D541314A17A1B98400611F30 /* testb.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541314617A1B98400611F30 /* testb.m4a */; };
+		D541314B17A1B98400611F30 /* testb.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541314617A1B98400611F30 /* testb.m4a */; };
+		D541314C17A1B98400611F30 /* testc.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541314717A1B98400611F30 /* testc.m4a */; };
+		D541314D17A1B98400611F30 /* testc.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541314717A1B98400611F30 /* testc.m4a */; };
+		D541314F17A2FEC000611F30 /* one_swe.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541314E17A2FEC000611F30 /* one_swe.m4a */; };
+		D541315017A2FEC000611F30 /* one_swe.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541314E17A2FEC000611F30 /* one_swe.m4a */; };
+		D541315217A2FF5A00611F30 /* two_swe.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541315117A2FF5A00611F30 /* two_swe.m4a */; };
+		D541315317A2FF5A00611F30 /* two_swe.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541315117A2FF5A00611F30 /* two_swe.m4a */; };
+		D541315617A3BCE000611F30 /* RepeatedStringsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D541315517A3BCE000611F30 /* RepeatedStringsTest.m */; };
+		D541315917A454F900611F30 /* RepeatedStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = D541315817A454F900611F30 /* RepeatedStrings.m */; };
+		D541315A17A454F900611F30 /* RepeatedStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = D541315817A454F900611F30 /* RepeatedStrings.m */; };
+		D570F2E41795775C00572426 /* onebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D570F2E31795775C00572426 /* onebutton.png */; };
+		D570F2EC1797341C00572426 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D570F2EB1797341C00572426 /* AVFoundation.framework */; };
 		D5A66DEA1782EA8E00D9062F /* MathOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A66DE91782EA8E00D9062F /* MathOperator.m */; };
 		D5A66DEB1782EA8E00D9062F /* MathOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A66DE91782EA8E00D9062F /* MathOperator.m */; };
 		D5A66DEE17835D2C00D9062F /* MathOperatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A66DED17835D2C00D9062F /* MathOperatorTest.m */; };
+		D5AECF3217A04C46001C6E55 /* a.b.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5AECF3117A04C46001C6E55 /* a.b.mp3 */; };
+		D5AECF3517A04FCD001C6E55 /* AudioPlayerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AECF3417A04FCD001C6E55 /* AudioPlayerMock.m */; };
 		D5C915BF17820D5D003939D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C915BE17820D5D003939D1 /* UIKit.framework */; };
 		D5C915C117820D5D003939D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C915C017820D5D003939D1 /* Foundation.framework */; };
 		D5C915C317820D5D003939D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C915C217820D5D003939D1 /* CoreGraphics.framework */; };
@@ -26,6 +43,9 @@
 		D5C915E517820D5D003939D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C915C017820D5D003939D1 /* Foundation.framework */; };
 		D5C915ED17820D5D003939D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5C915EB17820D5D003939D1 /* InfoPlist.strings */; };
 		D5C915F017820D5D003939D1 /* NewCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C915EF17820D5D003939D1 /* NewCalculatorTests.m */; };
+		D5E81BEF179F088400BC8659 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E81BEE179F088400BC8659 /* AudioPlayer.m */; };
+		D5E81BF2179F093C00BC8659 /* AudioPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E81BF1179F093C00BC8659 /* AudioPlayerTests.m */; };
+		D5E81BF3179F0A6900BC8659 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D570F2EB1797341C00572426 /* AVFoundation.framework */; };
 		D5EEF955178F3B3F0030E723 /* Display.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EEF954178F3B3F0030E723 /* Display.m */; };
 		D5EEF956178F3B3F0030E723 /* Display.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EEF954178F3B3F0030E723 /* Display.m */; };
 		D5EEF959178F3B560030E723 /* DisplayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EEF958178F3B550030E723 /* DisplayTest.m */; };
@@ -42,10 +62,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D541314517A1B98400611F30 /* testa.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = testa.m4a; sourceTree = "<group>"; };
+		D541314617A1B98400611F30 /* testb.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = testb.m4a; sourceTree = "<group>"; };
+		D541314717A1B98400611F30 /* testc.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = testc.m4a; sourceTree = "<group>"; };
+		D541314E17A2FEC000611F30 /* one_swe.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = one_swe.m4a; sourceTree = "<group>"; };
+		D541315117A2FF5A00611F30 /* two_swe.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = two_swe.m4a; sourceTree = "<group>"; };
+		D541315417A3BCE000611F30 /* RepeatedStringsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatedStringsTest.h; sourceTree = "<group>"; };
+		D541315517A3BCE000611F30 /* RepeatedStringsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatedStringsTest.m; sourceTree = "<group>"; };
+		D541315717A454F900611F30 /* RepeatedStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatedStrings.h; sourceTree = "<group>"; };
+		D541315817A454F900611F30 /* RepeatedStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatedStrings.m; sourceTree = "<group>"; };
+		D570F2E31795775C00572426 /* onebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onebutton.png; sourceTree = "<group>"; };
+		D570F2EB1797341C00572426 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D5A66DE81782EA8E00D9062F /* MathOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathOperator.h; sourceTree = "<group>"; };
 		D5A66DE91782EA8E00D9062F /* MathOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathOperator.m; sourceTree = "<group>"; };
 		D5A66DEC17835D2C00D9062F /* MathOperatorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathOperatorTest.h; sourceTree = "<group>"; };
 		D5A66DED17835D2C00D9062F /* MathOperatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathOperatorTest.m; sourceTree = "<group>"; };
+		D5AECF3117A04C46001C6E55 /* a.b.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a.b.mp3; sourceTree = "<group>"; };
+		D5AECF3317A04FCD001C6E55 /* AudioPlayerMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerMock.h; sourceTree = "<group>"; };
+		D5AECF3417A04FCD001C6E55 /* AudioPlayerMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerMock.m; sourceTree = "<group>"; };
 		D5C915BB17820D5D003939D1 /* NewCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C915BE17820D5D003939D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D5C915C017820D5D003939D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +102,10 @@
 		D5C915EC17820D5D003939D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5C915EE17820D5D003939D1 /* NewCalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewCalculatorTests.h; sourceTree = "<group>"; };
 		D5C915EF17820D5D003939D1 /* NewCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewCalculatorTests.m; sourceTree = "<group>"; };
+		D5E81BED179F088400BC8659 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		D5E81BEE179F088400BC8659 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		D5E81BF0179F093C00BC8659 /* AudioPlayerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerTests.h; sourceTree = "<group>"; };
+		D5E81BF1179F093C00BC8659 /* AudioPlayerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerTests.m; sourceTree = "<group>"; };
 		D5EEF953178F3B3F0030E723 /* Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Display.h; sourceTree = "<group>"; };
 		D5EEF954178F3B3F0030E723 /* Display.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Display.m; sourceTree = "<group>"; };
 		D5EEF957178F3B550030E723 /* DisplayTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayTest.h; sourceTree = "<group>"; };
@@ -79,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D570F2EC1797341C00572426 /* AVFoundation.framework in Frameworks */,
 				D5C915BF17820D5D003939D1 /* UIKit.framework in Frameworks */,
 				D5C915C117820D5D003939D1 /* Foundation.framework in Frameworks */,
 				D5C915C317820D5D003939D1 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E81BF3179F0A6900BC8659 /* AVFoundation.framework in Frameworks */,
 				D5C915E317820D5D003939D1 /* SenTestingKit.framework in Frameworks */,
 				D5C915E417820D5D003939D1 /* UIKit.framework in Frameworks */,
 				D5C915E517820D5D003939D1 /* Foundation.framework in Frameworks */,
@@ -101,6 +141,13 @@
 		D5C915B217820D5D003939D1 = {
 			isa = PBXGroup;
 			children = (
+				D541315117A2FF5A00611F30 /* two_swe.m4a */,
+				D541314E17A2FEC000611F30 /* one_swe.m4a */,
+				D541314517A1B98400611F30 /* testa.m4a */,
+				D541314617A1B98400611F30 /* testb.m4a */,
+				D541314717A1B98400611F30 /* testc.m4a */,
+				D570F2EB1797341C00572426 /* AVFoundation.framework */,
+				D570F2E31795775C00572426 /* onebutton.png */,
 				D5C915C417820D5D003939D1 /* NewCalculator */,
 				D5C915E817820D5D003939D1 /* NewCalculatorTests */,
 				D5C915BD17820D5D003939D1 /* Frameworks */,
@@ -141,6 +188,10 @@
 				D5C915C517820D5D003939D1 /* Supporting Files */,
 				D5EEF953178F3B3F0030E723 /* Display.h */,
 				D5EEF954178F3B3F0030E723 /* Display.m */,
+				D5E81BED179F088400BC8659 /* AudioPlayer.h */,
+				D5E81BEE179F088400BC8659 /* AudioPlayer.m */,
+				D541315717A454F900611F30 /* RepeatedStrings.h */,
+				D541315817A454F900611F30 /* RepeatedStrings.m */,
 			);
 			path = NewCalculator;
 			sourceTree = "<group>";
@@ -162,6 +213,7 @@
 		D5C915E817820D5D003939D1 /* NewCalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				D5AECF3117A04C46001C6E55 /* a.b.mp3 */,
 				D5C915EE17820D5D003939D1 /* NewCalculatorTests.h */,
 				D5C915EF17820D5D003939D1 /* NewCalculatorTests.m */,
 				D5C915E917820D5D003939D1 /* Supporting Files */,
@@ -169,6 +221,12 @@
 				D5A66DED17835D2C00D9062F /* MathOperatorTest.m */,
 				D5EEF957178F3B550030E723 /* DisplayTest.h */,
 				D5EEF958178F3B550030E723 /* DisplayTest.m */,
+				D5E81BF0179F093C00BC8659 /* AudioPlayerTests.h */,
+				D5E81BF1179F093C00BC8659 /* AudioPlayerTests.m */,
+				D5AECF3317A04FCD001C6E55 /* AudioPlayerMock.h */,
+				D5AECF3417A04FCD001C6E55 /* AudioPlayerMock.m */,
+				D541315417A3BCE000611F30 /* RepeatedStringsTest.h */,
+				D541315517A3BCE000611F30 /* RepeatedStringsTest.m */,
 			);
 			path = NewCalculatorTests;
 			sourceTree = "<group>";
@@ -258,6 +316,12 @@
 				D5C915D317820D5D003939D1 /* Default@2x.png in Resources */,
 				D5C915D517820D5D003939D1 /* Default-568h@2x.png in Resources */,
 				D5C915D817820D5D003939D1 /* MainStoryboard.storyboard in Resources */,
+				D570F2E41795775C00572426 /* onebutton.png in Resources */,
+				D541314817A1B98400611F30 /* testa.m4a in Resources */,
+				D541314A17A1B98400611F30 /* testb.m4a in Resources */,
+				D541314C17A1B98400611F30 /* testc.m4a in Resources */,
+				D541314F17A2FEC000611F30 /* one_swe.m4a in Resources */,
+				D541315217A2FF5A00611F30 /* two_swe.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +330,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5C915ED17820D5D003939D1 /* InfoPlist.strings in Resources */,
+				D5AECF3217A04C46001C6E55 /* a.b.mp3 in Resources */,
+				D541314917A1B98400611F30 /* testa.m4a in Resources */,
+				D541314B17A1B98400611F30 /* testb.m4a in Resources */,
+				D541314D17A1B98400611F30 /* testc.m4a in Resources */,
+				D541315017A2FEC000611F30 /* one_swe.m4a in Resources */,
+				D541315317A2FF5A00611F30 /* two_swe.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +367,8 @@
 				D5C915DB17820D5D003939D1 /* ViewController.m in Sources */,
 				D5A66DEA1782EA8E00D9062F /* MathOperator.m in Sources */,
 				D5EEF955178F3B3F0030E723 /* Display.m in Sources */,
+				D5E81BEF179F088400BC8659 /* AudioPlayer.m in Sources */,
+				D541315917A454F900611F30 /* RepeatedStrings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +381,10 @@
 				D5A66DEE17835D2C00D9062F /* MathOperatorTest.m in Sources */,
 				D5EEF956178F3B3F0030E723 /* Display.m in Sources */,
 				D5EEF959178F3B560030E723 /* DisplayTest.m in Sources */,
+				D5E81BF2179F093C00BC8659 /* AudioPlayerTests.m in Sources */,
+				D5AECF3517A04FCD001C6E55 /* AudioPlayerMock.m in Sources */,
+				D541315617A3BCE000611F30 /* RepeatedStringsTest.m in Sources */,
+				D541315A17A454F900611F30 /* RepeatedStrings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

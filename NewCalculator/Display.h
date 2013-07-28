@@ -8,11 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class RepeatedStrings;
+
 @interface Display : NSObject
 
 - (void)setValueWithNumber:(NSNumber *)number;
+
 - (NSNumber *)valueAsNumber;
 - (NSString *)valueAsString;
+- (NSArray *)valueAsArrayOfStrings;
+- (RepeatedStrings *)valueAsArrayOfRepeatedStrings;
+
 - (void)addDigitWithString:(NSString *)digit;
 - (void)addDigitWithInt:(int)digit;
 - (void)beginNewEntry;

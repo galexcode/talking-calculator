@@ -9,13 +9,29 @@
 #import "ViewController.h"
 #import "MathOperator.h"
 #import "Display.h"
+#import "AudioPlayer.h"
+#import "RepeatedStrings.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
+
+#define ONE @"1"
+#define TWO @"2"
+#define THREE @"3"
+#define FOUR @"4"
+#define FIVE @"5"
+#define SIX @"6"
+#define SEVEN @"7"
+#define EIGHT @"8"
+#define NINE @"9"
+#define ZERO @"0"
 
 @property (strong, nonatomic) NSNumber *previousValue;
 @property (strong, nonatomic) Display *displayModel;
 @property (strong, nonatomic) MathOperator *operator;
 @property (nonatomic) BOOL isAlpha;
+@property (strong, nonatomic) AudioPlayer *audioPlayer;
+@property (nonatomic) BOOL speechIsActivated;
 
 @end
 
@@ -27,6 +43,8 @@
 @synthesize operator = _operator;
 @synthesize operatorButton = _operatorButton;
 @synthesize isAlpha = _isAlpha;
+@synthesize audioPlayer = _audioPlayer;
+@synthesize speechIsActivated = _speechIsActivated;
 
 - (void)viewDidLoad
 {
@@ -46,6 +64,28 @@
     
     [[self view] addGestureRecognizer:oneFingerSwipeRight];
     [[self view] addGestureRecognizer:oneFingerSwipeLeft];
+    
+    
+    self.speechIsActivated = YES;
+    
+    [self initAudioPlayer];
+}
+
+- (void)initAudioPlayer
+{
+    if (self.speechIsActivated) {
+        [self.audioPlayer addAudioFile:@"one_swe.m4a" withKey:ONE];
+        [self.audioPlayer addAudioFile:@"two_swe.m4a" withKey:TWO];
+    }
+}
+
+- (AudioPlayer *)audioPlayer
+{
+    if (_audioPlayer == nil) {
+        _audioPlayer =  [[AudioPlayer alloc] init];
+    }
+    
+    return _audioPlayer;
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,46 +125,46 @@
 
 - (IBAction)onePressed:(UIButton *)sender
 {
-    [self digitPressed:@"1"];
+    [self digitPressed:ONE];
 }
 
 - (IBAction)twoPressed:(UIButton *)sender
 {
-    [self digitPressed:@"2"];
+    [self digitPressed:TWO];
 }
 
 - (IBAction)threePressed:(UIButton *)sender
 {
-    [self digitPressed:@"3"];
+    [self digitPressed:THREE];
 }
 
 - (IBAction)fourPressed:(UIButton *)sender
 {
-    [self digitPressed:@"4"];
+    [self digitPressed:FOUR];
 }
 - (IBAction)fivePressed:(UIButton *)sender
 {
-    [self digitPressed:@"5"];
+    [self digitPressed:FIVE];
 }
 - (IBAction)sixPressed:(UIButton *)sender
 {
-    [self digitPressed:@"6"];
+    [self digitPressed:SIX];
 }
 - (IBAction)sevenPressed:(UIButton *)sender
 {
-    [self digitPressed:@"7"];
+    [self digitPressed:SEVEN];
 }
 - (IBAction)eightPressed:(UIButton *)sender
 {
-    [self digitPressed:@"8"];
+    [self digitPressed:EIGHT];
 }
 - (IBAction)ninePressed:(UIButton *)sender
 {
-    [self digitPressed:@"9"];
+    [self digitPressed:NINE];
 }
 - (IBAction)zeroPressed:(UIButton *)sender
 {
-    [self digitPressed:@"0"];
+    [self digitPressed:ZERO];
 }
 
 - (IBAction)plusPressed:(UIButton *)sender
@@ -152,6 +192,12 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"DigitPressed" object:nil];
     
     [self addDigit:digit];
+    
+    if (self.speechIsActivated) {
+        [self.audioPlayer abortQueue];
+        //[self.audioPlayer playAudioWithKey:digit];
+        [self.audioPlayer playAudioWithKey:[[StringRepeated alloc] initWithString:digit]];
+    }
 }
 
 - (void)turnOffHighlightButton:(id)dummy
@@ -204,6 +250,11 @@
     [self updateDisplay];
 }
 
+- (void)sayResult:(RepeatedStrings *)result
+{
+    [self.audioPlayer playAudioQueueWithKeys2:result inBackground:YES];
+}
+
 - (IBAction)equalsPressed:(UIButton *)sender
 {
     [self turnOffHighlightButton:nil];
@@ -211,7 +262,12 @@
         [self performOperation:self.previousValue withRhs:[self getDisplayValue]];
     }
     self.operator = NULL;
+    
     [self.displayModel beginNewEntry];
+    
+    //NSArray *resultArray = [self.displayModel valueAsArrayOfStrings];
+    RepeatedStrings *resultArray = [self.displayModel valueAsArrayOfRepeatedStrings];
+    [self sayResult:resultArray];
 }
 
 - (void)undoEntry

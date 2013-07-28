@@ -60,7 +60,6 @@
 
 - (void)testAValueOf1BillionShouldInclude3Spaces
 {
-    
     Display *display = [[Display alloc] init];
     [display setValueWithNumber:[NSNumber numberWithInt:1000000000]];
     
@@ -124,5 +123,20 @@
     STAssertEqualObjects([display valueAsString], @"2", @"");
 }
 
+- (void)testValuAsArrayOfStringsShouldReturnEachDigitAsAString
+{
+    Display *display = [[Display alloc] init];
+    [display addDigitWithInt:5];
+    [display addDigitWithInt:3];
+    [display addDigitWithInt:4];
+    
+    NSArray *stringArray = [display valueAsArrayOfStrings];
+    
+    STAssertTrue([stringArray count] == 3, @"");
+    STAssertEqualObjects(stringArray[0], @"5", @"");
+    STAssertEqualObjects(stringArray[1], @"3", @"");
+    STAssertEqualObjects(stringArray[2], @"4", @"");
+    
+}
 
 @end

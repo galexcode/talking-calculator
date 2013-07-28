@@ -7,6 +7,7 @@
 //
 
 #import "Display.h"
+#import "RepeatedStrings.h"
 
 @interface Display()
 
@@ -83,4 +84,47 @@
     self.newEntry = YES;
 }
 
+- (void)asArray:(NSString *)string withResult:(NSMutableArray *)result
+{
+    if ([string isEqualToString:@""]) {
+        return;
+    } else {
+        NSString *first = [string substringToIndex:1];
+        [result addObject:first];
+        [self asArray:[string substringFromIndex:1] withResult:result];
+    }
+}
+
+- (NSArray *)valueAsArrayOfStrings
+{
+    NSString *string = [[self valueAsNumber] stringValue];
+    
+    NSMutableArray *stringArray = [[NSMutableArray alloc] initWithCapacity:[string length]];
+    
+    [self asArray:string withResult:stringArray];
+    return stringArray;
+}
+
++ (RepeatedStrings *)valueAsArrayOfRepeatedStringsImpl:(NSString *)value withResult:(RepeatedStrings *)result
+{
+    if ([value isEqualToString:@""]) {
+        return result;
+    }
+    
+    NSString *first = [value substringToIndex:1];
+    NSString *rest = [value substringFromIndex:1];
+    
+    [result addString:first];
+    return [self valueAsArrayOfRepeatedStringsImpl:rest withResult:result];
+}
+
+- (RepeatedStrings *)valueAsArrayOfRepeatedStrings
+{
+    NSString *valueAsString = [[self valueAsNumber] stringValue];
+    RepeatedStrings*result = [[RepeatedStrings alloc] init];
+    
+    return [Display valueAsArrayOfRepeatedStringsImpl:valueAsString withResult:result];
+}
+
 @end
+
