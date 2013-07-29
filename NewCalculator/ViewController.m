@@ -32,7 +32,8 @@
 @property (strong, nonatomic) MathOperator *operator;
 @property (nonatomic) BOOL isAlpha;
 @property (strong, nonatomic) AudioPlayer *audioPlayer;
-@property (nonatomic) BOOL speechIsActivated;
+@property (nonatomic) BOOL buttonSpeechIsActivated;
+@property (nonatomic) BOOL resultSpeechIsActivated;
 
 @end
 
@@ -45,7 +46,8 @@
 @synthesize operatorButton = _operatorButton;
 @synthesize isAlpha = _isAlpha;
 @synthesize audioPlayer = _audioPlayer;
-@synthesize speechIsActivated = _speechIsActivated;
+@synthesize buttonSpeechIsActivated = _buttonSpeechIsActivated;
+@synthesize resultSpeechIsActivated = _resultSpeechIsActivated;
 
 - (void)viewDidLoad
 {
@@ -65,24 +67,29 @@
     
     [[self view] addGestureRecognizer:oneFingerSwipeRight];
     [[self view] addGestureRecognizer:oneFingerSwipeLeft];
-    
-    self.speechIsActivated = YES;
-    
-    [self initAudioPlayer];
+}
+
+- (BOOL)buttonSpeechIsActivated
+{
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"buttonSpeechActivated"];
+}
+
+- (BOOL)resultSpeechIsActivated
+{
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"resultSpeechActivated"];
 }
 
 - (void)initAudioPlayer
 {
-    if (self.speechIsActivated) {
-        [self.audioPlayer addAudioFile:@"one_swe.m4a" withKey:ONE];
-        [self.audioPlayer addAudioFile:@"two_swe.m4a" withKey:TWO];
-    }
+    [_audioPlayer addAudioFile:@"one_swe.m4a" withKey:ONE];
+    [_audioPlayer addAudioFile:@"two_swe.m4a" withKey:TWO];
 }
 
 - (AudioPlayer *)audioPlayer
 {
     if (_audioPlayer == nil) {
         _audioPlayer =  [[AudioPlayer alloc] init];
+        [self initAudioPlayer];
     }
     
     return _audioPlayer;
@@ -193,7 +200,7 @@
     
     [self addDigit:digit];
     
-    if (self.speechIsActivated) {
+    if (self.buttonSpeechIsActivated) {
         [self.audioPlayer abortQueue];
         [self.audioPlayer playAudioWithKeyAsync:[[StringRepeated alloc] initWithString:digit]];
     }
@@ -264,16 +271,16 @@
     
     [self.displayModel beginNewEntry];
     
+    if (self.resultSpeechIsActivated) {
     RepeatedStrings *resultArray = [self.displayModel valueAsArrayOfRepeatedStrings];
-    [self sayResult:resultArray];
+        [self sayResult:resultArray];
+    }
 }
 
 - (IBAction)settingsPressed {
     UIViewController * controller = [[self storyboard] instantiateViewControllerWithIdentifier: @"Apa"];
     
     [self.navigationController pushViewController:controller animated:YES];
-    //[[self navigationController] popToViewController:controller animated:YES];
-    //[self performSegueWithIdentifier:@"NumericToSettings" sender:self];
 }
 
 - (void)undoEntry
@@ -305,7 +312,12 @@
         if (self.isAlpha) {
             selector = @"Numeric";
         } else {
-            selector = @"Alpha";
+            int lang = [[NSUserDefaults standardUserDefaults] integerForKey:@"Language"];
+            if (lang == 0) {
+                selector = @"AlphabeticSwe";
+            } else {
+                selector = @"Alpha";
+            }
         }
         [self performSegueWithIdentifier:selector sender:self];
     }
@@ -313,10 +325,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"Alpha"]) {
+    NSString *identifier = [segue identifier];
+    if ([identifier isEqualToString:@"Alpha"] || [identifier isEqualToString:@"AlphabeticSwe"]) {
         ViewController *vc = [segue destinationViewController];
         vc.isAlpha = YES;
-    } else if ([[segue identifier] isEqualToString:@"Numeric"]) {
+    } else if ([identifier isEqualToString:@"Numeric"]) {
         ViewController *vc = [segue destinationViewController];
         vc.isAlpha = NO;
     }

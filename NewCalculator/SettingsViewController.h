@@ -10,5 +10,11 @@
 
 @interface SettingsViewController : UITableViewController
 - (IBAction)backPressed:(id)sender;
+- (IBAction)buttonSpeechSwitched:(UISwitch *)sender;
+- (IBAction)resultSpeechSwitched:(UISwitch *)sender;
+- (IBAction)languageChanged:(UISegmentedControl *)sender;
 
+@property (weak, nonatomic) IBOutlet UISwitch *buttonSpeechSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *resultSpeechSwitch;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *LanguageControl;
 @end

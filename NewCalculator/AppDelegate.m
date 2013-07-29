@@ -13,6 +13,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"buttonSpeechActivated"];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"resultSpeechActivated"];
     return YES;
 }
 							
