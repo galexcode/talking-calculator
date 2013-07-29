@@ -11,6 +11,7 @@
 #import "Display.h"
 #import "AudioPlayer.h"
 #import "RepeatedStrings.h"
+#import "SettingsViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
@@ -265,6 +266,14 @@
     
     RepeatedStrings *resultArray = [self.displayModel valueAsArrayOfRepeatedStrings];
     [self sayResult:resultArray];
+}
+
+- (IBAction)settingsPressed {
+    UIViewController * controller = [[self storyboard] instantiateViewControllerWithIdentifier: @"Apa"];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+    //[[self navigationController] popToViewController:controller animated:YES];
+    //[self performSegueWithIdentifier:@"NumericToSettings" sender:self];
 }
 
 - (void)undoEntry

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UITableViewController
+- (IBAction)backPressed:(id)sender;
 
 @end

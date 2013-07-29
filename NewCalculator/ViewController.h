@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *operatorButton;
 
 - (IBAction)equalsPressed:(UIButton *)sender;
+- (IBAction)settingsPressed;
 
 - (IBAction)onePressed:(UIButton *)sender;
 - (IBAction)twoPressed:(UIButton *)sender;
