@@ -65,7 +65,6 @@
     [[self view] addGestureRecognizer:oneFingerSwipeRight];
     [[self view] addGestureRecognizer:oneFingerSwipeLeft];
     
-    
     self.speechIsActivated = YES;
     
     [self initAudioPlayer];

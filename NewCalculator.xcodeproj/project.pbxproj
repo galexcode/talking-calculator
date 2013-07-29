@@ -20,6 +20,8 @@
 		D541315617A3BCE000611F30 /* RepeatedStringsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D541315517A3BCE000611F30 /* RepeatedStringsTest.m */; };
 		D541315917A454F900611F30 /* RepeatedStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = D541315817A454F900611F30 /* RepeatedStrings.m */; };
 		D541315A17A454F900611F30 /* RepeatedStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = D541315817A454F900611F30 /* RepeatedStrings.m */; };
+		D541315D17A5ACED00611F30 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D541315C17A5ACED00611F30 /* SettingsViewController.m */; };
+		D541315E17A5ACED00611F30 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D541315C17A5ACED00611F30 /* SettingsViewController.m */; };
 		D570F2E41795775C00572426 /* onebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D570F2E31795775C00572426 /* onebutton.png */; };
 		D570F2EC1797341C00572426 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D570F2EB1797341C00572426 /* AVFoundation.framework */; };
 		D5A66DEA1782EA8E00D9062F /* MathOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A66DE91782EA8E00D9062F /* MathOperator.m */; };
@@ -71,6 +73,8 @@
 		D541315517A3BCE000611F30 /* RepeatedStringsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatedStringsTest.m; sourceTree = "<group>"; };
 		D541315717A454F900611F30 /* RepeatedStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatedStrings.h; sourceTree = "<group>"; };
 		D541315817A454F900611F30 /* RepeatedStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatedStrings.m; sourceTree = "<group>"; };
+		D541315B17A5ACED00611F30 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		D541315C17A5ACED00611F30 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D570F2E31795775C00572426 /* onebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onebutton.png; sourceTree = "<group>"; };
 		D570F2EB1797341C00572426 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D5A66DE81782EA8E00D9062F /* MathOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathOperator.h; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 				D5E81BEE179F088400BC8659 /* AudioPlayer.m */,
 				D541315717A454F900611F30 /* RepeatedStrings.h */,
 				D541315817A454F900611F30 /* RepeatedStrings.m */,
+				D541315B17A5ACED00611F30 /* SettingsViewController.h */,
+				D541315C17A5ACED00611F30 /* SettingsViewController.m */,
 			);
 			path = NewCalculator;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 				D5EEF955178F3B3F0030E723 /* Display.m in Sources */,
 				D5E81BEF179F088400BC8659 /* AudioPlayer.m in Sources */,
 				D541315917A454F900611F30 /* RepeatedStrings.m in Sources */,
+				D541315D17A5ACED00611F30 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +392,7 @@
 				D5AECF3517A04FCD001C6E55 /* AudioPlayerMock.m in Sources */,
 				D541315617A3BCE000611F30 /* RepeatedStringsTest.m in Sources */,
 				D541315A17A454F900611F30 /* RepeatedStrings.m in Sources */,
+				D541315E17A5ACED00611F30 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
