@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "ViewController.h"
 
 @interface SettingsViewController ()
 
@@ -56,6 +57,37 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+- (BOOL)previousControllerIsTextual
+{
+    NSArray *viewControllers = [self.navigationController viewControllers];
+    ViewController *previousController = [viewControllers objectAtIndex:(viewControllers.count - 2)];
+    return previousController.isAlpha == YES;
+}
+
+- (void)replaceStackWithCorrectLanguageCalculatorWithIndex:(int)index
+{
+    NSArray *viewControllers = [self.navigationController viewControllers];
+    NSMutableArray *vcnew = [[NSMutableArray alloc] initWithArray:viewControllers];
+    
+    UIViewController *settingsController = vcnew[(vcnew.count - 1)];
+    [vcnew removeLastObject];
+    [vcnew removeLastObject];
+    
+    NSString *viewControllerName = nil;
+    if (index == 0) {
+        viewControllerName = @"AlphabeticCalculatorSwe";
+    } else {
+        viewControllerName = @"AlphabeticCalculator";
+    }
+    ViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:viewControllerName];
+    viewController.isAlpha = YES;
+    
+    [vcnew addObject:viewController];
+    [vcnew addObject:settingsController];
+    
+    [self.navigationController setViewControllers:vcnew animated:NO];
+}
+
 - (IBAction)languageChanged:(UISegmentedControl *)sender {
     int selectedIndex = [sender selectedSegmentIndex];
     if (selectedIndex != 0 && selectedIndex != 1) {
@@ -64,5 +96,9 @@
     
     [[NSUserDefaults standardUserDefaults] setInteger:selectedIndex forKey:@"Language"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    if ([self previousControllerIsTextual]) {
+        [self replaceStackWithCorrectLanguageCalculatorWithIndex:selectedIndex];
+    }
 }
 @end

@@ -30,7 +30,6 @@
 @property (strong, nonatomic) NSNumber *previousValue;
 @property (strong, nonatomic) Display *displayModel;
 @property (strong, nonatomic) MathOperator *operator;
-@property (nonatomic) BOOL isAlpha;
 @property (strong, nonatomic) AudioPlayer *audioPlayer;
 @property (nonatomic) BOOL buttonSpeechIsActivated;
 @property (nonatomic) BOOL resultSpeechIsActivated;
