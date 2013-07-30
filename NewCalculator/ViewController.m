@@ -91,8 +91,6 @@
 
 - (void)initAudioPlayer
 {
-    _audioPlayer =  [[AudioPlayer alloc] init];
-    
     int lang = [[NSUserDefaults standardUserDefaults] integerForKey:@"Language"];
     self.language = lang;
     
@@ -103,54 +101,42 @@
     }
 }
 
-- (void)initAudioPlayerSwe
+- (void)initAudioPlayerWithFileNames:(NSArray *)filenames
 {
-    // Digits
-    [_audioPlayer addAudioFile:@"one_swe.m4a" withKey:ONE];
-    [_audioPlayer addAudioFile:@"two_swe.m4a" withKey:TWO];
-    [_audioPlayer addAudioFile:@"three_swe.m4a" withKey:THREE];
-    [_audioPlayer addAudioFile:@"four_swe.m4a" withKey:FOUR];
-    [_audioPlayer addAudioFile:@"five_swe.m4a" withKey:FIVE];
-    [_audioPlayer addAudioFile:@"six_swe.m4a" withKey:SIX];
-    [_audioPlayer addAudioFile:@"seven_swe.m4a" withKey:SEVEN];
-    [_audioPlayer addAudioFile:@"eight_swe.m4a" withKey:EIGHT];
-    [_audioPlayer addAudioFile:@"nine_swe.m4a" withKey:NINE];
-    [_audioPlayer addAudioFile:@"zero_swe.m4a" withKey:ZERO];
+    _audioPlayer =  [[AudioPlayer alloc] init];
+    
+    [_audioPlayer addAudioFile:filenames[0] withKey:ONE];
+    [_audioPlayer addAudioFile:filenames[1] withKey:TWO];
+    [_audioPlayer addAudioFile:filenames[2] withKey:THREE];
+    [_audioPlayer addAudioFile:filenames[3] withKey:FOUR];
+    [_audioPlayer addAudioFile:filenames[4] withKey:FIVE];
+    [_audioPlayer addAudioFile:filenames[5] withKey:SIX];
+    [_audioPlayer addAudioFile:filenames[6] withKey:SEVEN];
+    [_audioPlayer addAudioFile:filenames[7] withKey:EIGHT];
+    [_audioPlayer addAudioFile:filenames[8] withKey:NINE];
+    [_audioPlayer addAudioFile:filenames[9] withKey:ZERO];
     
     // Operators
-    [_audioPlayer addAudioFile:@"mul_swe.m4a" withKey:MUL];
-    [_audioPlayer addAudioFile:@"div_swe.m4a" withKey:DIV];
-    [_audioPlayer addAudioFile:@"plus_swe.m4a" withKey:PLUS];
-    [_audioPlayer addAudioFile:@"minus_swe.m4a" withKey:MINUS];
+    [_audioPlayer addAudioFile:filenames[10] withKey:MUL];
+    [_audioPlayer addAudioFile:filenames[11] withKey:DIV];
+    [_audioPlayer addAudioFile:filenames[12] withKey:PLUS];
+    [_audioPlayer addAudioFile:filenames[13] withKey:MINUS];
     
     
-    [_audioPlayer addAudioFile:@"equal_swe.m4a" withKey:EQUAL];
-    [_audioPlayer addAudioFile:@"dot_swe.m4a" withKey:DOT];
+    [_audioPlayer addAudioFile:filenames[14] withKey:EQUAL];
+    [_audioPlayer addAudioFile:filenames[15] withKey:DOT];
+}
+
+- (void)initAudioPlayerSwe
+{
+    NSArray *files = [[NSArray alloc] initWithObjects:@"one_swe.m4a", @"two_swe.m4a", @"three_swe.m4a", @"four_swe.m4a", @"five_swe.m4a", @"six_swe.m4a", @"seven_swe.m4a", @"eight_swe.m4a", @"nine_swe.m4a", @"zero_swe.m4a", @"mul_swe.m4a", @"div_swe.m4a", @"plus_swe.m4a", @"minus_swe.m4a", @"equal_swe.m4a", @"dot_swe.m4a", nil];
+    [self initAudioPlayerWithFileNames:files];
 }
 
 - (void)initAudioPlayerEn
 {
-    // Digits
-    [_audioPlayer addAudioFile:@"one_en.m4a" withKey:ONE];
-    [_audioPlayer addAudioFile:@"two_en.m4a" withKey:TWO];
-    [_audioPlayer addAudioFile:@"three_en.m4a" withKey:THREE];
-    [_audioPlayer addAudioFile:@"four_en.m4a" withKey:FOUR];
-    [_audioPlayer addAudioFile:@"five_en.m4a" withKey:FIVE];
-    [_audioPlayer addAudioFile:@"six_en.m4a" withKey:SIX];
-    [_audioPlayer addAudioFile:@"seven_en.m4a" withKey:SEVEN];
-    [_audioPlayer addAudioFile:@"eight_en.m4a" withKey:EIGHT];
-    [_audioPlayer addAudioFile:@"nine_en.m4a" withKey:NINE];
-    [_audioPlayer addAudioFile:@"zero_en.m4a" withKey:ZERO];
-    
-    // Operators
-    [_audioPlayer addAudioFile:@"mul_en.m4a" withKey:MUL];
-    [_audioPlayer addAudioFile:@"div_en.m4a" withKey:DIV];
-    [_audioPlayer addAudioFile:@"plus_en.m4a" withKey:PLUS];
-    [_audioPlayer addAudioFile:@"minus_en.m4a" withKey:MINUS];
-    
-    
-    [_audioPlayer addAudioFile:@"equal_en.m4a" withKey:EQUAL];
-    [_audioPlayer addAudioFile:@"dot_en.m4a" withKey:DOT];
+    NSArray *files = [[NSArray alloc] initWithObjects:@"one_en.m4a", @"two_en.m4a", @"three_en.m4a", @"four_en.m4a", @"five_en.m4a", @"six_en.m4a", @"seven_en.m4a", @"eight_en.m4a", @"nine_en.m4a", @"zero_en.m4a", @"mul_en.m4a", @"div_en.m4a", @"plus_en.m4a", @"minus_en.m4a", @"equal_en.m4a", @"dot_en.m4a", nil];
+    [self initAudioPlayerWithFileNames:files];
 }
 
 - (AudioPlayer *)audioPlayer
