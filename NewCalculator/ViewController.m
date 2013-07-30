@@ -42,6 +42,7 @@
 @property (strong, nonatomic) AudioPlayer *audioPlayer;
 @property (nonatomic) BOOL buttonSpeechIsActivated;
 @property (nonatomic) BOOL resultSpeechIsActivated;
+@property (nonatomic) int language;
 
 @end
 
@@ -56,6 +57,7 @@
 @synthesize audioPlayer = _audioPlayer;
 @synthesize buttonSpeechIsActivated = _buttonSpeechIsActivated;
 @synthesize resultSpeechIsActivated = _resultSpeechIsActivated;
+@synthesize language = _language;
 
 - (void)viewDidLoad
 {
@@ -89,6 +91,20 @@
 
 - (void)initAudioPlayer
 {
+    _audioPlayer =  [[AudioPlayer alloc] init];
+    
+    int lang = [[NSUserDefaults standardUserDefaults] integerForKey:@"Language"];
+    self.language = lang;
+    
+    if (lang == 0) {
+        [self initAudioPlayerSwe];
+    } else if (lang == 1) {
+        [self initAudioPlayerEn];
+    }
+}
+
+- (void)initAudioPlayerSwe
+{
     // Digits
     [_audioPlayer addAudioFile:@"one_swe.m4a" withKey:ONE];
     [_audioPlayer addAudioFile:@"two_swe.m4a" withKey:TWO];
@@ -112,10 +128,37 @@
     [_audioPlayer addAudioFile:@"dot_swe.m4a" withKey:DOT];
 }
 
+- (void)initAudioPlayerEn
+{
+    // Digits
+    [_audioPlayer addAudioFile:@"one_en.m4a" withKey:ONE];
+    [_audioPlayer addAudioFile:@"two_en.m4a" withKey:TWO];
+    [_audioPlayer addAudioFile:@"three_en.m4a" withKey:THREE];
+    [_audioPlayer addAudioFile:@"four_en.m4a" withKey:FOUR];
+    [_audioPlayer addAudioFile:@"five_en.m4a" withKey:FIVE];
+    [_audioPlayer addAudioFile:@"six_en.m4a" withKey:SIX];
+    [_audioPlayer addAudioFile:@"seven_en.m4a" withKey:SEVEN];
+    [_audioPlayer addAudioFile:@"eight_en.m4a" withKey:EIGHT];
+    [_audioPlayer addAudioFile:@"nine_en.m4a" withKey:NINE];
+    [_audioPlayer addAudioFile:@"zero_en.m4a" withKey:ZERO];
+    
+    // Operators
+    [_audioPlayer addAudioFile:@"mul_en.m4a" withKey:MUL];
+    [_audioPlayer addAudioFile:@"div_en.m4a" withKey:DIV];
+    [_audioPlayer addAudioFile:@"plus_en.m4a" withKey:PLUS];
+    [_audioPlayer addAudioFile:@"minus_en.m4a" withKey:MINUS];
+    
+    
+    [_audioPlayer addAudioFile:@"equal_en.m4a" withKey:EQUAL];
+    [_audioPlayer addAudioFile:@"dot_en.m4a" withKey:DOT];
+}
+
 - (AudioPlayer *)audioPlayer
 {
     if (_audioPlayer == nil) {
-        _audioPlayer =  [[AudioPlayer alloc] init];
+        [self initAudioPlayer];
+    } else if (self.language != [[NSUserDefaults standardUserDefaults] integerForKey:@"Language"]) {
+        _audioPlayer = [[AudioPlayer alloc] init];
         [self initAudioPlayer];
     }
     
