@@ -18,6 +18,7 @@
 - (NSString *)valueAsString;
 - (NSArray *)valueAsArrayOfStrings;
 - (RepeatedStrings *)valueAsArrayOfRepeatedStrings;
+- (RepeatedStrings *)valueAsArrayOfRepeatedStringsWithString:(NSString *)preString;
 
 - (void)addDigitWithString:(NSString *)digit;
 - (void)addDigitWithInt:(int)digit;

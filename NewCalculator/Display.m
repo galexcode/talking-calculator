@@ -120,7 +120,12 @@
 
 - (RepeatedStrings *)valueAsArrayOfRepeatedStrings
 {
-    NSString *valueAsString = [[self valueAsNumber] stringValue];
+    return [self valueAsArrayOfRepeatedStringsWithString:@""];
+}
+
+- (RepeatedStrings *)valueAsArrayOfRepeatedStringsWithString:(NSString *)preString
+{
+    NSString *valueAsString = [preString stringByAppendingString:[[self valueAsNumber] stringValue]];
     RepeatedStrings*result = [[RepeatedStrings alloc] init];
     
     return [Display valueAsArrayOfRepeatedStringsImpl:valueAsString withResult:result];

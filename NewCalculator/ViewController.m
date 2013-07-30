@@ -27,6 +27,15 @@
 #define NINE @"9"
 #define ZERO @"0"
 
+#define MUL @"*"
+#define DIV @"/"
+#define PLUS @"+"
+#define MINUS @"-"
+
+#define EQUAL @"="
+
+#define DOT @"."
+
 @property (strong, nonatomic) NSNumber *previousValue;
 @property (strong, nonatomic) Display *displayModel;
 @property (strong, nonatomic) MathOperator *operator;
@@ -80,8 +89,27 @@
 
 - (void)initAudioPlayer
 {
+    // Digits
     [_audioPlayer addAudioFile:@"one_swe.m4a" withKey:ONE];
     [_audioPlayer addAudioFile:@"two_swe.m4a" withKey:TWO];
+    [_audioPlayer addAudioFile:@"three_swe.m4a" withKey:THREE];
+    [_audioPlayer addAudioFile:@"four_swe.m4a" withKey:FOUR];
+    [_audioPlayer addAudioFile:@"five_swe.m4a" withKey:FIVE];
+    [_audioPlayer addAudioFile:@"six_swe.m4a" withKey:SIX];
+    [_audioPlayer addAudioFile:@"seven_swe.m4a" withKey:SEVEN];
+    [_audioPlayer addAudioFile:@"eight_swe.m4a" withKey:EIGHT];
+    [_audioPlayer addAudioFile:@"nine_swe.m4a" withKey:NINE];
+    [_audioPlayer addAudioFile:@"zero_swe.m4a" withKey:ZERO];
+    
+    // Operators
+    [_audioPlayer addAudioFile:@"mul_swe.m4a" withKey:MUL];
+    [_audioPlayer addAudioFile:@"div_swe.m4a" withKey:DIV];
+    [_audioPlayer addAudioFile:@"plus_swe.m4a" withKey:PLUS];
+    [_audioPlayer addAudioFile:@"minus_swe.m4a" withKey:MINUS];
+    
+    
+    [_audioPlayer addAudioFile:@"equal_swe.m4a" withKey:EQUAL];
+    [_audioPlayer addAudioFile:@"dot_swe.m4a" withKey:DOT];
 }
 
 - (AudioPlayer *)audioPlayer
@@ -175,22 +203,22 @@
 
 - (IBAction)plusPressed:(UIButton *)sender
 {
-    [self operatorPressed:sender withOperator:[[AddOperator alloc] init]];
+    [self operatorPressed:sender withOperator:PLUS];
 }
 
 - (IBAction)minusPressed:(UIButton *)sender
 {
-    [self operatorPressed:sender withOperator:[[SubOperator alloc] init]];
+    [self operatorPressed:sender withOperator:MINUS];
 }
 
 - (IBAction)multiplyPressed:(UIButton *)sender;
 {
-    [self operatorPressed:sender withOperator:[[MulOperator alloc] init]];
+    [self operatorPressed:sender withOperator:MUL];
 }
 
 - (IBAction)dividePressed:(UIButton *)sender
 {
-    [self operatorPressed:sender withOperator:[[DivOperator alloc] init]];
+    [self operatorPressed:sender withOperator:DIV];
 }
 
 - (void)digitPressed:(NSString *)digit
@@ -223,15 +251,18 @@
     [self performSelector:@selector(highlightButton:) withObject:nil afterDelay:0.0];
 }
 
-- (void)operatorPressed:(UIButton *)sender withOperator:(MathOperator *)operator
+- (void)operatorPressed:(UIButton *)sender withOperator:(NSString *)operator
 {
     [self highlightOperatorButton:sender];
+    if (self.buttonSpeechIsActivated) {
+        [self.audioPlayer playAudioWithKeyAsync:[[StringRepeated alloc] initWithString:operator]];
+    }
 
     if ([self hasOperator]) {
         [self performOperation:self.previousValue withRhs:[self getDisplayValue]];
     }
     
-    self.operator = operator;
+    self.operator = [MathOperator createWithString:operator];
     self.previousValue = [self getDisplayValue];
     [self.displayModel beginNewEntry];
 }
@@ -271,7 +302,7 @@
     [self.displayModel beginNewEntry];
     
     if (self.resultSpeechIsActivated) {
-    RepeatedStrings *resultArray = [self.displayModel valueAsArrayOfRepeatedStrings];
+        RepeatedStrings *resultArray = [self.displayModel valueAsArrayOfRepeatedStringsWithString:EQUAL];
         [self sayResult:resultArray];
     }
 }
