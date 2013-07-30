@@ -82,7 +82,6 @@
 		D54131B917A7EF5600611F30 /* zero_en.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541317C17A7EF5400611F30 /* zero_en.m4a */; };
 		D54131BA17A7EF5600611F30 /* zero_swe.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541317D17A7EF5600611F30 /* zero_swe.m4a */; };
 		D54131BB17A7EF5600611F30 /* zero_swe.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D541317D17A7EF5600611F30 /* zero_swe.m4a */; };
-		D570F2E41795775C00572426 /* onebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D570F2E31795775C00572426 /* onebutton.png */; };
 		D570F2EC1797341C00572426 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D570F2EB1797341C00572426 /* AVFoundation.framework */; };
 		D5A66DEA1782EA8E00D9062F /* MathOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A66DE91782EA8E00D9062F /* MathOperator.m */; };
 		D5A66DEB1782EA8E00D9062F /* MathOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A66DE91782EA8E00D9062F /* MathOperator.m */; };
@@ -165,7 +164,6 @@
 		D541317B17A7EF5400611F30 /* two_en.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = two_en.m4a; sourceTree = "<group>"; };
 		D541317C17A7EF5400611F30 /* zero_en.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = zero_en.m4a; sourceTree = "<group>"; };
 		D541317D17A7EF5600611F30 /* zero_swe.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = zero_swe.m4a; sourceTree = "<group>"; };
-		D570F2E31795775C00572426 /* onebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onebutton.png; sourceTree = "<group>"; };
 		D570F2EB1797341C00572426 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D5A66DE81782EA8E00D9062F /* MathOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathOperator.h; sourceTree = "<group>"; };
 		D5A66DE91782EA8E00D9062F /* MathOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathOperator.m; sourceTree = "<group>"; };
@@ -232,7 +230,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D5C915B217820D5D003939D1 = {
+		D54131BC17A8252300611F30 /* AudioFiles */ = {
 			isa = PBXGroup;
 			children = (
 				D541315F17A7EF4F00611F30 /* div_en.m4a */,
@@ -270,8 +268,15 @@
 				D541314517A1B98400611F30 /* testa.m4a */,
 				D541314617A1B98400611F30 /* testb.m4a */,
 				D541314717A1B98400611F30 /* testc.m4a */,
+			);
+			name = AudioFiles;
+			sourceTree = "<group>";
+		};
+		D5C915B217820D5D003939D1 = {
+			isa = PBXGroup;
+			children = (
+				D54131BC17A8252300611F30 /* AudioFiles */,
 				D570F2EB1797341C00572426 /* AVFoundation.framework */,
-				D570F2E31795775C00572426 /* onebutton.png */,
 				D5C915C417820D5D003939D1 /* NewCalculator */,
 				D5C915E817820D5D003939D1 /* NewCalculatorTests */,
 				D5C915BD17820D5D003939D1 /* Frameworks */,
@@ -442,7 +447,6 @@
 				D5C915D317820D5D003939D1 /* Default@2x.png in Resources */,
 				D5C915D517820D5D003939D1 /* Default-568h@2x.png in Resources */,
 				D5C915D817820D5D003939D1 /* MainStoryboard.storyboard in Resources */,
-				D570F2E41795775C00572426 /* onebutton.png in Resources */,
 				D541314817A1B98400611F30 /* testa.m4a in Resources */,
 				D541314A17A1B98400611F30 /* testb.m4a in Resources */,
 				D541314C17A1B98400611F30 /* testc.m4a in Resources */,
