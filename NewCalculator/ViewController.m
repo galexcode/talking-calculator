@@ -308,30 +308,21 @@
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     if (motion == UIEventSubtypeMotionShake) {
-        NSString *selector = nil;
+        NSString *viewControllerName = nil;
         if (self.isAlpha) {
-            selector = @"Numeric";
+            // Uses the fact the numeric calculator is the root view.
+            [self.navigationController popViewControllerAnimated:YES];
         } else {
             int lang = [[NSUserDefaults standardUserDefaults] integerForKey:@"Language"];
             if (lang == 0) {
-                selector = @"AlphabeticSwe";
+                viewControllerName = @"AlphabeticCalculatorSwe";
             } else {
-                selector = @"Alpha";
+                viewControllerName = @"AlphabeticCalculator";
             }
+            ViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:viewControllerName];
+            viewController.isAlpha = YES;
+            [self.navigationController pushViewController:viewController animated:YES];
         }
-        [self performSegueWithIdentifier:selector sender:self];
-    }
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSString *identifier = [segue identifier];
-    if ([identifier isEqualToString:@"Alpha"] || [identifier isEqualToString:@"AlphabeticSwe"]) {
-        ViewController *vc = [segue destinationViewController];
-        vc.isAlpha = YES;
-    } else if ([identifier isEqualToString:@"Numeric"]) {
-        ViewController *vc = [segue destinationViewController];
-        vc.isAlpha = NO;
     }
 }
 
