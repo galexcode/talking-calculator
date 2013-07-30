@@ -17,7 +17,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Settings" id="E6Y-H5-EM0">
-                                    <barButtonItem key="leftBarButtonItem" title="Back" id="nxJ-tQ-R1N">
+                                    <barButtonItem key="leftBarButtonItem" title="Done" id="nxJ-tQ-R1N">
                                         <connections>
                                             <action selector="backPressed:" destination="6Vd-Fr-45V" id="3fr-3v-621"/>
                                         </connections>
