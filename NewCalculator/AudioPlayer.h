@@ -12,7 +12,9 @@
 @class RepeatedStrings;
 @class StringRepeated;
 
-@interface AudioPlayer : NSObject
+@interface AudioPlayer : NSObject<AVAudioPlayerDelegate>
+
+@property (atomic) BOOL isPlaying;
 
 - (void)addAudioFile:(NSString *)audioFile withKey:(NSString *)key;
 - (void)playAudioWithKeyAsync:(StringRepeated *)key;
@@ -20,6 +22,7 @@
 - (void)playAudioQueueWithKeys:(RepeatedStrings *)keys inBackground:(BOOL)async;
 - (void)playAudio:(id)player;
 - (void)abortQueue;
+- (void)stopPlayerWithKey:(NSString *)key;
 
 @end
 
@@ -35,7 +38,7 @@
 
 @end
 
-@interface AsyncPlay : AsyncAudioPlayer
+@interface AsyncPlay : NSOperation
 
 -(id)initWithAudioPlayer:(AudioPlayer *)player andRepeatedKey:(StringRepeated *)repeatedString;
 @end

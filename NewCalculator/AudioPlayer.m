@@ -72,6 +72,7 @@
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
     
     AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    [audioPlayer setDelegate:self];
     [self.audioPlayerDict setObject:audioPlayer forKey:key];
 }
 
@@ -83,7 +84,7 @@
     [player setCurrentTime:(player.duration + player.duration)];
     [player setNumberOfLoops:(nbrOfLoops + 1)];
     [player prepareToPlay];
-    [player play];
+    [player setDelegate:self];
 }
 
 - (void)playAudio:(id)player
@@ -96,6 +97,7 @@
     AVAudioPlayer *audioPlayer = player;
     [self resetPlayer:player withNumberOfLoops:nbrTimes];
     [audioPlayer play];
+    self.isPlaying = YES;
 }
 
 - (AVAudioPlayer *)getPlayerForKey:(NSString *)key
@@ -120,9 +122,6 @@
 {
     AVAudioPlayer *player = [self getPlayerForKey:key.value];
     [self playAudio:player numberOfTimes:key.repeated];
-    while ([player isPlaying]) {
-        sleep(0.1);
-    }
 }
 
 - (void)playAudioQueueWithKeys:(RepeatedStrings *)keys inBackground:(BOOL)async
@@ -136,10 +135,22 @@
     }
 }
 
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    self.isPlaying = NO;
+}
+
 - (void)abortQueue
 {
     [self.queue cancelAllOperations];
 }
+
+- (void)stopPlayerWithKey:(NSString *)key
+{
+    AVAudioPlayer *player = [self getPlayerForKey:key];
+    [player stop];
+}
+
 
 @end
 
@@ -164,10 +175,17 @@
     @try {
         while ([self.keys hasNext]) {
             BOOL isDone = NO;
+            StringRepeated *key = [self.keys nextString];
             while (![self isCancelled] && !isDone) {
-                StringRepeated *key = [self.keys nextString];
                 [self.audioPlayer playAudioWithKey:key];
+                while (!self.isCancelled && self.audioPlayer.isPlaying) {
+                    sleep(0.05);
+                }
                 isDone = YES;
+            }
+            
+            if (self.isCancelled) {
+                [self.audioPlayer stopPlayerWithKey:key.value];
             }
         }
     }
@@ -180,12 +198,14 @@
 @interface AsyncPlay()
 
 @property (strong, nonatomic) StringRepeated *repeatedString;
+@property (strong, nonatomic) AudioPlayer *audioPlayer;
 
 @end
 
 @implementation AsyncPlay
 
 @synthesize repeatedString = _repeatedString;
+@synthesize audioPlayer = _audioPlayer;
 
 
 -(id)initWithAudioPlayer:(AudioPlayer *)player andRepeatedKey:(StringRepeated *)repeatedString
