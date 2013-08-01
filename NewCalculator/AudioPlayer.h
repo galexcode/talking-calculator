@@ -22,7 +22,7 @@
 - (void)playAudioQueueWithKeys:(RepeatedStrings *)keys inBackground:(BOOL)async;
 - (void)playAudio:(id)player;
 - (void)abortQueue;
-- (void)stopPlayerWithKey:(NSString *)key;
+- (void)stop;
 
 @end
 

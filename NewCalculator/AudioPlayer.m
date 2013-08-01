@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) NSMutableDictionary *audioPlayerDict;
 @property (strong, nonatomic) NSOperationQueue *queue;
+@property (strong, nonatomic) RepeatedStrings *keys;
+@property (strong, nonatomic) NSString *lastKey;
 @end
 
 @implementation AudioPlayer
@@ -107,6 +109,7 @@
         [MissingAudioKeyException raise:key format:@"Key does not exist"];
     }
     
+    self.lastKey = key;
     return player;
 }
 
@@ -135,9 +138,19 @@
     }
 }
 
+- (void)playSequence:(RepeatedStrings *)keys
+{
+    self.keys = keys;
+    [self playAudioWithKey:[self.keys nextString]];
+}
+
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
-    self.isPlaying = NO;
+    if ([self.keys hasNext]) {
+        [self playAudioWithKey:[self.keys nextString]];
+    } else {
+        self.isPlaying = NO;
+    }
 }
 
 - (void)abortQueue
@@ -151,6 +164,11 @@
     [player stop];
 }
 
+- (void)stop
+{
+    self.keys = nil;
+    [self stopPlayerWithKey:self.lastKey];
+}
 
 @end
 
@@ -173,20 +191,11 @@
 }
 -(void)main {
     @try {
-        while ([self.keys hasNext]) {
-            BOOL isDone = NO;
-            StringRepeated *key = [self.keys nextString];
-            while (![self isCancelled] && !isDone) {
-                [self.audioPlayer playAudioWithKey:key];
-                while (!self.isCancelled && self.audioPlayer.isPlaying) {
-                    sleep(0.05);
-                }
-                isDone = YES;
-            }
-            
-            if (self.isCancelled) {
-                [self.audioPlayer stopPlayerWithKey:key.value];
-            }
+        [self.audioPlayer playSequence:self.keys];
+        while (!self.isCancelled && [self.audioPlayer isPlaying]) {}
+        
+        if (self.isCancelled) {
+            [self.audioPlayer stop];
         }
     }
     @catch(...) {
@@ -219,11 +228,7 @@
 
 -(void)main {
     @try {
-        BOOL isDone = NO;
-        while (![self isCancelled] && !isDone) {
-            [self.audioPlayer playAudioWithKey:self.repeatedString];
-            isDone = YES;
-        }
+        [self.audioPlayer playAudioWithKey:self.repeatedString];
     }
     @catch(...) {
         // Do not rethrow exceptions.
