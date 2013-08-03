@@ -8,11 +8,11 @@
         <scene sceneID="19f-d1-QWp">
             <objects>
                 <tableViewController storyboardIdentifier="Apa" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Vd-Fr-45V" customClass="SettingsViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="Language" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="7A3-Ih-8s6">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="Language" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="static" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="7A3-Ih-8s6">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="qup-ZV-1M1">
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" barStyle="blackOpaque" id="qup-ZV-1M1">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
@@ -230,8 +230,8 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="UvJ-0T-fEW">
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="7va-1G-usA"/>
                                     <constraint firstAttribute="width" constant="271" id="Oog-ko-2X0"/>
-                                    <constraint firstAttribute="height" constant="58" id="d6Z-Qd-dDY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -239,9 +239,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-JN-zwb" customClass="LeopardButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="f3t-wV-tXP"/>
+                                    <constraint firstAttribute="height" constant="59" id="Md5-3q-Ggm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="7">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -254,10 +254,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOF-4H-mK4" customClass="LeopardButton">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="87" id="UxK-sF-kaY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="8">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -270,10 +267,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmO-w0-SfL" customClass="LeopardButton">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="2WZ-EC-rZf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="9">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -287,9 +281,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXD-Qa-dBs" customClass="LeopardButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="uhR-8Q-KPZ"/>
+                                    <constraint firstAttribute="height" constant="58" id="Mun-Dh-HJe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="4">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -302,7 +296,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95L-vX-MFL" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="5">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,7 +309,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wF-Yy-eiE" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="8Kz-rs-3Ne"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="6">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -328,7 +325,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gw-Yn-FDd" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="1">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -342,9 +339,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saT-Kp-Hw5" customClass="LeopardButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="vgF-eM-Ftk"/>
+                                    <constraint firstAttribute="width" constant="87" id="hKJ-Nz-D3f"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="2">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -357,7 +354,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-2k-Sgh" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="0">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -370,7 +367,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4r-rl-Gsl" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Rsf-Qb-Twt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="3">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -383,7 +383,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMe-S4-qtd" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -399,7 +399,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="JmO-W3-Z0M"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="-">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -415,7 +415,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="kDT-Mz-gb8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="*">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -429,9 +429,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsA-ir-PVU" customClass="LeopardButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="3Cx-lK-RNN"/>
+                                    <constraint firstAttribute="height" constant="56" id="7eL-Xb-07K"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="=">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -444,7 +444,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkb-4n-XqW" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="/">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -474,60 +474,59 @@
                         <constraints>
                             <constraint firstItem="6gw-Yn-FDd" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="07k-Mo-9uE"/>
                             <constraint firstItem="QsA-ir-PVU" firstAttribute="leading" secondItem="I4r-rl-Gsl" secondAttribute="leading" type="default" id="1de-IL-9Ik"/>
+                            <constraint firstItem="95L-vX-MFL" firstAttribute="top" secondItem="AOF-4H-mK4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1eC-zO-tIw"/>
                             <constraint firstItem="7k4-JN-zwb" firstAttribute="top" secondItem="UvJ-0T-fEW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4I6-rQ-WJA"/>
                             <constraint firstItem="IpW-HL-8vK" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9jw-g1-Zjs"/>
                             <constraint firstItem="IpW-HL-8vK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="A7W-Up-51k"/>
                             <constraint firstItem="95L-vX-MFL" firstAttribute="leading" secondItem="AXD-Qa-dBs" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="AXT-eT-Hvh"/>
                             <constraint firstItem="xkb-4n-XqW" firstAttribute="top" secondItem="QsA-ir-PVU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Bab-V3-YgM"/>
                             <constraint firstItem="UvJ-0T-fEW" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Bew-Mh-OhB"/>
+                            <constraint firstItem="I4r-rl-Gsl" firstAttribute="baseline" secondItem="saT-Kp-Hw5" secondAttribute="baseline" type="default" id="C33-kN-i7N"/>
                             <constraint firstItem="UvJ-0T-fEW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="C9r-WD-bcv"/>
-                            <constraint firstItem="XmO-w0-SfL" firstAttribute="top" secondItem="UvJ-0T-fEW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CSk-VD-Gy8"/>
-                            <constraint firstItem="95L-vX-MFL" firstAttribute="top" secondItem="AOF-4H-mK4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="D83-uW-zYo"/>
                             <constraint firstItem="4wF-Yy-eiE" firstAttribute="trailing" secondItem="I4r-rl-Gsl" secondAttribute="trailing" type="default" id="Dkj-qj-Efh"/>
-                            <constraint firstItem="4wF-Yy-eiE" firstAttribute="top" secondItem="XmO-w0-SfL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="GQQ-xR-qh7"/>
+                            <constraint firstItem="saT-Kp-Hw5" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="GdZ-gS-Gzm"/>
                             <constraint firstItem="95L-vX-MFL" firstAttribute="leading" secondItem="AOF-4H-mK4" secondAttribute="leading" type="default" id="Gp7-xl-lhE"/>
                             <constraint firstItem="kiR-Yo-Od4" firstAttribute="leading" secondItem="0g8-2k-Sgh" secondAttribute="leading" type="default" id="HUT-lm-WZE"/>
                             <constraint firstItem="4wF-Yy-eiE" firstAttribute="leading" secondItem="95L-vX-MFL" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="LOT-zn-3BM"/>
-                            <constraint firstItem="kiR-Yo-Od4" firstAttribute="top" secondItem="OVp-9R-dTm" secondAttribute="top" type="default" id="Lwr-TP-h2M"/>
                             <constraint firstItem="0g8-2k-Sgh" firstAttribute="top" secondItem="saT-Kp-Hw5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MKC-DB-YJA"/>
-                            <constraint firstItem="95L-vX-MFL" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="MOG-76-etP"/>
-                            <constraint firstItem="gMe-S4-qtd" firstAttribute="top" secondItem="6gw-Yn-FDd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Mjg-UO-eB3"/>
                             <constraint firstItem="kiR-Yo-Od4" firstAttribute="leading" secondItem="OVp-9R-dTm" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Qbl-kB-lfz"/>
-                            <constraint firstItem="I4r-rl-Gsl" firstAttribute="top" secondItem="4wF-Yy-eiE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Qp0-9s-tEI"/>
-                            <constraint firstItem="saT-Kp-Hw5" firstAttribute="top" secondItem="95L-vX-MFL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Qq2-Gg-hkM"/>
                             <constraint firstItem="4wF-Yy-eiE" firstAttribute="leading" secondItem="XmO-w0-SfL" secondAttribute="leading" type="default" id="S6g-BA-Je1"/>
+                            <constraint firstItem="95L-vX-MFL" firstAttribute="centerY" secondItem="AXD-Qa-dBs" secondAttribute="centerY" type="default" id="Ses-CI-Hri"/>
                             <constraint firstItem="xkb-4n-XqW" firstAttribute="leading" secondItem="QsA-ir-PVU" secondAttribute="leading" type="default" id="Slp-20-N5v"/>
-                            <constraint firstItem="95L-vX-MFL" firstAttribute="centerY" secondItem="AXD-Qa-dBs" secondAttribute="centerY" type="default" id="Uvo-lR-gg8"/>
                             <constraint firstItem="0g8-2k-Sgh" firstAttribute="leading" secondItem="gMe-S4-qtd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Vco-GI-3G2"/>
                             <constraint firstItem="kiR-Yo-Od4" firstAttribute="bottom" secondItem="OVp-9R-dTm" secondAttribute="bottom" type="default" id="Xbw-s8-JZr"/>
-                            <constraint firstItem="0g8-2k-Sgh" firstAttribute="top" secondItem="gMe-S4-qtd" secondAttribute="top" type="default" id="ZGH-KJ-2wB"/>
-                            <constraint firstItem="I4r-rl-Gsl" firstAttribute="centerY" secondItem="saT-Kp-Hw5" secondAttribute="centerY" type="default" id="ZYf-Xp-DHK"/>
                             <constraint firstItem="saT-Kp-Hw5" firstAttribute="top" secondItem="I4r-rl-Gsl" secondAttribute="top" type="default" id="ZiM-3R-vE9"/>
                             <constraint firstItem="7k4-JN-zwb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="a8N-vR-5P2"/>
-                            <constraint firstItem="gMe-S4-qtd" firstAttribute="baseline" secondItem="QsA-ir-PVU" secondAttribute="baseline" type="default" id="aSg-dg-ZCw"/>
+                            <constraint firstItem="XmO-w0-SfL" firstAttribute="top" secondItem="UvJ-0T-fEW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aVM-y0-Yj6"/>
                             <constraint firstItem="saT-Kp-Hw5" firstAttribute="leading" secondItem="6gw-Yn-FDd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="avR-s2-At8"/>
                             <constraint firstItem="QsA-ir-PVU" firstAttribute="leading" secondItem="0g8-2k-Sgh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="bhD-Jv-Ky6"/>
                             <constraint firstItem="4wF-Yy-eiE" firstAttribute="trailing" secondItem="XmO-w0-SfL" secondAttribute="trailing" type="default" id="bmD-nK-ZrH"/>
                             <constraint firstItem="AXD-Qa-dBs" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ceH-Uf-ZBv"/>
                             <constraint firstItem="XmO-w0-SfL" firstAttribute="leading" secondItem="AOF-4H-mK4" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="clW-yO-hyU"/>
+                            <constraint firstItem="4wF-Yy-eiE" firstAttribute="top" secondItem="XmO-w0-SfL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="d2w-Ky-jUH"/>
                             <constraint firstItem="OVp-9R-dTm" firstAttribute="top" secondItem="gMe-S4-qtd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dHM-E0-2Jm"/>
                             <constraint firstItem="I4r-rl-Gsl" firstAttribute="leading" secondItem="saT-Kp-Hw5" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="dMS-oi-Ipq"/>
                             <constraint firstItem="0g8-2k-Sgh" firstAttribute="leading" secondItem="saT-Kp-Hw5" secondAttribute="leading" type="default" id="dvN-4y-UTl"/>
                             <constraint firstItem="xkb-4n-XqW" firstAttribute="trailing" secondItem="QsA-ir-PVU" secondAttribute="trailing" type="default" id="eCJ-Tr-Vnp"/>
+                            <constraint firstItem="gMe-S4-qtd" firstAttribute="top" secondItem="6gw-Yn-FDd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ehJ-TQ-dN8"/>
                             <constraint firstItem="AXD-Qa-dBs" firstAttribute="top" secondItem="7k4-JN-zwb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eww-45-34q"/>
                             <constraint firstItem="xkb-4n-XqW" firstAttribute="bottom" secondItem="kiR-Yo-Od4" secondAttribute="bottom" type="default" id="gQv-w5-wda"/>
                             <constraint firstItem="I4r-rl-Gsl" firstAttribute="trailing" secondItem="QsA-ir-PVU" secondAttribute="trailing" type="default" id="gxx-u6-Xyr"/>
                             <constraint firstItem="saT-Kp-Hw5" firstAttribute="leading" secondItem="95L-vX-MFL" secondAttribute="leading" type="default" id="h2b-8Q-nrz"/>
+                            <constraint firstItem="OVp-9R-dTm" firstAttribute="top" secondItem="kiR-Yo-Od4" secondAttribute="top" type="default" id="jbM-yI-L4N"/>
                             <constraint firstItem="QsA-ir-PVU" firstAttribute="top" secondItem="I4r-rl-Gsl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mfY-pf-IWk"/>
                             <constraint firstItem="AOF-4H-mK4" firstAttribute="leading" secondItem="7k4-JN-zwb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="n0g-mn-KXA"/>
-                            <constraint firstItem="kiR-Yo-Od4" firstAttribute="top" secondItem="0g8-2k-Sgh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nqL-dH-rpu"/>
-                            <constraint firstItem="XmO-w0-SfL" firstAttribute="baseline" secondItem="AOF-4H-mK4" secondAttribute="baseline" type="default" id="oOL-gm-aHM"/>
+                            <constraint firstItem="saT-Kp-Hw5" firstAttribute="top" secondItem="95L-vX-MFL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ozC-Jl-wen"/>
                             <constraint firstItem="AOF-4H-mK4" firstAttribute="top" secondItem="UvJ-0T-fEW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pdK-rv-oFP"/>
+                            <constraint firstItem="I4r-rl-Gsl" firstAttribute="top" secondItem="4wF-Yy-eiE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="psV-Do-vlS"/>
+                            <constraint firstItem="kiR-Yo-Od4" firstAttribute="top" secondItem="0g8-2k-Sgh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="suf-w6-M3v"/>
                             <constraint firstItem="gMe-S4-qtd" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uT6-R4-h6a"/>
                             <constraint firstItem="6gw-Yn-FDd" firstAttribute="top" secondItem="AXD-Qa-dBs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uZL-mV-6ij"/>
+                            <constraint firstItem="0g8-2k-Sgh" firstAttribute="baseline" secondItem="gMe-S4-qtd" secondAttribute="baseline" type="default" id="vYk-Fx-CsI"/>
                             <constraint firstItem="95L-vX-MFL" firstAttribute="top" secondItem="AXD-Qa-dBs" secondAttribute="top" type="default" id="va6-7i-ajE"/>
                             <constraint firstItem="OVp-9R-dTm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vkA-Qt-OBe"/>
                             <constraint firstItem="I4r-rl-Gsl" firstAttribute="leading" secondItem="4wF-Yy-eiE" secondAttribute="leading" type="default" id="xcM-YP-baU"/>
+                            <constraint firstItem="4wF-Yy-eiE" firstAttribute="baseline" secondItem="95L-vX-MFL" secondAttribute="baseline" type="default" id="yRj-p4-iM1"/>
                             <constraint firstItem="xkb-4n-XqW" firstAttribute="top" secondItem="kiR-Yo-Od4" secondAttribute="top" type="default" id="yg4-CH-JfG"/>
                         </constraints>
                     </view>
@@ -556,7 +555,7 @@
                                     <constraint firstAttribute="width" constant="271" id="vRI-0i-RdW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                <color key="textColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X82-Qw-7dd" customClass="LeopardButton">
@@ -564,7 +563,7 @@
                                     <constraint firstAttribute="width" constant="88" id="R8d-wS-Ik5"/>
                                     <constraint firstAttribute="height" constant="57" id="dWf-fg-KTl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="seven">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -577,7 +576,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kx-hC-pdh" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="eight">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -593,7 +592,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="Ish-oS-L7o"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="nine">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -609,7 +608,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="0VR-y1-FdE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="four">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -622,7 +621,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-dm-IZ4" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="five">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -635,7 +634,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNJ-2T-BpC" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="six">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -651,7 +650,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="GbX-6Y-akG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="one">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -664,7 +663,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pl4-e0-tKt" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="two">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -677,7 +676,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wP9-le-UUI" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="zero">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -690,7 +689,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A17-I4-x6m" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="three">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -706,7 +705,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="LBn-OD-TIT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="plus">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -722,7 +721,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="Xmb-Xv-QaM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="minus">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -735,7 +734,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlR-JS-tOw" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="multiply">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -748,7 +747,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhl-3v-zKQ" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="equals">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -761,7 +760,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvI-wE-LRg" customClass="LeopardButton">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="divide">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -891,16 +890,11 @@
                                     <constraint firstAttribute="width" constant="271" id="uB3-oe-2Ln"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                <color key="textColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8d-SJ-y7l">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="SCs-AT-5Xm"/>
-                                    <constraint firstAttribute="width" constant="88" id="TWb-QE-FVV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8d-SJ-y7l" customClass="LeopardButton">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="sju">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -912,9 +906,8 @@
                                     <action selector="sevenPressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="OdR-M5-k7f"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sR2-Fp-TPx">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sR2-Fp-TPx" customClass="LeopardButton">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="åtta">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -926,9 +919,12 @@
                                     <action selector="eightPressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="sYh-aC-gnh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCs-WC-OgN">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCs-WC-OgN" customClass="LeopardButton">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="gWi-a7-Gog"/>
+                                    <constraint firstAttribute="width" constant="96" id="kBg-gj-Us8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="nio">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -940,12 +936,11 @@
                                     <action selector="ninePressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="0OC-qq-sb1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNW-7R-dEV">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNW-7R-dEV" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="W0u-v2-2B1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="fyra">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -957,9 +952,8 @@
                                     <action selector="fourPressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="1ev-lV-BFO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ8-fe-7XZ">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ8-fe-7XZ" customClass="LeopardButton">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="fem">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -971,9 +965,8 @@
                                     <action selector="fivePressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="Yze-hS-Hm5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdn-3a-iBr">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdn-3a-iBr" customClass="LeopardButton">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="sex">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -985,12 +978,11 @@
                                     <action selector="sixPressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="1es-iE-IWw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctU-gN-x1H">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctU-gN-x1H" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="zWs-gl-QM7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="ett">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1002,9 +994,11 @@
                                     <action selector="onePressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="CLw-4e-AwS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIm-QC-RLo">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIm-QC-RLo" customClass="LeopardButton">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="R2i-Ft-ItZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="två">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1016,9 +1010,11 @@
                                     <action selector="twoPressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="sMy-h7-LAq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnU-bm-4y0">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnU-bm-4y0" customClass="LeopardButton">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="KD7-Q9-h88"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="noll">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1030,9 +1026,8 @@
                                     <action selector="zeroPressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="adi-jC-64Z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIx-lM-KEO">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIx-lM-KEO" customClass="LeopardButton">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="tre">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1044,12 +1039,11 @@
                                     <action selector="threePressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="Ivx-qm-s3o"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrB-4f-EU3">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrB-4f-EU3" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="kKF-FU-W92"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="plus">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1061,12 +1055,11 @@
                                     <action selector="plusPressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="oR7-W7-Ruz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQT-zN-Wyd">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQT-zN-Wyd" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="CJe-aZ-XPp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="minus">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1078,9 +1071,8 @@
                                     <action selector="minusPressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="0oI-cn-ucu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pW-K5-XXa">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pW-K5-XXa" customClass="LeopardButton">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="gånger">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1092,9 +1084,8 @@
                                     <action selector="multiplyPressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="qeG-m7-qg8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIM-lT-Ceg">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIM-lT-Ceg" customClass="LeopardButton">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="lika med">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1106,9 +1097,8 @@
                                     <action selector="equalsPressed:" destination="THf-yU-gKg" eventType="touchUpInside" id="Ph7-Ff-Z5Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzK-JK-kjj">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzK-JK-kjj" customClass="LeopardButton">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="delat med">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1136,25 +1126,30 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="nCs-WC-OgN" secondAttribute="trailing" constant="12" id="0lm-za-M72"/>
                             <constraint firstItem="ZnU-bm-4y0" firstAttribute="leading" secondItem="aIm-QC-RLo" secondAttribute="leading" type="default" id="112-Q2-d4Q"/>
                             <constraint firstItem="iNW-7R-dEV" firstAttribute="leading" secondItem="iNu-cV-cbF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1kE-mp-kBQ"/>
                             <constraint firstItem="Sdn-3a-iBr" firstAttribute="leading" secondItem="nCs-WC-OgN" secondAttribute="leading" type="default" id="2Tv-fi-uKE"/>
                             <constraint firstItem="iNW-7R-dEV" firstAttribute="top" secondItem="D8d-SJ-y7l" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2yJ-mF-SMw"/>
+                            <constraint firstItem="2pW-K5-XXa" firstAttribute="baseline" secondItem="gzK-JK-kjj" secondAttribute="baseline" type="default" id="3IB-rd-am1"/>
                             <constraint firstItem="UQT-zN-Wyd" firstAttribute="leading" secondItem="iNu-cV-cbF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4sR-95-eBJ"/>
                             <constraint firstItem="ZrB-4f-EU3" firstAttribute="leading" secondItem="iNu-cV-cbF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5qZ-RO-Hup"/>
+                            <constraint firstItem="2pW-K5-XXa" firstAttribute="baseline" secondItem="UQT-zN-Wyd" secondAttribute="baseline" type="default" id="8GL-Vz-HF0"/>
                             <constraint firstItem="nCs-WC-OgN" firstAttribute="leading" secondItem="sR2-Fp-TPx" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="8K6-Ow-LIo"/>
                             <constraint firstItem="MIx-lM-KEO" firstAttribute="top" secondItem="Sdn-3a-iBr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8uh-M3-Ymj"/>
                             <constraint firstItem="2pW-K5-XXa" firstAttribute="leading" secondItem="ZnU-bm-4y0" secondAttribute="leading" type="default" id="AXk-66-IWZ"/>
                             <constraint firstItem="FIM-lT-Ceg" firstAttribute="leading" secondItem="ZnU-bm-4y0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Axt-ee-gE6"/>
                             <constraint firstItem="ctU-gN-x1H" firstAttribute="leading" secondItem="iNu-cV-cbF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BUS-jL-nRX"/>
+                            <constraint firstItem="ZnU-bm-4y0" firstAttribute="bottom" secondItem="ZrB-4f-EU3" secondAttribute="bottom" type="default" id="CcB-lP-xTT"/>
+                            <constraint firstItem="nCs-WC-OgN" firstAttribute="centerY" secondItem="D8d-SJ-y7l" secondAttribute="centerY" type="default" id="ClG-EV-lnZ"/>
                             <constraint firstItem="Sdn-3a-iBr" firstAttribute="baseline" secondItem="wQ8-fe-7XZ" secondAttribute="baseline" type="default" id="DCc-w9-MYu"/>
                             <constraint firstItem="Sdn-3a-iBr" firstAttribute="trailing" secondItem="MIx-lM-KEO" secondAttribute="trailing" type="default" id="Dcb-i8-eCN"/>
                             <constraint firstItem="sR2-Fp-TPx" firstAttribute="top" secondItem="Jop-lG-JdN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Dyk-0P-Ayn"/>
+                            <constraint firstItem="MIx-lM-KEO" firstAttribute="top" secondItem="aIm-QC-RLo" secondAttribute="top" type="default" id="E0R-C0-crp"/>
                             <constraint firstItem="FIM-lT-Ceg" firstAttribute="leading" secondItem="MIx-lM-KEO" secondAttribute="leading" type="default" id="G7z-9K-V6N"/>
                             <constraint firstItem="D8d-SJ-y7l" firstAttribute="top" secondItem="Jop-lG-JdN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HcJ-Hf-sJi"/>
                             <constraint firstItem="ZnU-bm-4y0" firstAttribute="leading" secondItem="ZrB-4f-EU3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="K38-6y-UiP"/>
                             <constraint firstItem="Sdn-3a-iBr" firstAttribute="trailing" secondItem="nCs-WC-OgN" secondAttribute="trailing" type="default" id="LGP-LP-wK9"/>
+                            <constraint firstItem="aIm-QC-RLo" firstAttribute="top" secondItem="ctU-gN-x1H" secondAttribute="top" type="default" id="LKa-Uq-73w"/>
                             <constraint firstItem="wQ8-fe-7XZ" firstAttribute="top" secondItem="sR2-Fp-TPx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="M4A-O6-dlN"/>
                             <constraint firstItem="wQ8-fe-7XZ" firstAttribute="leading" secondItem="iNW-7R-dEV" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="OmS-6D-RW5"/>
                             <constraint firstItem="ZnU-bm-4y0" firstAttribute="baseline" secondItem="ZrB-4f-EU3" secondAttribute="baseline" type="default" id="Qf3-5o-QjE"/>
@@ -1162,19 +1157,21 @@
                             <constraint firstItem="wQ8-fe-7XZ" firstAttribute="leading" secondItem="sR2-Fp-TPx" secondAttribute="leading" type="default" id="Rmw-Kd-zbo"/>
                             <constraint firstItem="ZrB-4f-EU3" firstAttribute="top" secondItem="ctU-gN-x1H" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="S9v-hp-Kec"/>
                             <constraint firstItem="sR2-Fp-TPx" firstAttribute="baseline" secondItem="nCs-WC-OgN" secondAttribute="baseline" type="default" id="TJC-9a-Uje"/>
+                            <constraint firstItem="nCs-WC-OgN" firstAttribute="centerY" secondItem="sR2-Fp-TPx" secondAttribute="centerY" type="default" id="Vw5-y8-Co0"/>
                             <constraint firstItem="aIm-QC-RLo" firstAttribute="baseline" secondItem="ctU-gN-x1H" secondAttribute="baseline" type="default" id="X2i-6R-rRm"/>
                             <constraint firstItem="MIx-lM-KEO" firstAttribute="trailing" secondItem="FIM-lT-Ceg" secondAttribute="trailing" type="default" id="Z2S-Bj-DBW"/>
                             <constraint firstItem="2pW-K5-XXa" firstAttribute="top" secondItem="ZnU-bm-4y0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ZK9-Ax-HYg"/>
                             <constraint firstItem="KCJ-ie-kJr" firstAttribute="leading" secondItem="iNu-cV-cbF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aln-Xp-7MF"/>
+                            <constraint firstItem="ZnU-bm-4y0" firstAttribute="centerX" secondItem="iNu-cV-cbF" secondAttribute="centerX" type="default" id="b8y-qO-MLz"/>
                             <constraint firstItem="FIM-lT-Ceg" firstAttribute="top" secondItem="MIx-lM-KEO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eEc-8A-7SY"/>
                             <constraint firstItem="2pW-K5-XXa" firstAttribute="bottom" secondItem="UQT-zN-Wyd" secondAttribute="bottom" type="default" id="fFc-mq-9lE"/>
                             <constraint firstItem="UQT-zN-Wyd" firstAttribute="top" secondItem="ZrB-4f-EU3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fzk-Go-gHX"/>
-                            <constraint firstItem="sR2-Fp-TPx" firstAttribute="centerX" secondItem="iNu-cV-cbF" secondAttribute="centerX" type="default" id="g23-Br-KD5"/>
                             <constraint firstItem="aIm-QC-RLo" firstAttribute="leading" secondItem="ctU-gN-x1H" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gAM-f2-rKj"/>
                             <constraint firstItem="wQ8-fe-7XZ" firstAttribute="baseline" secondItem="iNW-7R-dEV" secondAttribute="baseline" type="default" id="gMf-jv-6xo"/>
                             <constraint firstItem="MIx-lM-KEO" firstAttribute="leading" secondItem="Sdn-3a-iBr" secondAttribute="leading" type="default" id="gej-Gm-Ngs"/>
                             <constraint firstItem="gzK-JK-kjj" firstAttribute="leading" secondItem="FIM-lT-Ceg" secondAttribute="leading" type="default" id="gi4-JF-zt8"/>
                             <constraint firstItem="ctU-gN-x1H" firstAttribute="top" secondItem="iNW-7R-dEV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="heu-yh-2dm"/>
+                            <constraint firstItem="gzK-JK-kjj" firstAttribute="leading" secondItem="2pW-K5-XXa" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="hyt-z4-0UD"/>
                             <constraint firstItem="MIx-lM-KEO" firstAttribute="leading" secondItem="aIm-QC-RLo" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jZd-JK-LJP"/>
                             <constraint firstItem="Sdn-3a-iBr" firstAttribute="top" secondItem="nCs-WC-OgN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kZN-dz-hGZ"/>
                             <constraint firstItem="gzK-JK-kjj" firstAttribute="bottom" secondItem="2pW-K5-XXa" secondAttribute="bottom" type="default" id="l1Y-GP-1BT"/>
@@ -1185,11 +1182,11 @@
                             <constraint firstItem="Jop-lG-JdN" firstAttribute="top" secondItem="iNu-cV-cbF" secondAttribute="top" constant="20" symbolic="YES" type="default" id="pJs-WL-Kbn"/>
                             <constraint firstItem="nCs-WC-OgN" firstAttribute="top" secondItem="Jop-lG-JdN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qkK-Db-DlZ"/>
                             <constraint firstItem="D8d-SJ-y7l" firstAttribute="leading" secondItem="iNu-cV-cbF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qnz-Bo-RLN"/>
+                            <constraint firstItem="ZnU-bm-4y0" firstAttribute="top" secondItem="FIM-lT-Ceg" secondAttribute="top" type="default" id="rXi-dS-OZ5"/>
                             <constraint firstItem="gzK-JK-kjj" firstAttribute="top" secondItem="FIM-lT-Ceg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uBy-er-gSR"/>
                             <constraint firstItem="sR2-Fp-TPx" firstAttribute="leading" secondItem="D8d-SJ-y7l" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="uEr-tg-hEh"/>
                             <constraint firstItem="Jop-lG-JdN" firstAttribute="leading" secondItem="iNu-cV-cbF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uzf-Xl-09d"/>
                             <constraint firstItem="sR2-Fp-TPx" firstAttribute="baseline" secondItem="D8d-SJ-y7l" secondAttribute="baseline" type="default" id="uzq-V9-ePG"/>
-                            <constraint firstItem="gzK-JK-kjj" firstAttribute="leading" secondItem="2pW-K5-XXa" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="xHg-q5-YIX"/>
                             <constraint firstItem="MIx-lM-KEO" firstAttribute="baseline" secondItem="aIm-QC-RLo" secondAttribute="baseline" type="default" id="xSo-CK-KhG"/>
                             <constraint firstItem="aIm-QC-RLo" firstAttribute="leading" secondItem="wQ8-fe-7XZ" secondAttribute="leading" type="default" id="yjP-LM-bBB"/>
                             <constraint firstItem="Sdn-3a-iBr" firstAttribute="leading" secondItem="wQ8-fe-7XZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="yva-jw-1HP"/>

@@ -28,7 +28,6 @@
         self.layer.cornerRadius = 20.0;
         self.layer.masksToBounds = YES;
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [self.titleLabel setFont:[UIFont boldSystemFontOfSize:35]];
     }
     
     return self;
