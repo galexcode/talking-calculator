@@ -109,6 +109,7 @@
                                                         <segment title="Swedish"/>
                                                         <segment title="English"/>
                                                     </segments>
+                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <connections>
                                                         <action selector="languageChanged:" destination="6Vd-Fr-45V" eventType="valueChanged" id="QPB-Xa-bzz"/>
                                                     </connections>
@@ -233,12 +234,12 @@
                                     <constraint firstAttribute="height" constant="58" id="d6Z-Qd-dDY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-JN-zwb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-JN-zwb" customClass="LeopardButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="hRF-NQ-Tr6"/>
+                                    <constraint firstAttribute="height" constant="59" id="f3t-wV-tXP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="7">
@@ -252,7 +253,7 @@
                                     <action selector="sevenPressed:" destination="2" eventType="touchUpInside" id="1M7-5W-i3d"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOF-4H-mK4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOF-4H-mK4" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="87" id="UxK-sF-kaY"/>
                                 </constraints>
@@ -268,7 +269,7 @@
                                     <action selector="eightPressed:" destination="2" eventType="touchUpInside" id="GL3-sj-yod"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmO-w0-SfL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmO-w0-SfL" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="2WZ-EC-rZf"/>
                                 </constraints>
@@ -284,9 +285,9 @@
                                     <action selector="ninePressed:" destination="2" eventType="touchUpInside" id="NbL-tz-oC3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXD-Qa-dBs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXD-Qa-dBs" customClass="LeopardButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="lq1-OG-ANS"/>
+                                    <constraint firstAttribute="height" constant="58" id="uhR-8Q-KPZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="4">
@@ -300,7 +301,7 @@
                                     <action selector="fourPressed:" destination="2" eventType="touchUpInside" id="JbB-Uj-yGc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95L-vX-MFL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95L-vX-MFL" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="5">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -313,7 +314,7 @@
                                     <action selector="fivePressed:" destination="2" eventType="touchUpInside" id="aJf-bv-82V"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wF-Yy-eiE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wF-Yy-eiE" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="6">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -326,10 +327,7 @@
                                     <action selector="sixPressed:" destination="2" eventType="touchUpInside" id="KmJ-KV-jAD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gw-Yn-FDd">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="Kzb-BJ-OUH"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gw-Yn-FDd" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="1">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -342,7 +340,10 @@
                                     <action selector="onePressed:" destination="2" eventType="touchUpInside" id="65G-WV-RmQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saT-Kp-Hw5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saT-Kp-Hw5" customClass="LeopardButton">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="vgF-eM-Ftk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="2">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -355,7 +356,7 @@
                                     <action selector="twoPressed:" destination="2" eventType="touchUpInside" id="M9k-HQ-6xp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-2k-Sgh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-2k-Sgh" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="0">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -368,7 +369,7 @@
                                     <action selector="zeroPressed:" destination="2" eventType="touchUpInside" id="9zQ-pl-fxV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4r-rl-Gsl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4r-rl-Gsl" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="3">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -381,10 +382,7 @@
                                     <action selector="threePressed:" destination="2" eventType="touchUpInside" id="wOU-Qg-isL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMe-S4-qtd">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="zsk-al-ioa"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMe-S4-qtd" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -397,9 +395,9 @@
                                     <action selector="plusPressed:" destination="2" eventType="touchUpInside" id="wLS-Ow-QAl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVp-9R-dTm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVp-9R-dTm" customClass="LeopardButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="4ly-mV-hyc"/>
+                                    <constraint firstAttribute="height" constant="55" id="JmO-W3-Z0M"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="-">
@@ -413,7 +411,7 @@
                                     <action selector="minusPressed:" destination="2" eventType="touchUpInside" id="ttw-HJ-aCp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiR-Yo-Od4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiR-Yo-Od4" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="kDT-Mz-gb8"/>
                                 </constraints>
@@ -429,7 +427,10 @@
                                     <action selector="multiplyPressed:" destination="2" eventType="touchUpInside" id="wzh-44-ThH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsA-ir-PVU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsA-ir-PVU" customClass="LeopardButton">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="3Cx-lK-RNN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="=">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -442,7 +443,7 @@
                                     <action selector="equalsPressed:" destination="2" eventType="touchUpInside" id="XkL-66-kwA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkb-4n-XqW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkb-4n-XqW" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="/">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -455,7 +456,7 @@
                                     <action selector="dividePressed:" destination="2" eventType="touchUpInside" id="IDX-eg-j6U"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpW-HL-8vK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpW-HL-8vK">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -469,7 +470,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="6gw-Yn-FDd" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="07k-Mo-9uE"/>
                             <constraint firstItem="QsA-ir-PVU" firstAttribute="leading" secondItem="I4r-rl-Gsl" secondAttribute="leading" type="default" id="1de-IL-9Ik"/>
@@ -487,20 +488,23 @@
                             <constraint firstItem="95L-vX-MFL" firstAttribute="leading" secondItem="AOF-4H-mK4" secondAttribute="leading" type="default" id="Gp7-xl-lhE"/>
                             <constraint firstItem="kiR-Yo-Od4" firstAttribute="leading" secondItem="0g8-2k-Sgh" secondAttribute="leading" type="default" id="HUT-lm-WZE"/>
                             <constraint firstItem="4wF-Yy-eiE" firstAttribute="leading" secondItem="95L-vX-MFL" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="LOT-zn-3BM"/>
+                            <constraint firstItem="kiR-Yo-Od4" firstAttribute="top" secondItem="OVp-9R-dTm" secondAttribute="top" type="default" id="Lwr-TP-h2M"/>
                             <constraint firstItem="0g8-2k-Sgh" firstAttribute="top" secondItem="saT-Kp-Hw5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MKC-DB-YJA"/>
-                            <constraint firstItem="AOF-4H-mK4" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="MRH-Zo-2ql"/>
+                            <constraint firstItem="95L-vX-MFL" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="MOG-76-etP"/>
                             <constraint firstItem="gMe-S4-qtd" firstAttribute="top" secondItem="6gw-Yn-FDd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Mjg-UO-eB3"/>
                             <constraint firstItem="kiR-Yo-Od4" firstAttribute="leading" secondItem="OVp-9R-dTm" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Qbl-kB-lfz"/>
                             <constraint firstItem="I4r-rl-Gsl" firstAttribute="top" secondItem="4wF-Yy-eiE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Qp0-9s-tEI"/>
                             <constraint firstItem="saT-Kp-Hw5" firstAttribute="top" secondItem="95L-vX-MFL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Qq2-Gg-hkM"/>
                             <constraint firstItem="4wF-Yy-eiE" firstAttribute="leading" secondItem="XmO-w0-SfL" secondAttribute="leading" type="default" id="S6g-BA-Je1"/>
                             <constraint firstItem="xkb-4n-XqW" firstAttribute="leading" secondItem="QsA-ir-PVU" secondAttribute="leading" type="default" id="Slp-20-N5v"/>
-                            <constraint firstItem="4wF-Yy-eiE" firstAttribute="baseline" secondItem="95L-vX-MFL" secondAttribute="baseline" type="default" id="UQi-Do-kko"/>
+                            <constraint firstItem="95L-vX-MFL" firstAttribute="centerY" secondItem="AXD-Qa-dBs" secondAttribute="centerY" type="default" id="Uvo-lR-gg8"/>
                             <constraint firstItem="0g8-2k-Sgh" firstAttribute="leading" secondItem="gMe-S4-qtd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Vco-GI-3G2"/>
                             <constraint firstItem="kiR-Yo-Od4" firstAttribute="bottom" secondItem="OVp-9R-dTm" secondAttribute="bottom" type="default" id="Xbw-s8-JZr"/>
-                            <constraint firstItem="AOF-4H-mK4" firstAttribute="baseline" secondItem="XmO-w0-SfL" secondAttribute="baseline" type="default" id="Zdf-QV-BaR"/>
+                            <constraint firstItem="0g8-2k-Sgh" firstAttribute="top" secondItem="gMe-S4-qtd" secondAttribute="top" type="default" id="ZGH-KJ-2wB"/>
+                            <constraint firstItem="I4r-rl-Gsl" firstAttribute="centerY" secondItem="saT-Kp-Hw5" secondAttribute="centerY" type="default" id="ZYf-Xp-DHK"/>
+                            <constraint firstItem="saT-Kp-Hw5" firstAttribute="top" secondItem="I4r-rl-Gsl" secondAttribute="top" type="default" id="ZiM-3R-vE9"/>
                             <constraint firstItem="7k4-JN-zwb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="a8N-vR-5P2"/>
-                            <constraint firstItem="I4r-rl-Gsl" firstAttribute="baseline" secondItem="saT-Kp-Hw5" secondAttribute="baseline" type="default" id="aKc-QO-51c"/>
+                            <constraint firstItem="gMe-S4-qtd" firstAttribute="baseline" secondItem="QsA-ir-PVU" secondAttribute="baseline" type="default" id="aSg-dg-ZCw"/>
                             <constraint firstItem="saT-Kp-Hw5" firstAttribute="leading" secondItem="6gw-Yn-FDd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="avR-s2-At8"/>
                             <constraint firstItem="QsA-ir-PVU" firstAttribute="leading" secondItem="0g8-2k-Sgh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="bhD-Jv-Ky6"/>
                             <constraint firstItem="4wF-Yy-eiE" firstAttribute="trailing" secondItem="XmO-w0-SfL" secondAttribute="trailing" type="default" id="bmD-nK-ZrH"/>
@@ -514,24 +518,23 @@
                             <constraint firstItem="xkb-4n-XqW" firstAttribute="bottom" secondItem="kiR-Yo-Od4" secondAttribute="bottom" type="default" id="gQv-w5-wda"/>
                             <constraint firstItem="I4r-rl-Gsl" firstAttribute="trailing" secondItem="QsA-ir-PVU" secondAttribute="trailing" type="default" id="gxx-u6-Xyr"/>
                             <constraint firstItem="saT-Kp-Hw5" firstAttribute="leading" secondItem="95L-vX-MFL" secondAttribute="leading" type="default" id="h2b-8Q-nrz"/>
-                            <constraint firstItem="AOF-4H-mK4" firstAttribute="baseline" secondItem="7k4-JN-zwb" secondAttribute="baseline" type="default" id="jbh-Ed-Tra"/>
                             <constraint firstItem="QsA-ir-PVU" firstAttribute="top" secondItem="I4r-rl-Gsl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mfY-pf-IWk"/>
                             <constraint firstItem="AOF-4H-mK4" firstAttribute="leading" secondItem="7k4-JN-zwb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="n0g-mn-KXA"/>
-                            <constraint firstItem="0g8-2k-Sgh" firstAttribute="baseline" secondItem="gMe-S4-qtd" secondAttribute="baseline" type="default" id="nUi-bS-DYJ"/>
                             <constraint firstItem="kiR-Yo-Od4" firstAttribute="top" secondItem="0g8-2k-Sgh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nqL-dH-rpu"/>
-                            <constraint firstItem="95L-vX-MFL" firstAttribute="baseline" secondItem="AXD-Qa-dBs" secondAttribute="baseline" type="default" id="onI-Z4-j0H"/>
+                            <constraint firstItem="XmO-w0-SfL" firstAttribute="baseline" secondItem="AOF-4H-mK4" secondAttribute="baseline" type="default" id="oOL-gm-aHM"/>
                             <constraint firstItem="AOF-4H-mK4" firstAttribute="top" secondItem="UvJ-0T-fEW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pdK-rv-oFP"/>
-                            <constraint firstItem="saT-Kp-Hw5" firstAttribute="baseline" secondItem="6gw-Yn-FDd" secondAttribute="baseline" type="default" id="saS-e9-hCO"/>
                             <constraint firstItem="gMe-S4-qtd" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uT6-R4-h6a"/>
                             <constraint firstItem="6gw-Yn-FDd" firstAttribute="top" secondItem="AXD-Qa-dBs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uZL-mV-6ij"/>
-                            <constraint firstItem="0g8-2k-Sgh" firstAttribute="baseline" secondItem="QsA-ir-PVU" secondAttribute="baseline" type="default" id="uia-lN-b92"/>
+                            <constraint firstItem="95L-vX-MFL" firstAttribute="top" secondItem="AXD-Qa-dBs" secondAttribute="top" type="default" id="va6-7i-ajE"/>
                             <constraint firstItem="OVp-9R-dTm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vkA-Qt-OBe"/>
                             <constraint firstItem="I4r-rl-Gsl" firstAttribute="leading" secondItem="4wF-Yy-eiE" secondAttribute="leading" type="default" id="xcM-YP-baU"/>
+                            <constraint firstItem="xkb-4n-XqW" firstAttribute="top" secondItem="kiR-Yo-Od4" secondAttribute="top" type="default" id="yg4-CH-JfG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Calculator" id="lnc-7l-oWq"/>
                     <connections>
                         <outlet property="display" destination="UvJ-0T-fEW" id="c2h-hF-EzM"/>
+                        <outlet property="sevenButton" destination="7k4-JN-zwb" id="kqH-Cy-QzS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -556,13 +559,12 @@
                                 <color key="textColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X82-Qw-7dd">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X82-Qw-7dd" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="R8d-wS-Ik5"/>
                                     <constraint firstAttribute="height" constant="57" id="dWf-fg-KTl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="seven">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -574,9 +576,8 @@
                                     <action selector="sevenPressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="6cY-rt-XGh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kx-hC-pdh">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kx-hC-pdh" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="eight">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -588,12 +589,11 @@
                                     <action selector="eightPressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="Z03-ne-YD5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOD-22-hzT">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOD-22-hzT" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="Ish-oS-L7o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="nine">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -605,12 +605,11 @@
                                     <action selector="ninePressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="QfY-fk-upQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-5P-kSb">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-5P-kSb" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="0VR-y1-FdE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="four">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -622,9 +621,8 @@
                                     <action selector="fourPressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="bhU-aY-3Ly"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-dm-IZ4">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-dm-IZ4" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="five">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -636,9 +634,8 @@
                                     <action selector="fivePressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="8mK-r1-3qc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNJ-2T-BpC">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNJ-2T-BpC" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="six">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -650,12 +647,11 @@
                                     <action selector="sixPressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="Sys-3q-RaV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rp-uh-2KU">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rp-uh-2KU" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="GbX-6Y-akG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="one">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -667,9 +663,8 @@
                                     <action selector="onePressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="Tvj-wy-PlY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pl4-e0-tKt">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pl4-e0-tKt" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="two">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -681,9 +676,8 @@
                                     <action selector="twoPressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="jMA-ho-B2j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wP9-le-UUI">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wP9-le-UUI" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="zero">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -695,9 +689,8 @@
                                     <action selector="zeroPressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="yxH-UE-kAY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A17-I4-x6m">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A17-I4-x6m" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="three">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -709,12 +702,11 @@
                                     <action selector="threePressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="IA1-7A-Qhn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GE-z8-wbt">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GE-z8-wbt" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="LBn-OD-TIT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="plus">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -726,12 +718,11 @@
                                     <action selector="plusPressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="B0a-Pz-bGh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRW-FF-nqK">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRW-FF-nqK" customClass="LeopardButton">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="Xmb-Xv-QaM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="minus">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -743,9 +734,8 @@
                                     <action selector="minusPressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="Sbh-bG-ecS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlR-JS-tOw">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlR-JS-tOw" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="multiply">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -757,9 +747,8 @@
                                     <action selector="multiplyPressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="8zb-1t-ZgE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhl-3v-zKQ">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhl-3v-zKQ" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="equals">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -771,9 +760,8 @@
                                     <action selector="equalsPressed:" destination="r8S-N5-ZCh" eventType="touchUpInside" id="qBK-Yy-Xua"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvI-wE-LRg">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvI-wE-LRg" customClass="LeopardButton">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="divide">
                                     <color key="titleColor" red="0.83296535329999999" green="0.044624846060000001" blue="0.10452891979999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1219,6 +1207,9 @@
         </scene>
     </scenes>
     <classes>
+        <class className="LeopardButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LeopardButton.h"/>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
@@ -1255,6 +1246,7 @@
                 <relationship kind="action" name="zeroPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="display" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="operatorButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sevenButton" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

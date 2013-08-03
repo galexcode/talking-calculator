@@ -35,6 +35,13 @@
     self.buttonSpeechSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"buttonSpeechActivated"];
     self.resultSpeechSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"resultSpeechActivated"];
     self.LanguageControl.selectedSegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"Language"];
+    
+    UIImage *img = [UIImage imageNamed:@"leopardskin.jpg"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:img];
+    self.tableView.backgroundView = imageView;
+    
+    self.buttonSpeechSwitch.onTintColor = [UIColor blackColor];
+    self.resultSpeechSwitch.onTintColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning

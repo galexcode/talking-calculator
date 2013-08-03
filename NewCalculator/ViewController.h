@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *display;
 @property (weak, nonatomic) IBOutlet UIButton *operatorButton;
 @property (nonatomic) BOOL isAlpha;
+@property (weak, nonatomic) IBOutlet UIButton *sevenButton;
 
 - (IBAction)equalsPressed:(UIButton *)sender;
 - (IBAction)settingsPressed;
