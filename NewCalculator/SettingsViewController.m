@@ -38,7 +38,7 @@
     
     UIImage *img = [UIImage imageNamed:@"leopardskin.jpg"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:img];
-    self.tableView.backgroundView = imageView;
+    [self.tableView setBackgroundView:imageView];
     
     self.buttonSpeechSwitch.onTintColor = [UIColor blackColor];
     self.resultSpeechSwitch.onTintColor = [UIColor blackColor];
