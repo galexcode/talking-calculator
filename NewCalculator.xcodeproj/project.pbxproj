@@ -86,6 +86,7 @@
 		D541321017AC36AB00611F30 /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = D541320F17AC36AB00611F30 /* icon_retina.png */; };
 		D541322017ACF67500611F30 /* leopardskin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D541321F17ACF67500611F30 /* leopardskin.jpg */; };
 		D541322317AD7ED300611F30 /* LeopardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D541322217AD7ED300611F30 /* LeopardButton.m */; };
+		D541322517AEE1DD00611F30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D541322417AEE1DD00611F30 /* QuartzCore.framework */; };
 		D570F2EC1797341C00572426 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D570F2EB1797341C00572426 /* AVFoundation.framework */; };
 		D5A66DEA1782EA8E00D9062F /* MathOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A66DE91782EA8E00D9062F /* MathOperator.m */; };
 		D5A66DEB1782EA8E00D9062F /* MathOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A66DE91782EA8E00D9062F /* MathOperator.m */; };
@@ -173,6 +174,7 @@
 		D541321F17ACF67500611F30 /* leopardskin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = leopardskin.jpg; path = ../../../Documents/leopardskin.jpg; sourceTree = "<group>"; };
 		D541322117AD7ED300611F30 /* LeopardButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeopardButton.h; sourceTree = "<group>"; };
 		D541322217AD7ED300611F30 /* LeopardButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeopardButton.m; sourceTree = "<group>"; };
+		D541322417AEE1DD00611F30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D570F2EB1797341C00572426 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D5A66DE81782EA8E00D9062F /* MathOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathOperator.h; sourceTree = "<group>"; };
 		D5A66DE91782EA8E00D9062F /* MathOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathOperator.m; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D541322517AEE1DD00611F30 /* QuartzCore.framework in Frameworks */,
 				D570F2EC1797341C00572426 /* AVFoundation.framework in Frameworks */,
 				D5C915BF17820D5D003939D1 /* UIKit.framework in Frameworks */,
 				D5C915C117820D5D003939D1 /* Foundation.framework in Frameworks */,
@@ -284,6 +287,7 @@
 		D5C915B217820D5D003939D1 = {
 			isa = PBXGroup;
 			children = (
+				D541322417AEE1DD00611F30 /* QuartzCore.framework */,
 				D541321F17ACF67500611F30 /* leopardskin.jpg */,
 				D541320F17AC36AB00611F30 /* icon_retina.png */,
 				D541320D17AC34A400611F30 /* icon.png */,

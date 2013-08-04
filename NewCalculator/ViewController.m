@@ -346,7 +346,28 @@
 {
     self.operator = NULL;
     [self.displayModel setValueWithNumber:self.previousValue];
+    [self addDisplayLabelAnimation];
     [self updateDisplay];
+}
+
+- (void)addDisplayLabelAnimation
+{
+    [self addFlashAnimationToLayer:self.display.layer withDuration:0.2 andStartValue:0.1];
+}
+
+- (void)removeDisplayLabelAnimation
+{
+    [[self.display layer] removeAnimationForKey:@"flash"];
+}
+
+- (void)addFlashAnimationToLayer:(CALayer *)layer withDuration:(float)duration andStartValue:(float)startValue
+{
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    [anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+    [anim setFromValue:[NSNumber numberWithFloat:startValue]];
+    [anim setToValue:[NSNumber numberWithFloat:1.0]];
+    [anim setDuration:duration];
+    [layer addAnimation:anim forKey:@"flash"];
 }
 
 - (void)clear
@@ -355,6 +376,7 @@
     self.displayModel = [[Display alloc] init];
     [self turnOffHighlightButton:self.operatorButton];
     self.operatorButton = nil;
+    [self addFlashAnimationToLayer:self.view.layer withDuration:0.5 andStartValue:0.0];
     [self updateDisplay];
 }
 
