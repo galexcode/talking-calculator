@@ -125,10 +125,60 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Tax Calculations" id="3BO-SG-wfv">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Ar7-xQ-WHY">
+                                        <rect key="frame" x="0.0" y="305" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tax rate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpw-Nm-1zg">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="Ecz-1J-btN"/>
+                                                        <constraint firstAttribute="width" constant="198" id="YOG-dc-Im7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e3-LF-pdX">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="dOl-ho-Fsb"/>
+                                                        <constraint firstAttribute="width" constant="42" id="izx-2K-Wef"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="klx-me-k9I">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="46" id="Q4j-P8-jOq"/>
+                                                        <constraint firstAttribute="height" constant="40" type="user" id="pRU-iT-zjd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="klx-me-k9I" firstAttribute="centerY" secondItem="Ar7-xQ-WHY" secondAttribute="centerY" type="default" id="Fe7-5a-Vgu"/>
+                                            <constraint firstItem="Vpw-Nm-1zg" firstAttribute="leading" secondItem="Ar7-xQ-WHY" secondAttribute="leading" constant="22" id="LoY-lN-89O"/>
+                                            <constraint firstItem="0e3-LF-pdX" firstAttribute="top" secondItem="Ar7-xQ-WHY" secondAttribute="top" type="default" id="QrO-KY-jLV"/>
+                                            <constraint firstItem="0e3-LF-pdX" firstAttribute="leading" secondItem="Ar7-xQ-WHY" secondAttribute="leading" constant="281" id="WBs-rF-CgQ"/>
+                                            <constraint firstItem="klx-me-k9I" firstAttribute="leading" secondItem="Vpw-Nm-1zg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="cdY-yQ-Sll"/>
+                                            <constraint firstItem="Vpw-Nm-1zg" firstAttribute="baseline" secondItem="klx-me-k9I" secondAttribute="baseline" type="default" id="lKm-MJ-930"/>
+                                            <constraint firstItem="0e3-LF-pdX" firstAttribute="centerY" secondItem="Vpw-Nm-1zg" secondAttribute="centerY" type="default" id="lmc-ML-PuN"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="Motion Gestures" id="aEL-LO-La4">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="b0C-Fa-uZy" detailTextLabel="Stf-Zd-EXV" style="IBUITableViewCellStyleValue1" id="WiP-45-ghX">
-                                        <rect key="frame" x="0.0" y="305" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="396" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -149,7 +199,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="GjM-JO-lEs" detailTextLabel="uZu-Dd-My9" style="IBUITableViewCellStyleValue1" id="NvB-vh-obX">
-                                        <rect key="frame" x="0.0" y="350" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="441" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -174,7 +224,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="2e1-Je-rtn" detailTextLabel="pS3-wm-8iS" style="IBUITableViewCellStyleValue1" id="AsD-rT-bxh">
-                                        <rect key="frame" x="0.0" y="394" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="485" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
