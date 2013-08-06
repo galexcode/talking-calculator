@@ -72,9 +72,62 @@
     op = [MathOperator createWithString:@"/"];
 }
 
-- (void)testCreatingAnInvalidOperatorShouldThroe
+- (void)testCreatingAnInvalidOperatorShouldThrow
 {
     
     STAssertThrowsSpecific([MathOperator createWithString:@"a"], MathOperatorException, @"");
+}
+
+- (void)testATaxOperatorShouldBeInstantiatedWithARate
+{
+    NSNumber *rate = [NSNumber numberWithDouble:0.45];
+    InclusiveTaxOperator *op = [[InclusiveTaxOperator alloc] initWithNumber:rate];
+    
+    STAssertNoThrow([op performOperationWith:nil], @"");
+}
+
+- (void)testAnInclusiveTaxOperatorShouldReturnTheTermDividedByTheRate
+{
+    NSNumber *rate = [NSNumber numberWithDouble:0.25];
+    InclusiveTaxOperator *op = [[InclusiveTaxOperator alloc] initWithNumber:rate];
+    
+    NSNumber *nominal = [NSNumber numberWithDouble:2.5];
+    NSNumber *result = [NSNumber numberWithDouble:(2.5 * 1.25)];
+    
+    STAssertEqualObjects([op performOperationWith:nominal], result, @"");
+}
+
+- (void)testAnInclusiveTaxOperatorShouldReturnTheTermDividedByTheRateSimple
+{
+    NSNumber *rate = [NSNumber numberWithDouble:0.25];
+    InclusiveTaxOperator *op = [[InclusiveTaxOperator alloc] initWithNumber:rate];
+    
+    NSNumber *nominal = [NSNumber numberWithDouble:100];
+    NSNumber *result = [NSNumber numberWithDouble:(100 * (1 + 0.25))];
+    
+    STAssertEqualObjects([op performOperationWith:nominal], result, @"");
+}
+
+- (void)testAnExclusiveTaxOperatorShouldReturnTheTermMultipliedByTheRate
+{
+    NSNumber *rate = [NSNumber numberWithDouble:0.25];
+    ExclusiveTaxOperator *op = [[ExclusiveTaxOperator alloc] initWithNumber:rate];
+    
+    NSNumber *nominal = [NSNumber numberWithDouble:2.5];
+    NSNumber *result = [NSNumber numberWithDouble:(2.5 / (1 +0.25))];
+    
+    STAssertEqualObjects([op performOperationWith:nominal], result, @"");
+}
+
+- (void)testAnExclusiveTaxOperatorShouldReturnTheTermMultipliedByTheRateSimple
+{
+    NSNumber *rate = [NSNumber numberWithDouble:0.25];
+    ExclusiveTaxOperator *op = [[ExclusiveTaxOperator alloc] initWithNumber:rate];
+    
+    NSNumber *nominal = [NSNumber numberWithDouble:100.0];
+    double expected = 80.0;
+    double result = [[op performOperationWith:nominal] doubleValue];
+    
+    STAssertTrue(abs(expected - result) < 1E-12, @"");
 }
 @end

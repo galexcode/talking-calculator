@@ -90,4 +90,46 @@
 {
     return lhs - rhs;
 }
+
+@end
+
+@interface UnaryOperator ()
+@property (strong, nonatomic) NSNumber *number;
+@end
+
+@implementation UnaryOperator
+
+- (id)initWithNumber:(NSNumber *)number
+{
+    if (self = [super init]) {
+        self.number = number;
+    }
+    return self;
+}
+
+- (NSNumber *)performOperationWith:(NSNumber *)nominal
+{
+    return nil;
+}
+
+@end
+
+@implementation InclusiveTaxOperator
+
+- (NSNumber *)performOperationWith:(NSNumber *)nominal
+{
+    double result =  [nominal doubleValue] * (1.0 + [self.number doubleValue]);
+    return [NSNumber numberWithDouble:result];
+}
+
+@end
+
+@implementation ExclusiveTaxOperator
+
+- (NSNumber *)performOperationWith:(NSNumber *)nominal
+{
+    double result =  [nominal doubleValue] / ( 1 + [self.number doubleValue]);
+    return [NSNumber numberWithDouble:result];
+}
+
 @end

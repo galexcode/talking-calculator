@@ -23,6 +23,13 @@
 
 @end
 
+@interface UnaryOperator : NSObject
+
+- (NSNumber *)performOperationWith:(NSNumber *)number;
+- (id)initWithNumber:(NSNumber *)number;
+
+@end
+
 @interface MulOperator : MathOperator
 @end
 
@@ -33,4 +40,10 @@
 @end
 
 @interface SubOperator : MathOperator
+@end
+
+@interface InclusiveTaxOperator : UnaryOperator
+@end
+
+@interface ExclusiveTaxOperator : UnaryOperator
 @end

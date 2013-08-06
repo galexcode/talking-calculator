@@ -77,6 +77,10 @@
     
     [[self view] addGestureRecognizer:oneFingerSwipeRight];
     [[self view] addGestureRecognizer:oneFingerSwipeLeft];
+    
+    
+    // TODO remove
+    [[NSUserDefaults standardUserDefaults] setFloat:0.25 forKey:@"TaxRate"];
 }
 
 - (BOOL)buttonSpeechIsActivated
@@ -336,10 +340,33 @@
     }
 }
 
-- (IBAction)settingsPressed {
+- (IBAction)settingsPressed
+{
     UIViewController * controller = [[self storyboard] instantiateViewControllerWithIdentifier: @"Apa"];
     
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)inclTaxPressed
+{
+    NSNumber *taxRate = [NSNumber numberWithFloat:[[NSUserDefaults standardUserDefaults] floatForKey:@"TaxRate"]];
+    InclusiveTaxOperator *taxOperator = [[InclusiveTaxOperator alloc] initWithNumber:taxRate];
+    
+    NSNumber *currentValue = [self getDisplayValue];
+    NSNumber *result = [taxOperator performOperationWith:currentValue];
+    [self displayResult:result];
+    [self.displayModel beginNewEntry];
+}
+
+- (IBAction)exclTaxPressed
+{
+    NSNumber *taxRate = [NSNumber numberWithFloat:[[NSUserDefaults standardUserDefaults] floatForKey:@"TaxRate"]];
+    ExclusiveTaxOperator *taxOperator = [[ExclusiveTaxOperator alloc] initWithNumber:taxRate];
+    
+    NSNumber *currentValue = [self getDisplayValue];
+    NSNumber *result = [taxOperator performOperationWith:currentValue];
+    [self displayResult:result];
+    [self.displayModel beginNewEntry];
 }
 
 - (void)undoEntry

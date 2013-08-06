@@ -16,6 +16,8 @@
 
 - (IBAction)equalsPressed:(UIButton *)sender;
 - (IBAction)settingsPressed;
+- (IBAction)inclTaxPressed;
+- (IBAction)exclTaxPressed;
 
 - (IBAction)onePressed:(UIButton *)sender;
 - (IBAction)twoPressed:(UIButton *)sender;
