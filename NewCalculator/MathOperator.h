@@ -27,8 +27,9 @@
 
 @property (nonatomic) int intNumber;
 
-- (NSNumber *)performOperationWith:(NSNumber *)number;
++ (id)createFromString:(NSString *)operator;
 - (id)initWithInt:(int)number;
+- (NSNumber *)performOperationWith:(NSNumber *)number;
 
 @end
 

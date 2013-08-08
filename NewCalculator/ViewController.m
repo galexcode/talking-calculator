@@ -33,6 +33,8 @@
 #define MINUS @"-"
 
 #define EQUAL @"="
+#define INCL_TAX @"Tax+"
+#define EXCL_TAX @"Tax-"
 
 #define DOT @"."
 
@@ -315,9 +317,12 @@
     [self updateDisplay];
 }
 
-- (void)sayResult:(RepeatedStrings *)result
+- (void)sayResultWithPrefix:(NSString *)prefix
 {
-    [self.audioPlayer playAudioQueueWithKeys:result inBackground:YES];
+    if (self.resultSpeechIsActivated) {
+        RepeatedStrings *resultArray = [self.displayModel valueAsArrayOfRepeatedStringsWithString:prefix];
+        [self.audioPlayer playAudioQueueWithKeys:resultArray inBackground:YES];
+    }
 }
 
 - (IBAction)equalsPressed:(UIButton *)sender
@@ -329,11 +334,7 @@
     self.operator = NULL;
     
     [self.displayModel beginNewEntry];
-    
-    if (self.resultSpeechIsActivated) {
-        RepeatedStrings *resultArray = [self.displayModel valueAsArrayOfRepeatedStringsWithString:EQUAL];
-        [self sayResult:resultArray];
-    }
+    [self sayResultWithPrefix:EQUAL];
 }
 
 - (IBAction)settingsPressed
@@ -343,26 +344,26 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-- (void)performTaxCalculation:(UnaryOperator *)taxOperator
+- (void)performTaxCalculation:(NSString *)taxOperator
 {
     int taxRateTimesHundred = [[NSUserDefaults standardUserDefaults] integerForKey:@"TaxRate"];
-    taxOperator.intNumber = taxRateTimesHundred;
+    UnaryOperator *operator = [UnaryOperator createFromString:taxOperator];
+    operator.intNumber = taxRateTimesHundred;
     NSNumber *currentValue = [self getDisplayValue];
-    NSNumber *result = [taxOperator performOperationWith:currentValue];
+    NSNumber *result = [operator performOperationWith:currentValue];
     [self displayResult:result];
+    [self sayResultWithPrefix:taxOperator];
     [self.displayModel beginNewEntry];
 }
 
 - (IBAction)inclTaxPressed
 {
-    InclusiveTaxOperator *taxOperator = [[InclusiveTaxOperator alloc] init];
-    [self performTaxCalculation:taxOperator];
+    [self performTaxCalculation:INCL_TAX];
 }
 
 - (IBAction)exclTaxPressed
 {
-    ExclusiveTaxOperator *taxOperator = [[ExclusiveTaxOperator alloc] init];
-    [self performTaxCalculation:taxOperator];
+    [self performTaxCalculation:EXCL_TAX];
 }
 
 - (void)undoEntry

@@ -96,6 +96,18 @@
 
 @implementation UnaryOperator
 
++ (UnaryOperator *)createFromString:(NSString *)operator
+{
+    if ([operator isEqualToString:@"Tax+"]) {
+        return [[InclusiveTaxOperator alloc] init];
+    } else if ([operator isEqualToString:@"Tax-"]) {
+        return [[ExclusiveTaxOperator alloc] init];
+    }
+    
+    [MathOperatorException raise:operator format:@"No valid unary operator exist for operator"];
+    return nil;
+}
+
 - (id)initWithInt:(int)intNumber
 {
     if (self = [super init]) {
