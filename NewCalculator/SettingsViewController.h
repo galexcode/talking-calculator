@@ -13,8 +13,10 @@
 - (IBAction)buttonSpeechSwitched:(UISwitch *)sender;
 - (IBAction)resultSpeechSwitched:(UISwitch *)sender;
 - (IBAction)languageChanged:(UISegmentedControl *)sender;
+- (IBAction)taxRateChanged:(UITextField *)sender;
 
 @property (weak, nonatomic) IBOutlet UISwitch *buttonSpeechSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *resultSpeechSwitch;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *LanguageControl;
+@property (weak, nonatomic) IBOutlet UITextField *taxRateField;
 @end

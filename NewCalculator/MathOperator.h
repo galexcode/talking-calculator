@@ -25,8 +25,10 @@
 
 @interface UnaryOperator : NSObject
 
+@property (nonatomic) int intNumber;
+
 - (NSNumber *)performOperationWith:(NSNumber *)number;
-- (id)initWithNumber:(NSNumber *)number;
+- (id)initWithInt:(int)number;
 
 @end
 

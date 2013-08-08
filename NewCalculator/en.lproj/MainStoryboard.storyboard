@@ -128,7 +128,7 @@
                             <tableViewSection headerTitle="Tax Calculations" id="3BO-SG-wfv">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Ar7-xQ-WHY">
-                                        <rect key="frame" x="0.0" y="305" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="305" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -159,6 +159,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="taxRateChanged:" destination="6Vd-Fr-45V" eventType="editingDidEnd" id="Qoo-OR-UBn"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -261,6 +264,7 @@
                         <outlet property="LanguageControl" destination="U5k-5N-sQd" id="hr3-it-gSU"/>
                         <outlet property="buttonSpeechSwitch" destination="bWi-2Z-ZT8" id="IyX-pM-Rig"/>
                         <outlet property="resultSpeechSwitch" destination="yrc-Ie-sLR" id="Muy-z3-mBx"/>
+                        <outlet property="taxRateField" destination="klx-me-k9I" id="u8C-fg-HQi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eud-CE-kvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1305,52 +1309,6 @@
             <point key="canvasLocation" x="1155" y="892"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="LeopardButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LeopardButton.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backPressed:"/>
-                <relationship kind="action" name="buttonSpeechSwitched:" candidateClass="UISwitch"/>
-                <relationship kind="action" name="languageChanged:" candidateClass="UISegmentedControl"/>
-                <relationship kind="action" name="resultSpeechSwitched:" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="LanguageControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="buttonSpeechSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="resultSpeechSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="dividePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="eightPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="equalsPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="exclTaxPressed"/>
-                <relationship kind="action" name="fivePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="fourPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="inclTaxPressed"/>
-                <relationship kind="action" name="minusPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="multiplyPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="ninePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="onePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="plusPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="settingsPressed"/>
-                <relationship kind="action" name="sevenPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="sixPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="threePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="twoPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="zeroPressed:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="display" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="operatorButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sevenButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

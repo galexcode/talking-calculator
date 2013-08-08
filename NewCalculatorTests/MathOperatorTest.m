@@ -92,20 +92,23 @@
     InclusiveTaxOperator *op = [[InclusiveTaxOperator alloc] initWithNumber:rate];
     
     NSNumber *nominal = [NSNumber numberWithDouble:2.5];
-    NSNumber *result = [NSNumber numberWithDouble:(2.5 * 1.25)];
+    double expected = 3.125;
+    double result = [[op performOperationWith:nominal] doubleValue];
     
-    STAssertEqualObjects([op performOperationWith:nominal], result, @"");
+    STAssertEquals(result, expected, @"");
 }
 
 - (void)testAnInclusiveTaxOperatorShouldReturnTheTermDividedByTheRateSimple
 {
-    NSNumber *rate = [NSNumber numberWithDouble:0.25];
+    NSNumber *rate = [NSNumber numberWithDouble:0.20];
     InclusiveTaxOperator *op = [[InclusiveTaxOperator alloc] initWithNumber:rate];
     
-    NSNumber *nominal = [NSNumber numberWithDouble:100];
-    NSNumber *result = [NSNumber numberWithDouble:(100 * (1 + 0.25))];
+    NSNumber *nominal = [NSNumber numberWithDouble:100.0];
+    double expected = 120.0;
+    double result = [[op performOperationWith:nominal] doubleValue];
     
-    STAssertEqualObjects([op performOperationWith:nominal], result, @"");
+    STAssertTrue(expected = result, @"");
+    STAssertEquals(result, expected, @"");
 }
 
 - (void)testAnExclusiveTaxOperatorShouldReturnTheTermMultipliedByTheRate
@@ -125,9 +128,9 @@
     ExclusiveTaxOperator *op = [[ExclusiveTaxOperator alloc] initWithNumber:rate];
     
     NSNumber *nominal = [NSNumber numberWithDouble:100.0];
-    double expected = 80.0;
-    double result = [[op performOperationWith:nominal] doubleValue];
+    NSNumber *expected = [NSNumber numberWithInteger:80];
+    NSNumber *result = [op performOperationWith:nominal];
     
-    STAssertTrue(abs(expected - result) < 1E-12, @"");
+    STAssertEqualObjects(result, expected, @"");
 }
 @end

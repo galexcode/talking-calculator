@@ -36,6 +36,9 @@
     self.resultSpeechSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"resultSpeechActivated"];
     self.LanguageControl.selectedSegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"Language"];
     
+    int rateTimesHundred =[[NSUserDefaults standardUserDefaults] integerForKey:@"TaxRate"];
+    self.taxRateField.text = [NSString stringWithFormat:@"%d",  rateTimesHundred];
+    
     UIImage *img = [UIImage imageNamed:@"leopardskin.jpg"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:img];
     [self.tableView setBackgroundView:imageView];
@@ -107,5 +110,12 @@
     if ([self previousControllerIsTextual]) {
         [self replaceStackWithCorrectLanguageCalculatorWithIndex:selectedIndex];
     }
+}
+
+- (IBAction)taxRateChanged:(UITextField *)sender {
+    int rateTimesHundred = [[sender text] intValue];
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:rateTimesHundred forKey:@"TaxRate"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 @end

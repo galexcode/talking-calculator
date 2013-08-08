@@ -93,16 +93,13 @@
 
 @end
 
-@interface UnaryOperator ()
-@property (strong, nonatomic) NSNumber *number;
-@end
 
 @implementation UnaryOperator
 
-- (id)initWithNumber:(NSNumber *)number
+- (id)initWithInt:(int)intNumber
 {
     if (self = [super init]) {
-        self.number = number;
+        self.intNumber = intNumber;
     }
     return self;
 }
@@ -118,7 +115,7 @@
 
 - (NSNumber *)performOperationWith:(NSNumber *)nominal
 {
-    double result =  [nominal doubleValue] * (1.0 + [self.number doubleValue]);
+    double result =  [nominal doubleValue] * (100 + self.intNumber) / 100.0;
     return [NSNumber numberWithDouble:result];
 }
 
@@ -128,7 +125,7 @@
 
 - (NSNumber *)performOperationWith:(NSNumber *)nominal
 {
-    double result =  [nominal doubleValue] / ( 1 + [self.number doubleValue]);
+    double result =  [nominal doubleValue] / (100 + self.intNumber) * 100.0;
     return [NSNumber numberWithDouble:result];
 }
 
