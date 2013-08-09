@@ -285,14 +285,10 @@
 - (void)operatorPressed:(UIButton *)sender withOperator:(NSString *)operator
 {
     // TODO refactor!!
-    if (!(self.displayModel.newEntry) && [self hasOperator]) {
-        [self highlightOperatorButton:sender];
-        [self performOperation:self.previousValue withRhs:[self getDisplayValue]];
-        self.operator = [MathOperator createWithString:operator];
-        self.previousValue = [self getDisplayValue];
-        [self.displayModel beginNewEntry];
-    } else if (self.operatorButton == sender) {
+    if (self.operatorButton == sender && self.displayModel.newEntry) {
+        // Make it possible to append more numbers
         self.displayModel.newEntry = NO;
+        
         [self.operatorButton setHighlighted:NO];
         self.operatorButton = nil;
         self.operator = nil;
@@ -303,7 +299,11 @@
             [self.audioPlayer playAudioWithKeyAsync:[[StringRepeated alloc] initWithString:operator]];
         }
         
+        if (!(self.displayModel.newEntry) && [self hasOperator]) {
+            [self performOperation:self.previousValue withRhs:[self getDisplayValue]];
+        }
         self.operator = [MathOperator createWithString:operator];
+        
         self.previousValue = [self getDisplayValue];
         [self.displayModel beginNewEntry];
     }
