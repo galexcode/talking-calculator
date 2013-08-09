@@ -284,18 +284,29 @@
 
 - (void)operatorPressed:(UIButton *)sender withOperator:(NSString *)operator
 {
-    [self highlightOperatorButton:sender];
-    if (self.buttonSpeechIsActivated) {
-        [self.audioPlayer playAudioWithKeyAsync:[[StringRepeated alloc] initWithString:operator]];
-    }
-
-    if ([self hasOperator]) {
+    // TODO refactor!!
+    if (!(self.displayModel.newEntry) && [self hasOperator]) {
+        [self highlightOperatorButton:sender];
         [self performOperation:self.previousValue withRhs:[self getDisplayValue]];
+        self.operator = [MathOperator createWithString:operator];
+        self.previousValue = [self getDisplayValue];
+        [self.displayModel beginNewEntry];
+    } else if (self.operatorButton == sender) {
+        self.displayModel.newEntry = NO;
+        [self.operatorButton setHighlighted:NO];
+        self.operatorButton = nil;
+        self.operator = nil;
+    } else {
+        [self highlightOperatorButton:sender];
+        
+        if (self.buttonSpeechIsActivated) {
+            [self.audioPlayer playAudioWithKeyAsync:[[StringRepeated alloc] initWithString:operator]];
+        }
+        
+        self.operator = [MathOperator createWithString:operator];
+        self.previousValue = [self getDisplayValue];
+        [self.displayModel beginNewEntry];
     }
-    
-    self.operator = [MathOperator createWithString:operator];
-    self.previousValue = [self getDisplayValue];
-    [self.displayModel beginNewEntry];
 }
 
 - (void)performOperation:(NSNumber *)lhs
@@ -331,7 +342,8 @@
     if ([self hasOperator]) {
         [self performOperation:self.previousValue withRhs:[self getDisplayValue]];
     }
-    self.operator = NULL;
+    self.operator = nil;
+    self.operatorButton = nil;
     
     [self.displayModel beginNewEntry];
     [self sayResultWithPrefix:EQUAL];
@@ -346,6 +358,8 @@
 
 - (void)performTaxCalculation:(NSString *)taxOperator
 {
+    // TODO refactor
+    self.previousValue = [self getDisplayValue];
     int taxRateTimesHundred = [[NSUserDefaults standardUserDefaults] integerForKey:@"TaxRate"];
     UnaryOperator *operator = [UnaryOperator createFromString:taxOperator];
     operator.intNumber = taxRateTimesHundred;

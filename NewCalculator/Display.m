@@ -12,7 +12,6 @@
 @interface Display()
 
 @property (strong, nonatomic) NSString *value;
-@property BOOL newEntry;
 
 @end
 

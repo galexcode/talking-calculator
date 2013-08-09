@@ -29,6 +29,7 @@
         self.layer.masksToBounds = YES;
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
+        // TODO refactor
         CGRect rect = CGRectMake(0, 0, 1, 1);
         // Create a 1 by 1 pixel context
         UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);

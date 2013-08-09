@@ -12,6 +12,8 @@
 
 @interface Display : NSObject
 
+@property BOOL newEntry;
+
 - (void)setValueWithNumber:(NSNumber *)number;
 
 - (NSNumber *)valueAsNumber;
