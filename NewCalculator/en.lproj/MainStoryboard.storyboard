@@ -560,7 +560,9 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="6gw-Yn-FDd" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="07k-Mo-9uE"/>
+                            <constraint firstItem="kiR-Yo-Od4" firstAttribute="top" secondItem="xkb-4n-XqW" secondAttribute="top" type="default" id="0ps-6n-rVb"/>
                             <constraint firstItem="XmO-w0-SfL" firstAttribute="baseline" secondItem="AOF-4H-mK4" secondAttribute="baseline" type="default" id="0w3-kC-dmK"/>
+                            <constraint firstItem="kiR-Yo-Od4" firstAttribute="top" secondItem="0g8-2k-Sgh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1DG-lh-MDv"/>
                             <constraint firstItem="QsA-ir-PVU" firstAttribute="leading" secondItem="I4r-rl-Gsl" secondAttribute="leading" type="default" id="1de-IL-9Ik"/>
                             <constraint firstItem="95L-vX-MFL" firstAttribute="top" secondItem="AOF-4H-mK4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1eC-zO-tIw"/>
                             <constraint firstItem="7k4-JN-zwb" firstAttribute="top" secondItem="UvJ-0T-fEW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4I6-rQ-WJA"/>
@@ -587,7 +589,6 @@
                             <constraint firstItem="4wF-Yy-eiE" firstAttribute="leading" secondItem="95L-vX-MFL" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="LOT-zn-3BM"/>
                             <constraint firstItem="xkb-4n-XqW" firstAttribute="leading" secondItem="zWU-jW-j3Z" secondAttribute="leading" type="default" id="Lfh-dJ-krT"/>
                             <constraint firstItem="0g8-2k-Sgh" firstAttribute="top" secondItem="saT-Kp-Hw5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MKC-DB-YJA"/>
-                            <constraint firstItem="xkb-4n-XqW" firstAttribute="top" secondItem="QsA-ir-PVU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="O8H-wh-qMw"/>
                             <constraint firstItem="kiR-Yo-Od4" firstAttribute="leading" secondItem="OVp-9R-dTm" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Qbl-kB-lfz"/>
                             <constraint firstItem="EeA-tX-GyD" firstAttribute="baseline" secondItem="zWU-jW-j3Z" secondAttribute="baseline" type="default" id="Rfz-pC-Yoe"/>
                             <constraint firstItem="4wF-Yy-eiE" firstAttribute="leading" secondItem="XmO-w0-SfL" secondAttribute="leading" type="default" id="S6g-BA-Je1"/>
@@ -610,22 +611,21 @@
                             <constraint firstItem="gMe-S4-qtd" firstAttribute="top" secondItem="6gw-Yn-FDd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ehJ-TQ-dN8"/>
                             <constraint firstItem="AXD-Qa-dBs" firstAttribute="top" secondItem="7k4-JN-zwb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eww-45-34q"/>
                             <constraint firstItem="saT-Kp-Hw5" firstAttribute="leading" secondItem="95L-vX-MFL" secondAttribute="leading" type="default" id="h2b-8Q-nrz"/>
-                            <constraint firstItem="kiR-Yo-Od4" firstAttribute="top" secondItem="0g8-2k-Sgh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="h94-fu-8E4"/>
                             <constraint firstItem="EeA-tX-GyD" firstAttribute="top" secondItem="kiR-Yo-Od4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jsN-3o-aWe"/>
                             <constraint firstItem="QsA-ir-PVU" firstAttribute="top" secondItem="I4r-rl-Gsl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mfY-pf-IWk"/>
                             <constraint firstItem="AOF-4H-mK4" firstAttribute="leading" secondItem="7k4-JN-zwb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="n0g-mn-KXA"/>
-                            <constraint firstItem="kiR-Yo-Od4" firstAttribute="baseline" secondItem="xkb-4n-XqW" secondAttribute="baseline" type="default" id="oq8-9B-Ek5"/>
+                            <constraint firstItem="xkb-4n-XqW" firstAttribute="top" secondItem="QsA-ir-PVU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="n5r-WL-Vzn"/>
                             <constraint firstItem="saT-Kp-Hw5" firstAttribute="top" secondItem="95L-vX-MFL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ozC-Jl-wen"/>
                             <constraint firstItem="AOF-4H-mK4" firstAttribute="top" secondItem="UvJ-0T-fEW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pdK-rv-oFP"/>
                             <constraint firstItem="I4r-rl-Gsl" firstAttribute="top" secondItem="4wF-Yy-eiE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="psV-Do-vlS"/>
                             <constraint firstAttribute="trailing" secondItem="QsA-ir-PVU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qjj-PN-kMR"/>
                             <constraint firstItem="Gxd-8Y-CsO" firstAttribute="top" secondItem="OVp-9R-dTm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sZa-Bp-rpo"/>
-                            <constraint firstItem="kiR-Yo-Od4" firstAttribute="top" secondItem="0g8-2k-Sgh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="suf-w6-M3v"/>
                             <constraint firstAttribute="trailing" secondItem="zWU-jW-j3Z" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="twf-BW-fVA"/>
                             <constraint firstItem="gMe-S4-qtd" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uT6-R4-h6a"/>
                             <constraint firstItem="6gw-Yn-FDd" firstAttribute="top" secondItem="AXD-Qa-dBs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uZL-mV-6ij"/>
                             <constraint firstItem="0g8-2k-Sgh" firstAttribute="baseline" secondItem="gMe-S4-qtd" secondAttribute="baseline" type="default" id="vYk-Fx-CsI"/>
                             <constraint firstItem="OVp-9R-dTm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vkA-Qt-OBe"/>
+                            <constraint firstItem="xkb-4n-XqW" firstAttribute="top" secondItem="QsA-ir-PVU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xWx-JL-Qcf"/>
                             <constraint firstItem="I4r-rl-Gsl" firstAttribute="leading" secondItem="4wF-Yy-eiE" secondAttribute="leading" type="default" id="xcM-YP-baU"/>
                             <constraint firstItem="4wF-Yy-eiE" firstAttribute="baseline" secondItem="95L-vX-MFL" secondAttribute="baseline" type="default" id="yRj-p4-iM1"/>
                             <constraint firstAttribute="trailing" secondItem="4wF-Yy-eiE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zlZ-5I-kxr"/>
@@ -1304,54 +1304,6 @@
             <point key="canvasLocation" x="1155" y="892"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="LeopardButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LeopardButton.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backPressed:"/>
-                <relationship kind="action" name="buttonSpeechSwitched:" candidateClass="UISwitch"/>
-                <relationship kind="action" name="languageChanged:" candidateClass="UISegmentedControl"/>
-                <relationship kind="action" name="resultSpeechSwitched:" candidateClass="UISwitch"/>
-                <relationship kind="action" name="taxRateChanged:" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="LanguageControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="buttonSpeechSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="resultSpeechSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="taxRateField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="dividePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="eightPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="equalsPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="exclTaxPressed"/>
-                <relationship kind="action" name="fivePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="fourPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="inclTaxPressed"/>
-                <relationship kind="action" name="minusPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="multiplyPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="ninePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="onePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="plusPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="settingsPressed"/>
-                <relationship kind="action" name="sevenPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="sixPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="threePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="twoPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="zeroPressed:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="display" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="operatorButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sevenButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
