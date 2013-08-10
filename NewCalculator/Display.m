@@ -124,8 +124,10 @@
 
 - (RepeatedStrings *)valueAsArrayOfRepeatedStringsWithString:(NSString *)preString
 {
-    NSString *valueAsString = [preString stringByAppendingString:[[self valueAsNumber] stringValue]];
+    // TODO add tests!
     RepeatedStrings*result = [[RepeatedStrings alloc] init];
+    [result addString:preString];
+    NSString *valueAsString = [[self valueAsNumber] stringValue];
     
     return [Display valueAsArrayOfRepeatedStringsImpl:valueAsString withResult:result];
 }
