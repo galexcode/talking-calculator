@@ -38,7 +38,19 @@
     return [NSNumber numberWithDouble:[self.value doubleValue]];
 }
 
-+ (NSString *)addSpaceEveryThousand:(NSString *)valueAsString
+- (NSString *)addSpaceEveryThousand:(NSString *)valueAsString
+{
+    NSRange range = [valueAsString rangeOfString:@"."];
+    if (range.length > 0) {
+        NSString *before = [valueAsString substringToIndex:range.location];
+        NSString *withSpaces = [Display addSpaceEveryThousandImpl:before];
+        return [withSpaces stringByAppendingString:[valueAsString substringFromIndex:range.location]];
+    } else {
+        return [Display addSpaceEveryThousandImpl:valueAsString];
+    }
+}
+
++ (NSString *)addSpaceEveryThousandImpl:(NSString *)valueAsString
 {
     NSInteger count = [valueAsString length];
     if (count < 4) {
@@ -51,12 +63,12 @@
     
     NSString *result = [@" " stringByAppendingString:last];
     
-    return [[self addSpaceEveryThousand:first] stringByAppendingString:result];
+    return [[self addSpaceEveryThousandImpl:first] stringByAppendingString:result];
 }
 
 - (NSString *)valueAsString
 {
-    return [[self class] addSpaceEveryThousand:self.value];
+    return [self addSpaceEveryThousand:self.value];
 }
 
 - (void)addDigitWithString:(NSString *)digit
@@ -80,6 +92,7 @@
 
 - (void)beginNewEntry
 {
+    self.containsComma = NO;
     self.newEntry = YES;
 }
 
@@ -91,6 +104,14 @@
         NSString *first = [string substringToIndex:1];
         [result addObject:first];
         [self asArray:[string substringFromIndex:1] withResult:result];
+    }
+}
+
+- (void)addComma
+{
+    if (!self.containsComma) {
+        self.containsComma = YES;
+        [self addDigitWithString:@"."];
     }
 }
 

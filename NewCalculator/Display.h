@@ -13,6 +13,7 @@
 @interface Display : NSObject
 
 @property BOOL newEntry;
+@property (nonatomic) BOOL containsComma;
 
 - (void)setValueWithNumber:(NSNumber *)number;
 
@@ -24,6 +25,7 @@
 
 - (void)addDigitWithString:(NSString *)digit;
 - (void)addDigitWithInt:(int)digit;
+- (void)addComma;
 - (void)beginNewEntry;
 
 @end

@@ -380,6 +380,10 @@
     [self performTaxCalculation:EXCL_TAX];
 }
 
+- (IBAction)commaPressed {
+    [self.displayModel addComma];
+}
+
 - (void)undoEntry
 {
     self.operator = NULL;

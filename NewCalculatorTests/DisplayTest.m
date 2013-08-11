@@ -136,7 +136,62 @@
     STAssertEqualObjects(stringArray[0], @"5", @"");
     STAssertEqualObjects(stringArray[1], @"3", @"");
     STAssertEqualObjects(stringArray[2], @"4", @"");
+}
+
+- (void)testAddingACommaShouldPlaceACommaAsTheLastCharacter
+{
+    Display *display = [[Display alloc] init];
+    [display addDigitWithInt:3];
+    [display addComma];
+    [display addDigitWithInt:4];
     
+    STAssertEqualObjects([display valueAsString], @"3.4", @"");
+
+}
+
+- (void)testIfTheDisplayContainsACommaTryingToAddAnotherOneShouldBeIgnored
+{
+    Display *display = [[Display alloc] init];
+    [display addDigitWithInt:3];
+    [display addComma];
+    [display addDigitWithInt:4];
+    [display addComma];
+    
+    STAssertEqualObjects([display valueAsString], @"3.4", @"");
+}
+
+- (void)testAfterACommaNoSpacesShouldBeAdded
+{
+    Display *display = [[Display alloc] init];
+    [display addDigitWithInt:3];
+    [display addComma];
+    [display addDigitWithInt:4];
+    [display addDigitWithInt:2];
+    [display addDigitWithInt:4];
+    [display addDigitWithInt:1];
+    [display addDigitWithInt:7];
+    
+    STAssertEqualObjects([display valueAsString], @"3.42417", @"");
+}
+
+- (void)testADecimalNumberShouldCorrectlyHaveAdditionalSpaces
+{
+    NSNumber *decimalNumber = [NSNumber numberWithDouble:1234.6789];
+    
+    Display *display = [[Display alloc] init];
+    [display setValueWithNumber:decimalNumber];
+    
+    STAssertEqualObjects([display valueAsString], @"1 234.6789", @"");
+}
+
+- (void)testWhenBeginningANewEntryContainsCommaShouldBeFalse
+{
+    
+    Display *display = [[Display alloc] init];
+    [display addComma];
+    STAssertTrue(display.containsComma, @"");
+    [display beginNewEntry];
+    STAssertFalse(display.containsComma, @"");
 }
 
 @end

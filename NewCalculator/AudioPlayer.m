@@ -140,6 +140,7 @@
 
 - (void)playSequence:(RepeatedStrings *)keys
 {
+    [self stop];
     self.keys = keys;
     [self playAudioWithKey:[self.keys nextString]];
 }
@@ -228,7 +229,9 @@
 
 -(void)main {
     @try {
-        [self.audioPlayer playAudioWithKey:self.repeatedString];
+        if (!self.isCancelled) {
+            [self.audioPlayer playAudioWithKey:self.repeatedString];
+        }
     }
     @catch(...) {
         // Do not rethrow exceptions.

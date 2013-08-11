@@ -18,6 +18,7 @@
 - (IBAction)settingsPressed;
 - (IBAction)inclTaxPressed;
 - (IBAction)exclTaxPressed;
+- (IBAction)commaPressed;
 
 - (IBAction)onePressed:(UIButton *)sender;
 - (IBAction)twoPressed:(UIButton *)sender;
