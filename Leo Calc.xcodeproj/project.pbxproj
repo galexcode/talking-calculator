@@ -721,14 +721,15 @@
 		D5C915F717820D5D003939D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NewCalculator.app/NewCalculator";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Leo Calc.app/Leo Calc";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NewCalculator/NewCalculator-Prefix.pch";
+				GCC_PREFIX_HEADER = "NewCalculator/Leo Calc-Prefix.pch";
 				INFOPLIST_FILE = "NewCalculatorTests/Leo CalcTests-Info.plist";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = "Leo CalcTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -738,14 +739,15 @@
 		D5C915F817820D5D003939D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NewCalculator.app/NewCalculator";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)//Leo Calc.app/Leo Calc";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NewCalculator/NewCalculator-Prefix.pch";
+				GCC_PREFIX_HEADER = "NewCalculator/Leo Calc-Prefix.pch";
 				INFOPLIST_FILE = "NewCalculatorTests/Leo CalcTests-Info.plist";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = "Leo CalcTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

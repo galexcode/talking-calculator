@@ -78,7 +78,7 @@
         self.newEntry = NO;
     }
     
-    if ([self.value isEqualToString:@"0"]) {
+    if ([self.value isEqualToString:@"0"] && !self.containsComma) {
         self.value = digit;
     } else {
         self.value = [self.value stringByAppendingString:digit];

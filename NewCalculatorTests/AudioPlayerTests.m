@@ -8,6 +8,7 @@
 
 #import "AudioPlayerTests.h"
 #import "AudioPlayerMock.h"
+#import "AudioPlayer.h"
 #import "RepeatedStrings.h"
 
 @interface AudioPlayerTests ()

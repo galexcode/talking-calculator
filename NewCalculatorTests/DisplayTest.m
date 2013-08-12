@@ -184,6 +184,14 @@
     STAssertEqualObjects([display valueAsString], @"1 234.6789", @"");
 }
 
+- (void)testIfACommaIsTheFirstCharacterAZeroShouldBePrepended
+{
+    Display *display = [[Display alloc] init];
+    [display addComma];
+    
+    STAssertEqualObjects([display valueAsString], @"0.", @"");
+}
+
 - (void)testWhenBeginningANewEntryContainsCommaShouldBeFalse
 {
     
