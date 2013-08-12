@@ -252,16 +252,20 @@
     [self operatorPressed:sender withOperator:DIV];
 }
 
+- (void)sayButtonPressed:(NSString *)buttonIdentifier
+{
+    if (self.buttonSpeechIsActivated) {
+        [self.audioPlayer abortQueue];
+        [self.audioPlayer playAudioWithKeyAsync:[[StringRepeated alloc] initWithString:buttonIdentifier]];
+    }
+}
+
 - (void)digitPressed:(NSString *)digit
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"DigitPressed" object:nil];
     
     [self addDigit:digit];
-    
-    if (self.buttonSpeechIsActivated) {
-        [self.audioPlayer abortQueue];
-        [self.audioPlayer playAudioWithKeyAsync:[[StringRepeated alloc] initWithString:digit]];
-    }
+    [self sayButtonPressed:digit];
 }
 
 - (void)turnOffHighlightButton:(id)dummy
@@ -381,7 +385,9 @@
 }
 
 - (IBAction)commaPressed {
+    [self sayButtonPressed:DOT];
     [self.displayModel addComma];
+    [self updateDisplay];
 }
 
 - (void)undoEntry
@@ -394,7 +400,7 @@
 
 - (void)addDisplayLabelAnimation
 {
-    [self addFlashAnimationToLayer:self.display.layer withDuration:0.2 andStartValue:0.1];
+    [self addFlashAnimationToLayer:self.display.layer withDuration:0.4 andStartValue:0.1];
 }
 
 - (void)removeDisplayLabelAnimation

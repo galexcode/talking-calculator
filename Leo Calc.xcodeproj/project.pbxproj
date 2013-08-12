@@ -183,14 +183,14 @@
 		D5AECF3117A04C46001C6E55 /* a.b.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a.b.mp3; sourceTree = "<group>"; };
 		D5AECF3317A04FCD001C6E55 /* AudioPlayerMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerMock.h; sourceTree = "<group>"; };
 		D5AECF3417A04FCD001C6E55 /* AudioPlayerMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerMock.m; sourceTree = "<group>"; };
-		D5C915BB17820D5D003939D1 /* NewCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C915BB17820D5D003939D1 /* Leo Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Leo Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C915BE17820D5D003939D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D5C915C017820D5D003939D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D5C915C217820D5D003939D1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D5C915C617820D5D003939D1 /* NewCalculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewCalculator-Info.plist"; sourceTree = "<group>"; };
+		D5C915C617820D5D003939D1 /* Leo Calc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Leo Calc-Info.plist"; sourceTree = "<group>"; };
 		D5C915C817820D5D003939D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5C915CA17820D5D003939D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D5C915CC17820D5D003939D1 /* NewCalculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewCalculator-Prefix.pch"; sourceTree = "<group>"; };
+		D5C915CC17820D5D003939D1 /* Leo Calc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Leo Calc-Prefix.pch"; sourceTree = "<group>"; };
 		D5C915CD17820D5D003939D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D5C915CE17820D5D003939D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D5C915D017820D5D003939D1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -199,9 +199,9 @@
 		D5C915D717820D5D003939D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		D5C915D917820D5D003939D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D5C915DA17820D5D003939D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D5C915E117820D5D003939D1 /* NewCalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewCalculatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C915E117820D5D003939D1 /* Leo CalcTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Leo CalcTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C915E217820D5D003939D1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		D5C915EA17820D5D003939D1 /* NewCalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewCalculatorTests-Info.plist"; sourceTree = "<group>"; };
+		D5C915EA17820D5D003939D1 /* Leo CalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Leo CalcTests-Info.plist"; sourceTree = "<group>"; };
 		D5C915EC17820D5D003939D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5C915EE17820D5D003939D1 /* NewCalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewCalculatorTests.h; sourceTree = "<group>"; };
 		D5C915EF17820D5D003939D1 /* NewCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewCalculatorTests.m; sourceTree = "<group>"; };
@@ -245,6 +245,9 @@
 		D541326C17B66AD100611F30 /* AudioFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D541328717B66AD100611F30 /* testa.m4a */,
+				D541328817B66AD100611F30 /* testb.m4a */,
+				D541328917B66AD100611F30 /* testc.m4a */,
 				D541326D17B66AD100611F30 /* div_en.m4a */,
 				D541326E17B66AD100611F30 /* div_swe.m4a */,
 				D541326F17B66AD100611F30 /* dot_en.m4a */,
@@ -271,9 +274,6 @@
 				D541328417B66AD100611F30 /* seven_swe.m4a */,
 				D541328517B66AD100611F30 /* six_en.m4a */,
 				D541328617B66AD100611F30 /* six_swe.m4a */,
-				D541328717B66AD100611F30 /* testa.m4a */,
-				D541328817B66AD100611F30 /* testb.m4a */,
-				D541328917B66AD100611F30 /* testc.m4a */,
 				D541328A17B66AD100611F30 /* three_en.m4a */,
 				D541328B17B66AD100611F30 /* three_swe.m4a */,
 				D541328C17B66AD100611F30 /* two_en.m4a */,
@@ -303,8 +303,8 @@
 		D5C915BC17820D5D003939D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5C915BB17820D5D003939D1 /* NewCalculator.app */,
-				D5C915E117820D5D003939D1 /* NewCalculatorTests.octest */,
+				D5C915BB17820D5D003939D1 /* Leo Calc.app */,
+				D5C915E117820D5D003939D1 /* Leo CalcTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -348,10 +348,10 @@
 		D5C915C517820D5D003939D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D5C915C617820D5D003939D1 /* NewCalculator-Info.plist */,
+				D5C915C617820D5D003939D1 /* Leo Calc-Info.plist */,
 				D5C915C717820D5D003939D1 /* InfoPlist.strings */,
 				D5C915CA17820D5D003939D1 /* main.m */,
-				D5C915CC17820D5D003939D1 /* NewCalculator-Prefix.pch */,
+				D5C915CC17820D5D003939D1 /* Leo Calc-Prefix.pch */,
 				D5C915D017820D5D003939D1 /* Default.png */,
 				D5C915D217820D5D003939D1 /* Default@2x.png */,
 				D5C915D417820D5D003939D1 /* Default-568h@2x.png */,
@@ -383,7 +383,7 @@
 		D5C915E917820D5D003939D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D5C915EA17820D5D003939D1 /* NewCalculatorTests-Info.plist */,
+				D5C915EA17820D5D003939D1 /* Leo CalcTests-Info.plist */,
 				D5C915EB17820D5D003939D1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -392,9 +392,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5C915BA17820D5D003939D1 /* NewCalculator */ = {
+		D5C915BA17820D5D003939D1 /* Leo Calc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5C915F317820D5D003939D1 /* Build configuration list for PBXNativeTarget "NewCalculator" */;
+			buildConfigurationList = D5C915F317820D5D003939D1 /* Build configuration list for PBXNativeTarget "Leo Calc" */;
 			buildPhases = (
 				D5C915B717820D5D003939D1 /* Sources */,
 				D5C915B817820D5D003939D1 /* Frameworks */,
@@ -404,14 +404,14 @@
 			);
 			dependencies = (
 			);
-			name = NewCalculator;
+			name = "Leo Calc";
 			productName = NewCalculator;
-			productReference = D5C915BB17820D5D003939D1 /* NewCalculator.app */;
+			productReference = D5C915BB17820D5D003939D1 /* Leo Calc.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D5C915E017820D5D003939D1 /* NewCalculatorTests */ = {
+		D5C915E017820D5D003939D1 /* Leo CalcTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5C915F617820D5D003939D1 /* Build configuration list for PBXNativeTarget "NewCalculatorTests" */;
+			buildConfigurationList = D5C915F617820D5D003939D1 /* Build configuration list for PBXNativeTarget "Leo CalcTests" */;
 			buildPhases = (
 				D5C915DC17820D5D003939D1 /* Sources */,
 				D5C915DD17820D5D003939D1 /* Frameworks */,
@@ -423,9 +423,9 @@
 			dependencies = (
 				D5C915E717820D5D003939D1 /* PBXTargetDependency */,
 			);
-			name = NewCalculatorTests;
+			name = "Leo CalcTests";
 			productName = NewCalculatorTests;
-			productReference = D5C915E117820D5D003939D1 /* NewCalculatorTests.octest */;
+			productReference = D5C915E117820D5D003939D1 /* Leo CalcTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -437,7 +437,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Olof Hellquist";
 			};
-			buildConfigurationList = D5C915B617820D5D003939D1 /* Build configuration list for PBXProject "NewCalculator" */;
+			buildConfigurationList = D5C915B617820D5D003939D1 /* Build configuration list for PBXProject "Leo Calc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -449,8 +449,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5C915BA17820D5D003939D1 /* NewCalculator */,
-				D5C915E017820D5D003939D1 /* NewCalculatorTests */,
+				D5C915BA17820D5D003939D1 /* Leo Calc */,
+				D5C915E017820D5D003939D1 /* Leo CalcTests */,
 			);
 		};
 /* End PBXProject section */
@@ -607,7 +607,7 @@
 /* Begin PBXTargetDependency section */
 		D5C915E717820D5D003939D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5C915BA17820D5D003939D1 /* NewCalculator */;
+			target = D5C915BA17820D5D003939D1 /* Leo Calc */;
 			targetProxy = D5C915E617820D5D003939D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -665,7 +665,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -689,7 +689,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -700,9 +700,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NewCalculator/NewCalculator-Prefix.pch";
-				INFOPLIST_FILE = "NewCalculator/NewCalculator-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "NewCalculator/Leo Calc-Prefix.pch";
+				INFOPLIST_FILE = "NewCalculator/Leo Calc-Info.plist";
+				PRODUCT_NAME = "Leo Calc";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -711,9 +711,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NewCalculator/NewCalculator-Prefix.pch";
-				INFOPLIST_FILE = "NewCalculator/NewCalculator-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "NewCalculator/Leo Calc-Prefix.pch";
+				INFOPLIST_FILE = "NewCalculator/Leo Calc-Info.plist";
+				PRODUCT_NAME = "Leo Calc";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -728,8 +728,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NewCalculator/NewCalculator-Prefix.pch";
-				INFOPLIST_FILE = "NewCalculatorTests/NewCalculatorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "NewCalculatorTests/Leo CalcTests-Info.plist";
+				PRODUCT_NAME = "Leo CalcTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -745,8 +745,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NewCalculator/NewCalculator-Prefix.pch";
-				INFOPLIST_FILE = "NewCalculatorTests/NewCalculatorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "NewCalculatorTests/Leo CalcTests-Info.plist";
+				PRODUCT_NAME = "Leo CalcTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -755,7 +755,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5C915B617820D5D003939D1 /* Build configuration list for PBXProject "NewCalculator" */ = {
+		D5C915B617820D5D003939D1 /* Build configuration list for PBXProject "Leo Calc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5C915F117820D5D003939D1 /* Debug */,
@@ -764,7 +764,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5C915F317820D5D003939D1 /* Build configuration list for PBXNativeTarget "NewCalculator" */ = {
+		D5C915F317820D5D003939D1 /* Build configuration list for PBXNativeTarget "Leo Calc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5C915F417820D5D003939D1 /* Debug */,
@@ -773,7 +773,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5C915F617820D5D003939D1 /* Build configuration list for PBXNativeTarget "NewCalculatorTests" */ = {
+		D5C915F617820D5D003939D1 /* Build configuration list for PBXNativeTarget "Leo CalcTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5C915F717820D5D003939D1 /* Debug */,
