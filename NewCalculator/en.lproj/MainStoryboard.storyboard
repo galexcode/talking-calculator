@@ -145,8 +145,8 @@
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e3-LF-pdX">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="48" id="dOl-ho-Fsb"/>
                                                         <constraint firstAttribute="width" constant="42" id="izx-2K-Wef"/>
+                                                        <constraint firstAttribute="height" constant="48" id="vah-B5-8Cq"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -167,13 +167,13 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="klx-me-k9I" firstAttribute="centerY" secondItem="Ar7-xQ-WHY" secondAttribute="centerY" type="default" id="Fe7-5a-Vgu"/>
+                                            <constraint firstItem="0e3-LF-pdX" firstAttribute="centerY" secondItem="Vpw-Nm-1zg" secondAttribute="centerY" type="default" id="Khr-pt-gkr"/>
+                                            <constraint firstItem="klx-me-k9I" firstAttribute="centerY" secondItem="Ar7-xQ-WHY" secondAttribute="centerY" type="default" id="L06-tC-uVb"/>
                                             <constraint firstItem="Vpw-Nm-1zg" firstAttribute="leading" secondItem="Ar7-xQ-WHY" secondAttribute="leading" constant="22" id="LoY-lN-89O"/>
                                             <constraint firstItem="0e3-LF-pdX" firstAttribute="top" secondItem="Ar7-xQ-WHY" secondAttribute="top" type="default" id="QrO-KY-jLV"/>
                                             <constraint firstItem="0e3-LF-pdX" firstAttribute="leading" secondItem="Ar7-xQ-WHY" secondAttribute="leading" constant="281" id="WBs-rF-CgQ"/>
                                             <constraint firstItem="klx-me-k9I" firstAttribute="leading" secondItem="Vpw-Nm-1zg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="cdY-yQ-Sll"/>
                                             <constraint firstItem="Vpw-Nm-1zg" firstAttribute="baseline" secondItem="klx-me-k9I" secondAttribute="baseline" type="default" id="lKm-MJ-930"/>
-                                            <constraint firstItem="0e3-LF-pdX" firstAttribute="centerY" secondItem="Vpw-Nm-1zg" secondAttribute="centerY" type="default" id="lmc-ML-PuN"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -1417,55 +1417,6 @@
             <point key="canvasLocation" x="1155" y="892"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="LeopardButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LeopardButton.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backPressed:"/>
-                <relationship kind="action" name="buttonSpeechSwitched:" candidateClass="UISwitch"/>
-                <relationship kind="action" name="languageChanged:" candidateClass="UISegmentedControl"/>
-                <relationship kind="action" name="resultSpeechSwitched:" candidateClass="UISwitch"/>
-                <relationship kind="action" name="taxRateChanged:" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="LanguageControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="buttonSpeechSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="resultSpeechSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="taxRateField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="commaPressed"/>
-                <relationship kind="action" name="dividePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="eightPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="equalsPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="exclTaxPressed"/>
-                <relationship kind="action" name="fivePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="fourPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="inclTaxPressed"/>
-                <relationship kind="action" name="minusPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="multiplyPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="ninePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="onePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="plusPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="settingsPressed"/>
-                <relationship kind="action" name="sevenPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="sixPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="threePressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="twoPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="zeroPressed:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="display" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="operatorButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sevenButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

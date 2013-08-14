@@ -45,6 +45,15 @@
     
     self.buttonSpeechSwitch.onTintColor = [UIColor blackColor];
     self.resultSpeechSwitch.onTintColor = [UIColor blackColor];
+    
+    UITapGestureRecognizer *oneTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideNumPad)];
+    oneTapRecognizer.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:oneTapRecognizer];
+}
+
+- (void)hideNumPad
+{
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -118,4 +127,5 @@
     [[NSUserDefaults standardUserDefaults] setInteger:rateTimesHundred forKey:@"TaxRate"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
 @end
