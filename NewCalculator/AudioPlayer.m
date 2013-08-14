@@ -161,8 +161,10 @@
 
 - (void)stopPlayerWithKey:(NSString *)key
 {
-    AVAudioPlayer *player = [self getPlayerForKey:key];
-    [player stop];
+    if (key != nil) {
+        AVAudioPlayer *player = [self getPlayerForKey:key];
+        [player stop];
+    }
 }
 
 - (void)stop
