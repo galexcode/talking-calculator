@@ -28,27 +28,48 @@
     return self;
 }
 
+- (void)setButtonStatesWithStoredValues
+{
+    self.buttonSpeechSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"buttonSpeechActivated"];
+    self.resultSpeechSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"resultSpeechActivated"];
+    self.LanguageControl.selectedSegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"Language"];
+}
+
+- (void)addRecognizerToHideNumPad
+{
+    UITapGestureRecognizer *oneTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideNumPad)];
+    oneTapRecognizer.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:oneTapRecognizer];
+}
+
+- (void)setTaxRateFieldProperties
+{
+    int rateTimesHundred = [[NSUserDefaults standardUserDefaults] integerForKey:@"TaxRate"];
+    self.taxRateField.text = [NSString stringWithFormat:@"%d",  rateTimesHundred];
+    [self addRecognizerToHideNumPad];
+}
+
+- (void)setBackground
+{
+    UIImage *img = [UIImage imageNamed:@"leopardskin.jpg"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:img];
+    [self.tableView setBackgroundView:imageView];
+}
+
+- (void)setSwitchColors
+{
+    self.buttonSpeechSwitch.onTintColor = [UIColor blackColor];
+    self.resultSpeechSwitch.onTintColor = [UIColor blackColor];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.buttonSpeechSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"buttonSpeechActivated"];
-    self.resultSpeechSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"resultSpeechActivated"];
-    self.LanguageControl.selectedSegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"Language"];
-    
-    int rateTimesHundred =[[NSUserDefaults standardUserDefaults] integerForKey:@"TaxRate"];
-    self.taxRateField.text = [NSString stringWithFormat:@"%d",  rateTimesHundred];
-    
-    UIImage *img = [UIImage imageNamed:@"leopardskin.jpg"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:img];
-    [self.tableView setBackgroundView:imageView];
-    
-    self.buttonSpeechSwitch.onTintColor = [UIColor blackColor];
-    self.resultSpeechSwitch.onTintColor = [UIColor blackColor];
-    
-    UITapGestureRecognizer *oneTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideNumPad)];
-    oneTapRecognizer.numberOfTapsRequired = 1;
-    [self.view addGestureRecognizer:oneTapRecognizer];
+    [self setBackground];
+    [self setSwitchColors];
+    [self setButtonStatesWithStoredValues];
+    [self setTaxRateFieldProperties];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
