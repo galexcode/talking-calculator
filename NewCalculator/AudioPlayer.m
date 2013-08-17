@@ -15,7 +15,6 @@
 @property (strong, nonatomic) NSMutableDictionary *audioPlayerDict;
 @property (strong, nonatomic) NSOperationQueue *queue;
 @property (strong, nonatomic) RepeatedStrings *keys;
-@property (strong, nonatomic) NSString *lastKey;
 @end
 
 @implementation AudioPlayer
@@ -109,7 +108,6 @@
         [MissingAudioKeyException raise:key format:@"Key does not exist"];
     }
     
-    self.lastKey = key;
     return player;
 }
 
@@ -159,18 +157,10 @@
     [self.queue cancelAllOperations];
 }
 
-- (void)stopPlayerWithKey:(NSString *)key
-{
-    if (key != nil) {
-        AVAudioPlayer *player = [self getPlayerForKey:key];
-        [player stop];
-    }
-}
-
 - (void)stop
 {
     self.keys = nil;
-    [self stopPlayerWithKey:self.lastKey];
+    [self.audioPlayerDict enumerateKeysAndObjectsUsingBlock:^(id key, id player, BOOL *quit){[player stop];}];
 }
 
 @end
