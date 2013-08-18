@@ -125,6 +125,18 @@
     [self playAudio:player numberOfTimes:key.repeated];
 }
 
+- (void)playAudioQueueWithArray:(NSArray *)keys
+{
+    RepeatedStrings *s = [[RepeatedStrings alloc] init];
+    
+    for (NSString *key in keys) {
+        [s addString:key];
+    }
+    
+    [self playAudioQueueWithKeys:s inBackground:YES];
+}
+
+
 - (void)playAudioQueueWithKeys:(RepeatedStrings *)keys inBackground:(BOOL)async
 {
     AsyncAudioPlayer *ap = [[AsyncAudioPlayer alloc] initWithAudioPlayer:self andKeys:keys];

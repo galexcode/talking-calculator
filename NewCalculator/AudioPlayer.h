@@ -20,6 +20,7 @@
 - (void)playAudioWithKeyAsync:(StringRepeated *)key;
 - (void)playAudioWithKey:(StringRepeated *)key;
 - (void)playAudioQueueWithKeys:(RepeatedStrings *)keys inBackground:(BOOL)async;
+- (void)playAudioQueueWithArray:(NSArray *)keys;
 - (void)playAudio:(id)player;
 - (void)abortQueue;
 - (void)stop;

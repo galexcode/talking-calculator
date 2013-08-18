@@ -10,4 +10,10 @@
 
 @interface MathGrammar : NSObject
 
++ (MathGrammar *)grammarWithInt:(int)number;
+
+- (int)powerOfTen;
+- (int)valueOfPowerOfTen:(int)powerOfTen;
+- (NSArray *)getSpeechRepresentation;
+
 @end
