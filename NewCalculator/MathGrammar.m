@@ -73,83 +73,73 @@
      return self.number - value * pow(10, power);
 }
 
-- (MathGrammar *)addReslutAndReducePowerOfTen:(NSMutableArray *)result
-                                    withPower:(int)power
-                                 stringFormat:(NSString *)format
-                                    andString:(NSString *)stringValue
+- (BOOL)numberIsUnique
 {
+    return [self powerOfTen] == 1 && self.number > 19;
+}
+
+- (NSMutableArray *)addResultAndContinue:(NSMutableArray *)result
+{
+    int power = [self powerOfTen];
     int value = [self valueOfPowerOfTen:power];
+    int tenToThePower = pow(10, power);
     
-    [result addObject:[NSString stringWithFormat:format, value]];
-    if (stringValue != nil) {
-        [result addObject:stringValue];
+    if ([self numberIsUnique]) {
+        [result addObject:[NSString stringWithFormat:@"%d0", value]];
+    } else {
+        [result addObject:[NSString stringWithFormat:@"%d", value]];
+        [result addObject:[NSString stringWithFormat:@"%d", tenToThePower]];
     }
     
     int reducedNumber = [self removePowerOfTen:power withValue:value];
-    return [MathGrammar grammarWithInt:reducedNumber];
+    MathGrammar *grammar = [MathGrammar grammarWithInt:reducedNumber];
+    
+    return [grammar impl:result];
 }
 
-- (NSMutableArray *)impl:(NSMutableArray *)result withGrammar:(MathGrammar *)grammar
+- (NSMutableArray *)dividePower:(int)power andConquer:(NSMutableArray *)result
 {
-    int power = [grammar powerOfTen];
+    int tenToThePower = pow(10, power);
+    int first = self.number / tenToThePower;
+    int rest = self.number % tenToThePower;
     
-    if (power == 9) {
-        MathGrammar *g = [self addReslutAndReducePowerOfTen:result withPower:power stringFormat:@"%d" andString:@"1000000000"];
-        return [g impl:result withGrammar:g];
-        
+    MathGrammar *firstGrammar = [MathGrammar grammarWithInt:first];
+    result = [firstGrammar impl:result];
+    
+    [result addObject:[NSString stringWithFormat:@"%d", tenToThePower]];
+    
+    MathGrammar *restGrammar = [MathGrammar grammarWithInt:rest];
+    result = [restGrammar impl:result];
+    
+    return result;
+}
+
+- (BOOL)powerIsEssential
+{
+    int power = [self powerOfTen];
+    
+    return power == 9 || power == 6 || power == 3 || power == 2;
+}
+
+- (NSMutableArray *)impl:(NSMutableArray *)result
+{
+    int power = [self powerOfTen];
+    
+    if ([self powerIsEssential]) {
+        return [self addResultAndContinue:result];
     } else if (power > 6) {
-        int thousand = pow(10, 6);
-        int first = self.number / thousand;
-        int rest = self.number % thousand;
-        
-        MathGrammar *firstGrammar = [MathGrammar grammarWithInt:first];
-        result = [firstGrammar impl:result withGrammar:firstGrammar];
-        
-        [result addObject:@"1000000"];
-        
-        MathGrammar *restGrammar = [MathGrammar grammarWithInt:rest];
-        result = [restGrammar impl:result withGrammar:restGrammar];
-        
-        return result;
-    } else if (power == 6) {
-        MathGrammar *g = [self addReslutAndReducePowerOfTen:result withPower:power stringFormat:@"%d" andString:@"1000000"];
-        return [g impl:result withGrammar:g];
+        return [self dividePower:6 andConquer:result];
     } else if (power > 3) {
-        int thousand = pow(10, 3);
-        int first = self.number / thousand;
-        int rest = self.number % thousand;
-        
-        MathGrammar *firstGrammar = [MathGrammar grammarWithInt:first];
-        result = [firstGrammar impl:result withGrammar:firstGrammar];
-        
-        [result addObject:@"1000"];
-        
-        MathGrammar *restGrammar = [MathGrammar grammarWithInt:rest];
-        result = [restGrammar impl:result withGrammar:restGrammar];
-        
-        return result;
-        
-    } else if (power == 3) {
-        MathGrammar *g = [self addReslutAndReducePowerOfTen:result withPower:power stringFormat:@"%d" andString:@"1000"];
-        return [g impl:result withGrammar:g];
-    } else if (power == 2) {
-        MathGrammar *g = [self addReslutAndReducePowerOfTen:result withPower:power stringFormat:@"%d" andString:@"100"];
-        return [g impl:result withGrammar:g];
+        return [self dividePower:3 andConquer:result];
     } else if (power == 1) {
         if (self.number > 19) {
-            MathGrammar *g = [self addReslutAndReducePowerOfTen:result withPower:power stringFormat:@"%d0" andString:nil];
-            return [g impl:result withGrammar:g];
+            return [self addResultAndContinue:result];
         } else {
             [result addObject:[NSString stringWithFormat:@"%d", self.number]];
-            return result;
         }
     } else {
-        if (self.number == 0) {
-            // Do nothing
-        } else {
+        if (self.number != 0) {
             [result addObject:[NSString stringWithFormat:@"%d", self.number]];
-            
-            return result;
         }
     }
     
@@ -160,7 +150,7 @@
 {
     NSMutableArray *result = [[NSMutableArray alloc] init];
     
-    return [self impl:result withGrammar:self];
+    return [self impl:result];
 }
 
 @end
