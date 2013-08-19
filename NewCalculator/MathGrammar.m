@@ -10,11 +10,20 @@
 #import "MathGrammar.h"
 
 @interface MathGrammar ()
-
+@property (nonatomic) int powerOfTen;
 @property (nonatomic) int number;
 @end
 
 @implementation MathGrammar
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.powerOfTen = -1;
+    }
+    return self;
+}
 
 + (MathGrammar *)grammarWithInt:(int)number
 {
@@ -36,7 +45,10 @@
 
 - (int)powerOfTen
 {
-    return [MathGrammar powerOfTen:self.number withResult:0];
+    if (_powerOfTen == -1) {
+        _powerOfTen = [MathGrammar powerOfTen:self.number withResult:0];
+    }
+    return _powerOfTen;
 }
 
 + (int)stripOnePowerOfTen:(int)value
@@ -45,15 +57,15 @@
         return value;
     } else {
         MathGrammar *grammar = [MathGrammar grammarWithInt:value];
-        int power = pow(10, [grammar powerOfTen]);
-        int reducedNumber = value % power;
+        int reductionValue = pow(10, grammar.powerOfTen);
+        int reducedNumber = value % reductionValue;
         return [self stripOnePowerOfTen:reducedNumber];
     }
 }
 
 - (int)valueOfPowerOfTen:(int)powerOfTen
 {
-    int power = [self powerOfTen];
+    int power = self.powerOfTen;
     if (powerOfTen > power) {
         return 0;
     }
@@ -75,14 +87,13 @@
 
 - (BOOL)numberIsUnique
 {
-    return [self powerOfTen] == 1 && self.number > 19;
+    return self.powerOfTen == 1 && self.number > 19;
 }
 
 - (NSMutableArray *)addResultAndContinue:(NSMutableArray *)result
 {
-    int power = [self powerOfTen];
-    int value = [self valueOfPowerOfTen:power];
-    int tenToThePower = pow(10, power);
+    int value = [self valueOfPowerOfTen:self.powerOfTen];
+    int tenToThePower = pow(10, self.powerOfTen);
     
     if ([self numberIsUnique]) {
         [result addObject:[NSString stringWithFormat:@"%d0", value]];
@@ -91,47 +102,52 @@
         [result addObject:[NSString stringWithFormat:@"%d", tenToThePower]];
     }
     
-    int reducedNumber = [self removePowerOfTen:power withValue:value];
+    int reducedNumber = [self removePowerOfTen:self.powerOfTen withValue:value];
     MathGrammar *grammar = [MathGrammar grammarWithInt:reducedNumber];
     
-    return [grammar impl:result];
+    return [grammar getSpeechRepresentationWithResult:result];
 }
 
-- (NSMutableArray *)dividePower:(int)power andConquer:(NSMutableArray *)result
+- (int)splitOnPower
 {
-    int tenToThePower = pow(10, power);
+    return self.powerOfTen > 6 ? 6 : 3;
+}
+
+- (NSMutableArray *)dividePowerAndConquer:(NSMutableArray *)result
+{
+    int powerToSplit = [self splitOnPower];
+    int tenToThePower = pow(10, powerToSplit);
     int first = self.number / tenToThePower;
     int rest = self.number % tenToThePower;
     
     MathGrammar *firstGrammar = [MathGrammar grammarWithInt:first];
-    result = [firstGrammar impl:result];
+    result = [firstGrammar getSpeechRepresentationWithResult:result];
     
     [result addObject:[NSString stringWithFormat:@"%d", tenToThePower]];
     
     MathGrammar *restGrammar = [MathGrammar grammarWithInt:rest];
-    result = [restGrammar impl:result];
+    result = [restGrammar getSpeechRepresentationWithResult:result];
     
     return result;
 }
 
 - (BOOL)powerIsEssential
 {
-    int power = [self powerOfTen];
-    
-    return power == 9 || power == 6 || power == 3 || power == 2;
+    return self.powerOfTen == 9 || self.powerOfTen == 6 || self.powerOfTen == 3 || self.powerOfTen == 2;
 }
 
-- (NSMutableArray *)impl:(NSMutableArray *)result
+- (BOOL)splitIsNeeded
 {
-    int power = [self powerOfTen];
-    
+    return self.powerOfTen > 9 || self.powerOfTen > 3;
+}
+
+- (NSMutableArray *)getSpeechRepresentationWithResult:(NSMutableArray *)result
+{
     if ([self powerIsEssential]) {
         return [self addResultAndContinue:result];
-    } else if (power > 6) {
-        return [self dividePower:6 andConquer:result];
-    } else if (power > 3) {
-        return [self dividePower:3 andConquer:result];
-    } else if (power == 1) {
+    } else if ([self splitIsNeeded]) {
+        [self dividePowerAndConquer:result];
+    } else if (self.powerOfTen == 1) {
         if (self.number > 19) {
             return [self addResultAndContinue:result];
         } else {
@@ -149,8 +165,7 @@
 - (NSArray *)getSpeechRepresentation
 {
     NSMutableArray *result = [[NSMutableArray alloc] init];
-    
-    return [self impl:result];
+    return [self getSpeechRepresentationWithResult:result];
 }
 
 @end
