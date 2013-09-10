@@ -120,43 +120,14 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-- (IBAction)resultSpeechSwitched:(UISwitch *)sender {
+- (IBAction)resultSpeechSwitched:(UISwitch *)sender
+{
     [[NSUserDefaults standardUserDefaults] setBool:sender.on forKey:@"resultSpeechActivated"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-- (BOOL)previousControllerIsTextual
+- (IBAction)languageChanged:(UISegmentedControl *)sender
 {
-    NSArray *viewControllers = [self.navigationController viewControllers];
-    ViewController *previousController = [viewControllers objectAtIndex:(viewControllers.count - 2)];
-    return previousController.isAlpha == YES;
-}
-
-- (void)replaceStackWithCorrectLanguageCalculatorWithIndex:(int)index
-{
-    NSArray *viewControllers = [self.navigationController viewControllers];
-    NSMutableArray *vcnew = [[NSMutableArray alloc] initWithArray:viewControllers];
-    
-    UIViewController *settingsController = vcnew[(vcnew.count - 1)];
-    [vcnew removeLastObject];
-    [vcnew removeLastObject];
-    
-    NSString *viewControllerName = nil;
-    if (index == 0) {
-        viewControllerName = @"AlphabeticCalculatorSwe";
-    } else {
-        viewControllerName = @"AlphabeticCalculator";
-    }
-    ViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:viewControllerName];
-    viewController.isAlpha = YES;
-    
-    [vcnew addObject:viewController];
-    [vcnew addObject:settingsController];
-    
-    [self.navigationController setViewControllers:vcnew animated:NO];
-}
-
-- (IBAction)languageChanged:(UISegmentedControl *)sender {
     int selectedIndex = [sender selectedSegmentIndex];
     if (selectedIndex != 0 && selectedIndex != 1) {
         [NSException raise:nil format:@"Language button error"];
@@ -164,10 +135,6 @@
     
     [[NSUserDefaults standardUserDefaults] setInteger:selectedIndex forKey:@"Language"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    if ([self previousControllerIsTextual]) {
-        [self replaceStackWithCorrectLanguageCalculatorWithIndex:selectedIndex];
-    }
 }
 
 - (IBAction)taxRateChanged:(UITextField *)sender {

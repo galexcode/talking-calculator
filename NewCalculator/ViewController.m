@@ -50,17 +50,6 @@
 
 @implementation ViewController
 
-@synthesize previousValue = _previousValue;
-@synthesize display = _display;
-@synthesize displayModel = _displayModel;
-@synthesize operator = _operator;
-@synthesize operatorButton = _operatorButton;
-@synthesize isAlpha = _isAlpha;
-@synthesize audioPlayer = _audioPlayer;
-@synthesize buttonSpeechIsActivated = _buttonSpeechIsActivated;
-@synthesize resultSpeechIsActivated = _resultSpeechIsActivated;
-@synthesize language = _language;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -426,33 +415,6 @@
     self.operatorButton = nil;
     [self addFlashAnimationToLayer:self.view.layer withDuration:0.5 andStartValue:0.0];
     [self updateDisplay];
-}
-
-// For shake recognizer
-- (BOOL)canBecomeFirstResponder
-{
-    return YES;
-}
-
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (motion == UIEventSubtypeMotionShake) {
-        NSString *viewControllerName = nil;
-        if (self.isAlpha) {
-            // Uses the fact the numeric calculator is the root view.
-            [self.navigationController popViewControllerAnimated:YES];
-        } else {
-            int lang = [[NSUserDefaults standardUserDefaults] integerForKey:@"Language"];
-            if (lang == 0) {
-                viewControllerName = @"AlphabeticCalculatorSwe";
-            } else {
-                viewControllerName = @"AlphabeticCalculator";
-            }
-            ViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:viewControllerName];
-            viewController.isAlpha = YES;
-            [self.navigationController pushViewController:viewController animated:YES];
-        }
-    }
 }
 
 @end
