@@ -41,58 +41,82 @@
     return self;
 }
 
-- (CGContextRef)getMaskedContext:(CGRect)rect witRadius:(int)radius
-{
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSaveGState(context);
-    CGPathRef clippath = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:radius].CGPath;
-    CGContextAddPath(context, clippath);
-    CGContextClip(context);
-    
-    return context;
-}
-
-- (UIImage *)restoreContextAndGetImage:(CGContextRef)context
+- (UIImage *)getUIImageFromContext:(CGContextRef)context
 {
     CGImageRef imageRef = CGBitmapContextCreateImage(context);
     UIImage* image = [UIImage imageWithCGImage:imageRef];
     
     CGImageRelease(imageRef);
-    CGContextRestoreGState(context);
-    
     return image;
 }
 
-- (void)setBackground:(CGRect)rect forHighlightedStateUsingRadius:(int)radius
+- (void)setBackground:(CGRect)rect forHighlightedStateUsingPath:(CGPathRef)borderPath
 {
-    const CGFloat *color = CGColorGetComponents([[UIColor whiteColor] CGColor]);
-    CGContextRef context = [self getMaskedContext:rect witRadius:radius];
-    
-    // Fill the context with white color
-    CGContextSetRGBFillColor(context, color[0], color[0], color[0], 1.f);
-    CGContextFillRect(context, rect);
+    CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSaveGState(context);
+    CGContextAddPath(context, borderPath);
+    CGContextClip(context);
     
-    UIImage *image = [self restoreContextAndGetImage:context];
+    CGContextSaveGState(context);
+    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextFillRect(context, rect);
+    CGContextRestoreGState(context);
+    
+    UIImage *image = [self getUIImageFromContext:context];
     [self setBackgroundImage:image forState:UIControlStateHighlighted];
 }
 
-- (void)setBackground:(CGRect)rect forNormalStateUsingRadius:(int)radius
+- (void)drawShadow:(CGContextRef)context withPath:(CGPathRef)borderPath
 {
-    CGContextRef context = [self getMaskedContext:rect witRadius:radius];
-    
+    int softness = 3;
+    CGSize shadowOffset = CGSizeMake (-1,  1);
+
+    CGContextSaveGState(context);
+    CGContextSetShadowWithColor(context, shadowOffset, softness, [UIColor grayColor].CGColor);
+    CGContextAddPath(context, borderPath);
+    CGContextFillPath(context);
+    CGContextRestoreGState(context);
+}
+
+- (void)setBackgroundImage:(CGContextRef)context withPath:(CGPathRef)borderPath
+{
+    CGContextSaveGState(context);
+    CGContextAddPath(context, borderPath);
+    CGContextClip(context);
+    CGRect smallerRect = CGPathGetPathBoundingBox(borderPath);
+
     UIImage *originalImage = [UIImage imageNamed:@"leopardskin.jpg"];
-    [originalImage drawInRect:rect];
-    
-    UIImage *maskedImage = [self restoreContextAndGetImage:context];
+    [originalImage drawInRect:smallerRect];
+    UIImage *maskedImage = [self getUIImageFromContext:context];
     [self setBackgroundImage:maskedImage forState:UIControlStateNormal];
+    CGContextRestoreGState(context);
+}
+
+- (void)drawBorder:(CGContextRef)context withPath:(CGPathRef)borderPath
+{
+    CGContextSaveGState(context);
+    CGContextAddPath(context, borderPath);
+    CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextStrokePath(context);
+    CGContextRestoreGState(context);
+}
+
+- (void)setBackground:(CGRect)rect forNormalStateUsingPath:(CGPathRef)borderPath
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    [self drawShadow:context withPath:borderPath];
+    [self setBackgroundImage:context withPath:borderPath];
+    [self drawBorder:context withPath:borderPath];
 }
 
 - (void)setUpBackgroundForStates:(CGRect)rect
 {
     int radius = 20;
-    [self setBackground:rect forNormalStateUsingRadius:radius];
-    [self setBackground:rect forHighlightedStateUsingRadius:radius];
+    CGRect smallerRect = CGRectInset(rect, 2, 2);
+    CGPathRef border = [UIBezierPath bezierPathWithRoundedRect:smallerRect cornerRadius:radius].CGPath;
+    [self setBackground:smallerRect forNormalStateUsingPath:border];
+    [self setBackground:smallerRect forHighlightedStateUsingPath:border];
 }
 
 // An empty implementation adversely affects performance during animation.
