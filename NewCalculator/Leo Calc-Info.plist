@@ -15,7 +15,6 @@
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string>leopard_icon.png</string>
-				<string>icon_retina.png</string>
 				<string>leopard_icon_retina.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
